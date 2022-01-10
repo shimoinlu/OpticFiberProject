@@ -1,0 +1,15 @@
+C:\Users\Eran\Downloads\finalproject\OpticFiberTest_ver1\ReaderProg\bin\Debug\aai2c_eeprom.exe
+C:\Users\Eran\Downloads\finalproject\OpticFiberTest_ver1\ReaderProg\bin\Debug\aai2c_eeprom.pdb
+C:\Users\Eran\Downloads\finalproject\OpticFiberTest_ver1\ReaderProg\obj\Debug\aai2c_eeprom.csprojAssemblyReference.cache
+C:\Users\Eran\Downloads\finalproject\OpticFiberTest_ver1\ReaderProg\obj\Debug\aai2c_eeprom.csproj.CoreCompileInputs.cache
+C:\Users\Eran\Downloads\finalproject\OpticFiberTest_ver1\ReaderProg\obj\Debug\aai2c_eeprom.exe
+C:\Users\Eran\Downloads\finalproject\OpticFiberTest_ver1\ReaderProg\obj\Debug\aai2c_eeprom.pdb
+C:\Users\hgrv1\Desktop\finalProj\OpticFiberTest_ver2\OpticFiberTest_ver2\ReaderProg\bin\Debug\aai2c_eeprom.exe
+C:\Users\hgrv1\Desktop\finalProj\OpticFiberTest_ver2\OpticFiberTest_ver2\ReaderProg\bin\Debug\aai2c_eeprom.pdb
+C:\Users\hgrv1\Desktop\finalProj\OpticFiberTest_ver2\OpticFiberTest_ver2\ReaderProg\obj\Debug\aai2c_eeprom.csprojAssemblyReference.cache
+C:\Users\hgrv1\Desktop\finalProj\OpticFiberTest_ver2\OpticFiberTest_ver2\ReaderProg\obj\Debug\aai2c_eeprom.exe
+C:\Users\hgrv1\Desktop\finalProj\OpticFiberTest_ver2\OpticFiberTest_ver2\ReaderProg\obj\Debug\aai2c_eeprom.pdb
+C:\Users\Eran\Desktop\תאילנד פרויקט גמר\OpticFiberTest_ver6\ReaderProg\obj\Debug\aai2c_eeprom.csprojAssemblyReference.cache
+C:\Users\Eran\Desktop\תאילנד פרויקט גמר\OpticFiberTest_ver6\ReaderProg\obj\Debug\aai2c_eeprom.csproj.CoreCompileInputs.cache
+C:\Users\Eran\Desktop\תאילנד פרויקט גמר\OpticFiberTest_ver6\ReaderProg\obj\Debug\aai2c_eeprom.exe
+C:\Users\Eran\Desktop\תאילנד פרויקט גמר\OpticFiberTest_ver6\ReaderProg\obj\Debug\aai2c_eeprom.pdb

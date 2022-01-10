@@ -1,0 +1,43 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="Protocol_x0020_SFF-8636" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Protocol_x0020_SFF-8636">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Parameter" type="xs:string" minOccurs="0" />
+                <xs:element name="Value" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Protocol_x0020_SFF-8636>
+    <Parameter>System.Collections.Generic.Dictionary`2+KeyCollection[System.String,System.String]</Parameter>
+    <Value>System.Collections.Generic.Dictionary`2+ValueCollection[System.String,System.String]</Value>
+  </Protocol_x0020_SFF-8636>
+  <Protocol_x0020_SFF-8636>
+    <Parameter>System.Collections.Generic.Dictionary`2+KeyCollection[System.String,System.String]</Parameter>
+    <Value>System.Collections.Generic.Dictionary`2+ValueCollection[System.String,System.String]</Value>
+  </Protocol_x0020_SFF-8636>
+  <Protocol_x0020_SFF-8636>
+    <Parameter>System.Collections.Generic.Dictionary`2+KeyCollection[System.String,System.String]</Parameter>
+    <Value>System.Collections.Generic.Dictionary`2+ValueCollection[System.String,System.String]</Value>
+  </Protocol_x0020_SFF-8636>
+  <Protocol_x0020_SFF-8636>
+    <Parameter>System.Collections.Generic.Dictionary`2+KeyCollection[System.String,System.String]</Parameter>
+    <Value>System.Collections.Generic.Dictionary`2+ValueCollection[System.String,System.String]</Value>
+  </Protocol_x0020_SFF-8636>
+  <Protocol_x0020_SFF-8636>
+    <Parameter>System.Collections.Generic.Dictionary`2+KeyCollection[System.String,System.String]</Parameter>
+    <Value>System.Collections.Generic.Dictionary`2+ValueCollection[System.String,System.String]</Value>
+  </Protocol_x0020_SFF-8636>
+  <Protocol_x0020_SFF-8636>
+    <Parameter>System.Collections.Generic.Dictionary`2+KeyCollection[System.String,System.String]</Parameter>
+    <Value>System.Collections.Generic.Dictionary`2+ValueCollection[System.String,System.String]</Value>
+  </Protocol_x0020_SFF-8636>
+</NewDataSet>

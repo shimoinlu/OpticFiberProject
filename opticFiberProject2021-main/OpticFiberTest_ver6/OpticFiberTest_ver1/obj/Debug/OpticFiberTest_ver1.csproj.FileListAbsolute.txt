@@ -1,0 +1,291 @@
+C:/Users/Eran/source/repos/Final_Project/OpticFiberTest_ver1/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.exe.config
+C:/Users/Eran/source/repos/Final_Project/OpticFiberTest_ver1/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.exe
+C:/Users/Eran/source/repos/Final_Project/OpticFiberTest_ver1/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.pdb
+C:/Users/Eran/source/repos/Final_Project/OpticFiberTest_ver1/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.Properties.Resources.resources
+C:/Users/Eran/source/repos/Final_Project/OpticFiberTest_ver1/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.csproj.GenerateResource.cache
+C:/Users/Eran/source/repos/Final_Project/OpticFiberTest_ver1/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.csproj.CoreCompileInputs.cache
+C:/Users/Eran/source/repos/Final_Project/OpticFiberTest_ver1/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.exe
+C:/Users/Eran/source/repos/Final_Project/OpticFiberTest_ver1/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.pdb
+C:/Users/Eran/source/repos/Final_Project/OpticFiberTest_ver1/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.SFF8636.resources
+C:/Users/ybaruch/Desktop/CS/פרוייקט גמר/OpticFiberTest_ver1/OpticFiberTest_ver1/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.exe.config
+C:/Users/ybaruch/Desktop/CS/פרוייקט גמר/OpticFiberTest_ver1/OpticFiberTest_ver1/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.exe
+C:/Users/ybaruch/Desktop/CS/פרוייקט גמר/OpticFiberTest_ver1/OpticFiberTest_ver1/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.pdb
+C:/Users/ybaruch/Desktop/CS/פרוייקט גמר/OpticFiberTest_ver1/OpticFiberTest_ver1/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.csprojAssemblyReference.cache
+C:/Users/ybaruch/Desktop/CS/פרוייקט גמר/OpticFiberTest_ver1/OpticFiberTest_ver1/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.SFF8636.resources
+C:/Users/ybaruch/Desktop/CS/פרוייקט גמר/OpticFiberTest_ver1/OpticFiberTest_ver1/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.Properties.Resources.resources
+C:/Users/ybaruch/Desktop/CS/פרוייקט גמר/OpticFiberTest_ver1/OpticFiberTest_ver1/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.csproj.GenerateResource.cache
+C:/Users/ybaruch/Desktop/CS/פרוייקט גמר/OpticFiberTest_ver1/OpticFiberTest_ver1/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.exe
+C:/Users/ybaruch/Desktop/CS/פרוייקט גמר/OpticFiberTest_ver1/OpticFiberTest_ver1/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.pdb
+C:/Users/Eran/Downloads/OpticFiberTest_ver2/OpticFiberTest_ver1/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.exe.config
+C:/Users/Eran/Downloads/OpticFiberTest_ver2/OpticFiberTest_ver1/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.exe
+C:/Users/Eran/Downloads/OpticFiberTest_ver2/OpticFiberTest_ver1/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.pdb
+C:/Users/Eran/Downloads/OpticFiberTest_ver2/OpticFiberTest_ver1/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.csprojAssemblyReference.cache
+C:/Users/Eran/Downloads/OpticFiberTest_ver2/OpticFiberTest_ver1/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.Properties.Resources.resources
+C:/Users/Eran/Downloads/OpticFiberTest_ver2/OpticFiberTest_ver1/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.csproj.GenerateResource.cache
+C:/Users/Eran/Downloads/OpticFiberTest_ver2/OpticFiberTest_ver1/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.csproj.CoreCompileInputs.cache
+C:/Users/Eran/Downloads/OpticFiberTest_ver2/OpticFiberTest_ver1/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.exe
+C:/Users/Eran/Downloads/OpticFiberTest_ver2/OpticFiberTest_ver1/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.pdb
+C:/Users/Eran/Downloads/OpticFiberTest_ver2/OpticFiberTest_ver1/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.OpticFiberTest.resources
+C:/Users/Eran/Downloads/פרויקט גמר/OpticFiberTest_ver2/OpticFiberTest_ver1/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.exe.config
+C:/Users/Eran/Downloads/פרויקט גמר/OpticFiberTest_ver2/OpticFiberTest_ver1/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.exe
+C:/Users/Eran/Downloads/פרויקט גמר/OpticFiberTest_ver2/OpticFiberTest_ver1/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.pdb
+C:/Users/Eran/Downloads/פרויקט גמר/OpticFiberTest_ver2/OpticFiberTest_ver1/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.csprojAssemblyReference.cache
+C:/Users/Eran/Downloads/פרויקט גמר/OpticFiberTest_ver2/OpticFiberTest_ver1/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.OpticFiberTest.resources
+C:/Users/Eran/Downloads/פרויקט גמר/OpticFiberTest_ver2/OpticFiberTest_ver1/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.Properties.Resources.resources
+C:/Users/Eran/Downloads/פרויקט גמר/OpticFiberTest_ver2/OpticFiberTest_ver1/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.csproj.GenerateResource.cache
+C:/Users/Eran/Downloads/פרויקט גמר/OpticFiberTest_ver2/OpticFiberTest_ver1/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.csproj.CoreCompileInputs.cache
+C:/Users/Eran/Downloads/פרויקט גמר/OpticFiberTest_ver2/OpticFiberTest_ver1/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.exe
+C:/Users/Eran/Downloads/פרויקט גמר/OpticFiberTest_ver2/OpticFiberTest_ver1/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.pdb
+C:/Users/Eran/Downloads/פרויקט גמר/OpticFiberTest_ver1/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.exe.config
+C:/Users/Eran/Downloads/פרויקט גמר/OpticFiberTest_ver1/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.exe
+C:/Users/Eran/Downloads/פרויקט גמר/OpticFiberTest_ver1/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.pdb
+C:/Users/Eran/Downloads/פרויקט גמר/OpticFiberTest_ver1/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.csprojAssemblyReference.cache
+C:/Users/Eran/Downloads/פרויקט גמר/OpticFiberTest_ver1/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.OpticFiberTest.resources
+C:/Users/Eran/Downloads/פרויקט גמר/OpticFiberTest_ver1/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.Properties.Resources.resources
+C:/Users/Eran/Downloads/פרויקט גמר/OpticFiberTest_ver1/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.csproj.GenerateResource.cache
+C:/Users/Eran/Downloads/פרויקט גמר/OpticFiberTest_ver1/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.csproj.CoreCompileInputs.cache
+C:/Users/Eran/Downloads/פרויקט גמר/OpticFiberTest_ver1/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.exe
+C:/Users/Eran/Downloads/פרויקט גמר/OpticFiberTest_ver1/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.pdb
+C:/Users/Eran/Downloads/finalproject/OpticFiberTest_ver1/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.exe.config
+C:/Users/Eran/Downloads/finalproject/OpticFiberTest_ver1/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.exe
+C:/Users/Eran/Downloads/finalproject/OpticFiberTest_ver1/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.pdb
+C:/Users/Eran/Downloads/finalproject/OpticFiberTest_ver1/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.csprojAssemblyReference.cache
+C:/Users/Eran/Downloads/finalproject/OpticFiberTest_ver1/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.OpticFiberTest.resources
+C:/Users/Eran/Downloads/finalproject/OpticFiberTest_ver1/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.Properties.Resources.resources
+C:/Users/Eran/Downloads/finalproject/OpticFiberTest_ver1/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.csproj.GenerateResource.cache
+C:/Users/Eran/Downloads/finalproject/OpticFiberTest_ver1/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.csproj.CoreCompileInputs.cache
+C:/Users/Eran/Downloads/finalproject/OpticFiberTest_ver1/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.exe
+C:/Users/Eran/Downloads/finalproject/OpticFiberTest_ver1/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.pdb
+C:/Users/hgrv1/Desktop/finalProj/OpticFiberTest_ver2/OpticFiberTest_ver2/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.exe.config
+C:/Users/hgrv1/Desktop/finalProj/OpticFiberTest_ver2/OpticFiberTest_ver2/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.exe
+C:/Users/hgrv1/Desktop/finalProj/OpticFiberTest_ver2/OpticFiberTest_ver2/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.pdb
+C:/Users/hgrv1/Desktop/finalProj/OpticFiberTest_ver2/OpticFiberTest_ver2/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.csprojAssemblyReference.cache
+C:/Users/hgrv1/Desktop/finalProj/OpticFiberTest_ver2/OpticFiberTest_ver2/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.OpticFiberTest.resources
+C:/Users/hgrv1/Desktop/finalProj/OpticFiberTest_ver2/OpticFiberTest_ver2/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.Properties.Resources.resources
+C:/Users/hgrv1/Desktop/finalProj/OpticFiberTest_ver2/OpticFiberTest_ver2/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.csproj.GenerateResource.cache
+C:/Users/hgrv1/Desktop/finalProj/OpticFiberTest_ver2/OpticFiberTest_ver2/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.exe
+C:/Users/hgrv1/Desktop/finalProj/OpticFiberTest_ver2/OpticFiberTest_ver2/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.pdb
+C:/Users/Eran/Downloads/finalprog2/OpticFiberTest_ver2/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.csprojAssemblyReference.cache
+C:/Users/Eran/Downloads/finalprog2/OpticFiberTest_ver2/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.OpticFiberTest.resources
+C:/Users/Eran/Downloads/finalprog2/OpticFiberTest_ver2/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.Properties.Resources.resources
+C:/Users/Eran/Downloads/finalprog2/OpticFiberTest_ver2/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.csproj.GenerateResource.cache
+C:/Users/Eran/Downloads/finalprog2/OpticFiberTest_ver2/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.csproj.CoreCompileInputs.cache
+C:/Users/Eran/Downloads/finalprog2/OpticFiberTest_ver2/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.exe
+C:/Users/Eran/Downloads/finalprog2/OpticFiberTest_ver2/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.pdb
+C:/Users/Eran/Downloads/finalprog2/OpticFiberTest_ver2/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.exe.config
+C:/Users/Eran/Downloads/finalprog2/OpticFiberTest_ver2/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.exe
+C:/Users/Eran/Downloads/finalprog2/OpticFiberTest_ver2/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.pdb
+C:/Users/hgrv1/Desktop/finalProj/OpticFiberTest_ver6/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.exe.config
+C:/Users/hgrv1/Desktop/finalProj/OpticFiberTest_ver6/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.exe
+C:/Users/hgrv1/Desktop/finalProj/OpticFiberTest_ver6/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.pdb
+C:/Users/hgrv1/Desktop/finalProj/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.csprojAssemblyReference.cache
+C:/Users/hgrv1/Desktop/finalProj/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.OpticFiberTest.resources
+C:/Users/hgrv1/Desktop/finalProj/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.Properties.Resources.resources
+C:/Users/hgrv1/Desktop/finalProj/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.csproj.GenerateResource.cache
+C:/Users/hgrv1/Desktop/finalProj/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.exe
+C:/Users/hgrv1/Desktop/finalProj/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.pdb
+C:/Users/Eran/Desktop/גירסאות פרויקט גמר/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.csprojAssemblyReference.cache
+C:/Users/Eran/Desktop/גירסאות פרויקט גמר/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.OpticFiberTest.resources
+C:/Users/Eran/Desktop/גירסאות פרויקט גמר/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.Properties.Resources.resources
+C:/Users/Eran/Desktop/גירסאות פרויקט גמר/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.csproj.GenerateResource.cache
+C:/Users/Eran/Desktop/גירסאות פרויקט גמר/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.csproj.CoreCompileInputs.cache
+C:/Users/Eran/Desktop/גירסאות פרויקט גמר/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.exe
+C:/Users/Eran/Desktop/גירסאות פרויקט גמר/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.pdb
+C:/Users/Eran/Desktop/גירסאות פרויקט גמר/OpticFiberTest_ver6/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.exe.config
+C:/Users/Eran/Desktop/גירסאות פרויקט גמר/OpticFiberTest_ver6/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.exe
+C:/Users/Eran/Desktop/גירסאות פרויקט גמר/OpticFiberTest_ver6/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.pdb
+C:/Users/hgrv1/Desktop/finalProj/עדכוןאחרון ערן/OpticFiberTest_ver6/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.exe.config
+C:/Users/hgrv1/Desktop/finalProj/עדכוןאחרון ערן/OpticFiberTest_ver6/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.exe
+C:/Users/hgrv1/Desktop/finalProj/עדכוןאחרון ערן/OpticFiberTest_ver6/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.pdb
+C:/Users/hgrv1/Desktop/finalProj/עדכוןאחרון ערן/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.csprojAssemblyReference.cache
+C:/Users/hgrv1/Desktop/finalProj/עדכוןאחרון ערן/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.OpticFiberTest.resources
+C:/Users/hgrv1/Desktop/finalProj/עדכוןאחרון ערן/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.Properties.Resources.resources
+C:/Users/hgrv1/Desktop/finalProj/עדכוןאחרון ערן/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.csproj.GenerateResource.cache
+C:/Users/hgrv1/Desktop/finalProj/עדכוןאחרון ערן/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.exe
+C:/Users/hgrv1/Desktop/finalProj/עדכוןאחרון ערן/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.pdb
+C:/Users/hgrv1/Desktop/finalProj/OpticFiberTest-yaara12.6.20/OpticFiberTest_ver6/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.exe.config
+C:/Users/hgrv1/Desktop/finalProj/OpticFiberTest-yaara12.6.20/OpticFiberTest_ver6/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.exe
+C:/Users/hgrv1/Desktop/finalProj/OpticFiberTest-yaara12.6.20/OpticFiberTest_ver6/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.pdb
+C:/Users/hgrv1/Desktop/finalProj/OpticFiberTest-yaara12.6.20/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.csprojAssemblyReference.cache
+C:/Users/hgrv1/Desktop/finalProj/OpticFiberTest-yaara12.6.20/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.OpticFiberTest.resources
+C:/Users/hgrv1/Desktop/finalProj/OpticFiberTest-yaara12.6.20/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.Properties.Resources.resources
+C:/Users/hgrv1/Desktop/finalProj/OpticFiberTest-yaara12.6.20/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.csproj.GenerateResource.cache
+C:/Users/hgrv1/Desktop/finalProj/OpticFiberTest-yaara12.6.20/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.exe
+C:/Users/hgrv1/Desktop/finalProj/OpticFiberTest-yaara12.6.20/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.pdb
+C:/Users/Eran/Desktop/תאילנד פרויקט גמר/OpticFiberTest_ver6/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.exe.config
+C:/Users/Eran/Desktop/תאילנד פרויקט גמר/OpticFiberTest_ver6/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.exe
+C:/Users/Eran/Desktop/תאילנד פרויקט גמר/OpticFiberTest_ver6/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.pdb
+C:/Users/Eran/Desktop/תאילנד פרויקט גמר/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.csprojAssemblyReference.cache
+C:/Users/Eran/Desktop/תאילנד פרויקט גמר/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.OpticFiberTest.resources
+C:/Users/Eran/Desktop/תאילנד פרויקט גמר/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.Properties.Resources.resources
+C:/Users/Eran/Desktop/תאילנד פרויקט גמר/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.csproj.GenerateResource.cache
+C:/Users/Eran/Desktop/תאילנד פרויקט גמר/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.csproj.CoreCompileInputs.cache
+C:/Users/Eran/Desktop/תאילנד פרויקט גמר/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.exe
+C:/Users/Eran/Desktop/תאילנד פרויקט גמר/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.pdb
+C:/Users/Eran/Desktop/פרויקט גמר גירסה אחרונה/OpticFiberTest_ver6/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.exe.config
+C:/Users/Eran/Desktop/פרויקט גמר גירסה אחרונה/OpticFiberTest_ver6/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.exe
+C:/Users/Eran/Desktop/פרויקט גמר גירסה אחרונה/OpticFiberTest_ver6/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.pdb
+C:/Users/Eran/Desktop/פרויקט גמר גירסה אחרונה/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.csprojAssemblyReference.cache
+C:/Users/Eran/Desktop/פרויקט גמר גירסה אחרונה/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.OpticFiberTest.resources
+C:/Users/Eran/Desktop/פרויקט גמר גירסה אחרונה/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.Properties.Resources.resources
+C:/Users/Eran/Desktop/פרויקט גמר גירסה אחרונה/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.csproj.GenerateResource.cache
+C:/Users/Eran/Desktop/פרויקט גמר גירסה אחרונה/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.csproj.CoreCompileInputs.cache
+C:/Users/Eran/Desktop/פרויקט גמר גירסה אחרונה/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.exe
+C:/Users/Eran/Desktop/פרויקט גמר גירסה אחרונה/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.pdb
+C:/Users/Eran/Desktop/פרויקט גמר גירסה אחרונה/גירסה סופית/OpticFiberTest_ver6/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.exe.config
+C:/Users/Eran/Desktop/פרויקט גמר גירסה אחרונה/גירסה סופית/OpticFiberTest_ver6/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.exe
+C:/Users/Eran/Desktop/פרויקט גמר גירסה אחרונה/גירסה סופית/OpticFiberTest_ver6/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.pdb
+C:/Users/Eran/Desktop/פרויקט גמר גירסה אחרונה/גירסה סופית/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.csprojAssemblyReference.cache
+C:/Users/Eran/Desktop/פרויקט גמר גירסה אחרונה/גירסה סופית/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.OpticFiberTest.resources
+C:/Users/Eran/Desktop/פרויקט גמר גירסה אחרונה/גירסה סופית/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.Properties.Resources.resources
+C:/Users/Eran/Desktop/פרויקט גמר גירסה אחרונה/גירסה סופית/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.csproj.GenerateResource.cache
+C:/Users/Eran/Desktop/פרויקט גמר גירסה אחרונה/גירסה סופית/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.csproj.CoreCompileInputs.cache
+C:/Users/Eran/Desktop/פרויקט גמר גירסה אחרונה/גירסה סופית/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.exe
+C:/Users/Eran/Desktop/פרויקט גמר גירסה אחרונה/גירסה סופית/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.pdb
+C:/Users/hgrv1/Desktop/פרויקט גמר אחרון/OpticFiberTest_ver6/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.exe.config
+C:/Users/hgrv1/Desktop/פרויקט גמר אחרון/OpticFiberTest_ver6/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.exe
+C:/Users/hgrv1/Desktop/פרויקט גמר אחרון/OpticFiberTest_ver6/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.pdb
+C:/Users/hgrv1/Desktop/פרויקט גמר אחרון/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.csprojAssemblyReference.cache
+C:/Users/hgrv1/Desktop/פרויקט גמר אחרון/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.OpticFiberTest.resources
+C:/Users/hgrv1/Desktop/פרויקט גמר אחרון/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.Properties.Resources.resources
+C:/Users/hgrv1/Desktop/פרויקט גמר אחרון/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.csproj.GenerateResource.cache
+C:/Users/hgrv1/Desktop/פרויקט גמר אחרון/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.exe
+C:/Users/hgrv1/Desktop/פרויקט גמר אחרון/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.pdb
+/Users/Eran/Downloads/OpticFiberTest_ver6/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.exe.config
+/Users/Eran/Downloads/OpticFiberTest_ver6/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.exe
+/Users/Eran/Downloads/OpticFiberTest_ver6/OpticFiberTest_ver1/bin/Debug/OpticFiberTest_ver1.pdb
+/Users/Eran/Downloads/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.csprojAssemblyReference.cache
+/Users/Eran/Downloads/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.OpticFiberTest.resources
+/Users/Eran/Downloads/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.Properties.Resources.resources
+/Users/Eran/Downloads/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.csproj.GenerateResource.cache
+/Users/Eran/Downloads/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.csproj.CoreCompileInputs.cache
+/Users/Eran/Downloads/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.exe
+/Users/Eran/Downloads/OpticFiberTest_ver6/OpticFiberTest_ver1/obj/Debug/OpticFiberTest_ver1.pdb
+E:\גיבוי\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\OpticFiberTest_ver1.exe.config
+E:\גיבוי\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\OpticFiberTest_ver1.exe
+E:\גיבוי\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\OpticFiberTest_ver1.pdb
+E:\גיבוי\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.csprojAssemblyReference.cache
+E:\גיבוי\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.OpticFiberTest.resources
+E:\גיבוי\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.Properties.Resources.resources
+E:\גיבוי\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.csproj.GenerateResource.cache
+E:\גיבוי\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.csproj.CoreCompileInputs.cache
+E:\גיבוי\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.exe
+E:\גיבוי\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.pdb
+C:\Users\Yousef\Desktop\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\OpticFiberTest_ver1.exe.config
+C:\Users\Yousef\Desktop\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\OpticFiberTest_ver1.exe
+C:\Users\Yousef\Desktop\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\OpticFiberTest_ver1.pdb
+C:\Users\Yousef\Desktop\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.csprojAssemblyReference.cache
+C:\Users\Yousef\Desktop\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.OpticFiberTest.resources
+C:\Users\Yousef\Desktop\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.Properties.Resources.resources
+C:\Users\Yousef\Desktop\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.csproj.GenerateResource.cache
+C:\Users\Yousef\Desktop\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.csproj.CoreCompileInputs.cache
+C:\Users\Yousef\Desktop\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.exe
+C:\Users\Yousef\Desktop\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.pdb
+C:\Users\Imran\OneDrive\سطح المكتب\1\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\OpticFiberTest_ver1.exe.config
+C:\Users\Imran\OneDrive\سطح المكتب\1\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\OpticFiberTest_ver1.exe
+C:\Users\Imran\OneDrive\سطح المكتب\1\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\OpticFiberTest_ver1.pdb
+C:\Users\Imran\OneDrive\سطح المكتب\1\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.csprojAssemblyReference.cache
+C:\Users\Imran\OneDrive\سطح المكتب\1\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.OpticFiberTest.resources
+C:\Users\Imran\OneDrive\سطح المكتب\1\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.Properties.Resources.resources
+C:\Users\Imran\OneDrive\سطح المكتب\1\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.csproj.GenerateResource.cache
+C:\Users\Imran\OneDrive\سطح المكتب\1\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.csproj.CoreCompileInputs.cache
+C:\Users\Imran\OneDrive\سطح المكتب\1\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.exe
+C:\Users\Imran\OneDrive\سطح المكتب\1\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.pdb
+C:\Users\דור\Desktop\פרוייקט מעודכן\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\OpticFiberTest_ver1.exe.config
+C:\Users\דור\Desktop\פרוייקט מעודכן\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\OpticFiberTest_ver1.exe
+C:\Users\דור\Desktop\פרוייקט מעודכן\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\OpticFiberTest_ver1.pdb
+C:\Users\דור\Desktop\פרוייקט מעודכן\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.csprojAssemblyReference.cache
+C:\Users\דור\Desktop\פרוייקט מעודכן\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.OpticFiberTest.resources
+C:\Users\דור\Desktop\פרוייקט מעודכן\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.Properties.Resources.resources
+C:\Users\דור\Desktop\פרוייקט מעודכן\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.csproj.GenerateResource.cache
+C:\Users\דור\Desktop\פרוייקט מעודכן\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.csproj.CoreCompileInputs.cache
+C:\Users\דור\Desktop\פרוייקט מעודכן\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.exe
+C:\Users\דור\Desktop\פרוייקט מעודכן\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.pdb
+C:\Users\דור\Desktop\פרוייקט excel\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\OpticFiberTest_ver1.exe.config
+C:\Users\דור\Desktop\פרוייקט excel\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\OpticFiberTest_ver1.exe
+C:\Users\דור\Desktop\פרוייקט excel\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\OpticFiberTest_ver1.pdb
+C:\Users\דור\Desktop\פרוייקט excel\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.csprojAssemblyReference.cache
+C:\Users\דור\Desktop\פרוייקט excel\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.OpticFiberTest.resources
+C:\Users\דור\Desktop\פרוייקט excel\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.Properties.Resources.resources
+C:\Users\דור\Desktop\פרוייקט excel\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.csproj.GenerateResource.cache
+C:\Users\דור\Desktop\פרוייקט excel\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.csproj.CoreCompileInputs.cache
+C:\Users\דור\Desktop\פרוייקט excel\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.exe
+C:\Users\דור\Desktop\פרוייקט excel\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.pdb
+C:\Users\Yousef\Desktop\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\files\demoData.txt
+C:\Users\Yousef\Desktop\Project Code\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\files\dempDataP3.txt
+C:\Users\Yousef\Desktop\Project Code_ImranBarhoum_DorIshay\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\files\demoData.txt
+C:\Users\Yousef\Desktop\Project Code_ImranBarhoum_DorIshay\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\files\dempDataP3.txt
+C:\Users\Yousef\Desktop\Project Code_ImranBarhoum_DorIshay\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\OpticFiberTest_ver1.exe.config
+C:\Users\Yousef\Desktop\Project Code_ImranBarhoum_DorIshay\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\OpticFiberTest_ver1.exe
+C:\Users\Yousef\Desktop\Project Code_ImranBarhoum_DorIshay\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\OpticFiberTest_ver1.pdb
+C:\Users\Yousef\Desktop\Project Code_ImranBarhoum_DorIshay\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.csprojAssemblyReference.cache
+C:\Users\Yousef\Desktop\Project Code_ImranBarhoum_DorIshay\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.OpticFiberTest.resources
+C:\Users\Yousef\Desktop\Project Code_ImranBarhoum_DorIshay\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.Properties.Resources.resources
+C:\Users\Yousef\Desktop\Project Code_ImranBarhoum_DorIshay\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.csproj.GenerateResource.cache
+C:\Users\Yousef\Desktop\Project Code_ImranBarhoum_DorIshay\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.csproj.CoreCompileInputs.cache
+C:\Users\Yousef\Desktop\Project Code_ImranBarhoum_DorIshay\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.exe
+C:\Users\Yousef\Desktop\Project Code_ImranBarhoum_DorIshay\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.pdb
+C:\Users\dor (web)\Desktop\פרוייקט גמר סופי\Project Code_ImranBarhoum_DorIshay\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\files\demoData.txt
+C:\Users\dor (web)\Desktop\פרוייקט גמר סופי\Project Code_ImranBarhoum_DorIshay\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\files\dempDataP3.txt
+C:\Users\dor (web)\Desktop\פרוייקט גמר סופי\Project Code_ImranBarhoum_DorIshay\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\OpticFiberTest_ver1.exe.config
+C:\Users\dor (web)\Desktop\פרוייקט גמר סופי\Project Code_ImranBarhoum_DorIshay\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\OpticFiberTest_ver1.exe
+C:\Users\dor (web)\Desktop\פרוייקט גמר סופי\Project Code_ImranBarhoum_DorIshay\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\OpticFiberTest_ver1.pdb
+C:\Users\dor (web)\Desktop\פרוייקט גמר סופי\Project Code_ImranBarhoum_DorIshay\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.csprojAssemblyReference.cache
+C:\Users\dor (web)\Desktop\פרוייקט גמר סופי\Project Code_ImranBarhoum_DorIshay\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.OpticFiberTest.resources
+C:\Users\dor (web)\Desktop\פרוייקט גמר סופי\Project Code_ImranBarhoum_DorIshay\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.Properties.Resources.resources
+C:\Users\dor (web)\Desktop\פרוייקט גמר סופי\Project Code_ImranBarhoum_DorIshay\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.csproj.GenerateResource.cache
+C:\Users\dor (web)\Desktop\פרוייקט גמר סופי\Project Code_ImranBarhoum_DorIshay\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.csproj.CoreCompileInputs.cache
+C:\Users\dor (web)\Desktop\פרוייקט גמר סופי\Project Code_ImranBarhoum_DorIshay\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.exe
+C:\Users\dor (web)\Desktop\פרוייקט גמר סופי\Project Code_ImranBarhoum_DorIshay\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.pdb
+C:\Users\Yousef\Desktop\code\Project Code_ImranBarhoum_DorIshay_update\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\files\demoData.txt
+C:\Users\Yousef\Desktop\code\Project Code_ImranBarhoum_DorIshay_update\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\files\dempDataP3.txt
+C:\Users\Yousef\Desktop\code\Project Code_ImranBarhoum_DorIshay_update\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\OpticFiberTest_ver1.exe.config
+C:\Users\Yousef\Desktop\code\Project Code_ImranBarhoum_DorIshay_update\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\OpticFiberTest_ver1.exe
+C:\Users\Yousef\Desktop\code\Project Code_ImranBarhoum_DorIshay_update\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\OpticFiberTest_ver1.pdb
+C:\Users\Yousef\Desktop\code\Project Code_ImranBarhoum_DorIshay_update\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.csprojAssemblyReference.cache
+C:\Users\Yousef\Desktop\code\Project Code_ImranBarhoum_DorIshay_update\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.OpticFiberTest.resources
+C:\Users\Yousef\Desktop\code\Project Code_ImranBarhoum_DorIshay_update\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.Properties.Resources.resources
+C:\Users\Yousef\Desktop\code\Project Code_ImranBarhoum_DorIshay_update\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.csproj.GenerateResource.cache
+C:\Users\Yousef\Desktop\code\Project Code_ImranBarhoum_DorIshay_update\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.csproj.CoreCompileInputs.cache
+C:\Users\Yousef\Desktop\code\Project Code_ImranBarhoum_DorIshay_update\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.exe
+C:\Users\Yousef\Desktop\code\Project Code_ImranBarhoum_DorIshay_update\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.pdb
+C:\Users\Yousef\Desktop\code\Project Code_ImranBarhoum_DorIshay_update\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\files\XMLFile1.xml
+C:\Users\rache\Desktop\optic fiber project\Project Code_ImranBarhoum_DorIshay\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\files\demoData.txt
+C:\Users\rache\Desktop\optic fiber project\Project Code_ImranBarhoum_DorIshay\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\files\dempDataP3.txt
+C:\Users\rache\Desktop\optic fiber project\Project Code_ImranBarhoum_DorIshay\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\files\XMLFile1.xml
+C:\Users\rache\Desktop\optic fiber project\Project Code_ImranBarhoum_DorIshay\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\OpticFiberTest_ver1.exe.config
+C:\Users\rache\Desktop\optic fiber project\Project Code_ImranBarhoum_DorIshay\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\OpticFiberTest_ver1.exe
+C:\Users\rache\Desktop\optic fiber project\Project Code_ImranBarhoum_DorIshay\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\OpticFiberTest_ver1.pdb
+C:\Users\rache\Desktop\optic fiber project\Project Code_ImranBarhoum_DorIshay\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.csproj.AssemblyReference.cache
+C:\Users\rache\Desktop\optic fiber project\Project Code_ImranBarhoum_DorIshay\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.OpticFiberTest.resources
+C:\Users\rache\Desktop\optic fiber project\Project Code_ImranBarhoum_DorIshay\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.Properties.Resources.resources
+C:\Users\rache\Desktop\optic fiber project\Project Code_ImranBarhoum_DorIshay\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.csproj.GenerateResource.cache
+C:\Users\rache\Desktop\optic fiber project\Project Code_ImranBarhoum_DorIshay\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.csproj.CoreCompileInputs.cache
+C:\Users\rache\Desktop\optic fiber project\Project Code_ImranBarhoum_DorIshay\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.exe
+C:\Users\rache\Desktop\optic fiber project\Project Code_ImranBarhoum_DorIshay\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.pdb
+C:\Users\rache\Desktop\optic fiber project\תוכנה לעבודה\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\files\demoData.txt
+C:\Users\rache\Desktop\optic fiber project\תוכנה לעבודה\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\files\dempDataP3.txt
+C:\Users\rache\Desktop\optic fiber project\תוכנה לעבודה\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\files\XMLFile1.xml
+C:\Users\rache\Desktop\optic fiber project\תוכנה לעבודה\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\OpticFiberTest_ver1.exe.config
+C:\Users\rache\Desktop\optic fiber project\תוכנה לעבודה\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\OpticFiberTest_ver1.exe
+C:\Users\rache\Desktop\optic fiber project\תוכנה לעבודה\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\OpticFiberTest_ver1.pdb
+C:\Users\rache\Desktop\optic fiber project\תוכנה לעבודה\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.csproj.AssemblyReference.cache
+C:\Users\rache\Desktop\optic fiber project\תוכנה לעבודה\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.OpticFiberTest.resources
+C:\Users\rache\Desktop\optic fiber project\תוכנה לעבודה\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.Properties.Resources.resources
+C:\Users\rache\Desktop\optic fiber project\תוכנה לעבודה\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.csproj.GenerateResource.cache
+C:\Users\rache\Desktop\optic fiber project\תוכנה לעבודה\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.csproj.CoreCompileInputs.cache
+C:\Users\rache\Desktop\optic fiber project\תוכנה לעבודה\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.exe
+C:\Users\rache\Desktop\optic fiber project\תוכנה לעבודה\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.pdb
+C:\Users\This_user\OneDrive - Hadassah Academic College\Desktop\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\files\demoData.txt
+C:\Users\This_user\OneDrive - Hadassah Academic College\Desktop\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\files\dempDataP3.txt
+C:\Users\This_user\OneDrive - Hadassah Academic College\Desktop\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\files\XMLFile1.xml
+C:\Users\This_user\OneDrive - Hadassah Academic College\Desktop\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\OpticFiberTest_ver1.exe.config
+C:\Users\This_user\OneDrive - Hadassah Academic College\Desktop\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\OpticFiberTest_ver1.exe
+C:\Users\This_user\OneDrive - Hadassah Academic College\Desktop\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\OpticFiberTest_ver1.pdb
+C:\Users\This_user\OneDrive - Hadassah Academic College\Desktop\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.csprojAssemblyReference.cache
+C:\Users\This_user\OneDrive - Hadassah Academic College\Desktop\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.OpticFiberTest.resources
+C:\Users\This_user\OneDrive - Hadassah Academic College\Desktop\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.Properties.Resources.resources
+C:\Users\This_user\OneDrive - Hadassah Academic College\Desktop\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.csproj.GenerateResource.cache
+C:\Users\This_user\OneDrive - Hadassah Academic College\Desktop\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.csproj.CoreCompileInputs.cache
+C:\Users\This_user\OneDrive - Hadassah Academic College\Desktop\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.exe
+C:\Users\This_user\OneDrive - Hadassah Academic College\Desktop\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.pdb
