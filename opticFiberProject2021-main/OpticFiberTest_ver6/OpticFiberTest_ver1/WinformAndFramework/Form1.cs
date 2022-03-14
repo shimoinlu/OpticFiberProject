@@ -99,6 +99,8 @@ namespace OpticFiberTest_ver1
             MainDictionary.Add(63, new EnhancedOptions());
             MainDictionary.Add(64, new CC_EXT());
             MainDictionary.Add(65, new VendorSpecific());
+          //  MainDictionary.Add(66, new TempRange());
+
         }
         /****************************************************************
         * This function reads all the data from I2cData class and validate
@@ -110,7 +112,7 @@ namespace OpticFiberTest_ver1
             {
                 int x = MainDictionary[i + 1].GetAddress();
                 if (x > 0)
-                    MainDictionary[i + 1].ValidateVal(Data.I2cData.Geti2cDataSub(MainDictionary[i + 1].GetAddress(), MainDictionary[i + 1].GetSize()));
+                    MainDictionary[i + 1].ValidateVal(Data.I2cData.Geti2cDataSub(MainDictionary[i + 1].GetAddress(), MainDictionary[i + 1].GetSize(), MainDictionary[i + 1].GetPage()));
                 else
                     MainDictionary[i + 1].ValidateVal("00");
             }

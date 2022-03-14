@@ -7,6 +7,7 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
     {
         public TxBias(char number, byte address)
         {
+            
             m_title = "Tx" + number + " bias";
             m_size = 2; // The size of Tx bias
             m_address = address; // Thes addrss of Tx bias

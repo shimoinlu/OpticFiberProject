@@ -136,6 +136,8 @@
     <Compile Include="Classes_SFF8636\SpecificationCompliance.cs" />
     <Compile Include="Classes_SFF8636\EncodingSFF.cs" />
     <Compile Include="Classes_SFF8636\Rates\ExtendedRateSelectCompliance.cs" />
+    <Compile Include="Classes_SFF8636\ValidateRange\BaseRange.cs" />
+    <Compile Include="Classes_SFF8636\ValidateRange\TempRange.cs" />
     <Compile Include="Classes_SFF8636\Vendor\Vendor.cs" />
     <Compile Include="Classes_SFF8636\Vendor\VendorName.cs" />
     <Compile Include="Classes_SFF8636\Vendor\VendorOUI.cs" />

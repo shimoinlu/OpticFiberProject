@@ -33,6 +33,7 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
         {
             return m_textColor;
         }
+ 
         public byte GetAddress()
         {
             
@@ -54,6 +55,7 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
         }   //SethasRead will set the value that we read
 
         public string GetTitle() { return m_title; }
+        public int GetPage() { return m_page; }
 
 
         protected short m_size;   //m_size protected int member for all classes
@@ -61,6 +63,7 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
         protected string m_storedValue = ""; //m_storedValue protected int member for all classes
         protected string m_title;
         protected string m_textColor = "Green";
+        protected int m_page = 1;
 
     }
 
