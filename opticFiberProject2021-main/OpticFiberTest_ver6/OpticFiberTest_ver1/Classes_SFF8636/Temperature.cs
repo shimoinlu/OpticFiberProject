@@ -3,6 +3,7 @@ using Convers = OpticFiberTest_ver1.Converstions;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace OpticFiberTest_ver1.Classes_SFF8636
 {
     class Temperature : SFF8636
@@ -13,13 +14,13 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
             m_size = 2;
             m_address = 22;
 
-           
+            m_TempRangeValidation = new TempRange();
 
             //max temperature
-            m_max = ((SByte)i2cReader.AAI2cEeprom.getByte(128, 3) << 8) + i2cReader.AAI2cEeprom.getByte(129, 3);
+            //m_max = ((SByte)i2cReader.AAI2cEeprom.getByte(128, 3) << 8) + i2cReader.AAI2cEeprom.getByte(129, 3);
 
-            //min temperature
-            m_min = ((SByte)i2cReader.AAI2cEeprom.getByte(130, 3) << 8) + i2cReader.AAI2cEeprom.getByte(131, 3);
+            ////min temperature
+            //m_min = ((SByte)i2cReader.AAI2cEeprom.getByte(130, 3) << 8) + i2cReader.AAI2cEeprom.getByte(131, 3);
 
             m_temp = ((SByte)i2cReader.AAI2cEeprom.getByte(23, 0) << 8) + i2cReader.AAI2cEeprom.getByte(22, 0);
         }
@@ -30,7 +31,8 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
 
             m_storedValue = Convert.ToString(checker) + "C\n";
 
-            if ((m_temp < m_min || m_temp > m_max))
+
+            if ((m_temp < (int)m_TempRangeValidation.getMin() || m_temp > (int)m_TempRangeValidation.getMax()))
             {
                 throw new Exception();
             }
@@ -38,12 +40,12 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
 
         public int getMin()
         {
-            return m_min;
+            return (int)m_TempRangeValidation.getMin();
         }
 
         public int getMax()
         {
-            return m_max;
+            return (int)m_TempRangeValidation.getMax();
         }
 
         public int getTemperature()
@@ -52,9 +54,10 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
         }
 
 
-        private int m_min=0;
-        private int m_max =0;
+        //private int m_min=0;
+        //private int m_max =0;
         private int m_temp = 0;
+        private TempRange m_TempRangeValidation;
     }
 
 }
