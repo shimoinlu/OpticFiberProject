@@ -12,11 +12,17 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
         {
             m_title = "CC_EXT";
             m_size = 1;
-            m_address = 223;
-            m_max = ((SByte)i2cReader.AAI2cEeprom.getByte(128, 3) << 8) + i2cReader.AAI2cEeprom.getByte(129, 3);
+            m_address = 128;
+            m_page = 3;
 
+            int first = m_address + 2;
+            int second = m_address + 1;
+
+            m_max = ((SByte)i2cReader.AAI2cEeprom.getByte(m_address, (byte)m_page) << 8) + i2cReader.AAI2cEeprom.getByte((byte)second, (byte)m_page);
+            second += 2;
             //min temperature
-            m_min = ((SByte)i2cReader.AAI2cEeprom.getByte(130, 3) << 8) + i2cReader.AAI2cEeprom.getByte(131, 3);
+            m_min = ((SByte)i2cReader.AAI2cEeprom.getByte((byte)first, (byte)m_page) << 8) + i2cReader.AAI2cEeprom.getByte((byte)second, (byte)m_page);
+
             //m_title = "tamp randge limits";
         }
         override public bool ValidateValue(int val)
@@ -26,10 +32,6 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
         }
         void UpdateMinMax()
         {
-            m_max = ((SByte)i2cReader.AAI2cEeprom.getByte(128, 3) << 8) + i2cReader.AAI2cEeprom.getByte(129, 3);
-
-            //min temperature
-            m_min = ((SByte)i2cReader.AAI2cEeprom.getByte(130, 3) << 8) + i2cReader.AAI2cEeprom.getByte(131, 3);
 
         }
 

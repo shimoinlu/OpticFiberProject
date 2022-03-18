@@ -32,10 +32,11 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
             m_storedValue = Convert.ToString(checker) + "C\n";
 
 
-            if ((m_temp < (int)m_TempRangeValidation.getMin() || m_temp > (int)m_TempRangeValidation.getMax()))
-            {
-                throw new Exception();
-            }
+//            if ((m_temp < (int)m_TempRangeValidation.getMin() || m_temp > (int)m_TempRangeValidation.getMax()))
+                if (!m_TempRangeValidation.ValidateValue(checker))
+                {
+                    throw new Exception();
+                }
         }
 
         public int getMin()
