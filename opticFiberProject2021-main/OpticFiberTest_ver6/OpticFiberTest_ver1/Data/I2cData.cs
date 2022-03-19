@@ -103,19 +103,24 @@ namespace OpticFiberTest_ver1.Data
         //taking part of the data string and return it as substring
         static public String Geti2cDataSub(int index, int buffer,int page = 1)
         {
-            string[] myPage;   
-            if (page == 1) 
-                myPage = myData;
+            String result;
+            if (page == 1)
+                result = myData[index];
             else
-                myPage = myData1;
-
-
-            String result = myPage[index];
+            {
+                
+                result = myData1[index-128];
+            }
 
             for (int i = index + 1; i < index + buffer; i++)
             {
+
                 result += ' ';
-                result += myPage[i];
+
+                if (page == 1)
+                    result += myData[i];
+                else
+                    result += myData1[i-128];
             }
             return result;
         }

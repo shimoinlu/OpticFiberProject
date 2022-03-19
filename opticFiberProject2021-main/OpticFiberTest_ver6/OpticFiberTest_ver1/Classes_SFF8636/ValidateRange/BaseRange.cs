@@ -9,18 +9,6 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
         /****************************************************************
         * This function is encoding, comparing and define the value according sff-8636
         ***************************************************************/
-        public override void EncodeValue(string name)
-        {
-            
-        string[] bitsAdrr = name.Split(' '); //split the value
-             m_min = Convert.ToInt32(Convers.HexToAsc.Convert2Asc(bitsAdrr[0] + bitsAdrr[1])); //convert to ascii
-             m_max = Convert.ToInt32(Convers.HexToAsc.Convert2Asc(bitsAdrr[2] + bitsAdrr[3])); //convect to ascii
-
-            m_storedValue = "max is: " + Convert.ToString(m_max) + "min is: " + Convert.ToString(m_min) + '\n';
-
-
-
-        }
         virtual public bool ValidateValue(int val)
         {
             return val >=m_min && val <= m_max;
