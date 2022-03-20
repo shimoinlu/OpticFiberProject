@@ -8,7 +8,7 @@
  * SFF8636 is abstract class that will be the base class of any 
  * Parameter Class.
  ***************************************************************/
-
+using System;
 using System.Collections.Generic;
 
 
@@ -23,9 +23,12 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
             {
                 EncodeValue(name);
             }
-            catch
+            catch (Exception e)
             {
-                m_textColor = "Red";
+                if (e.Message == "Warning")
+                    m_textColor = "Black";
+                else
+                    m_textColor = "Red";
             }
         }
         virtual public void SumAllBits(ref Dictionary<int, SFF8636> MainDictionary) { }

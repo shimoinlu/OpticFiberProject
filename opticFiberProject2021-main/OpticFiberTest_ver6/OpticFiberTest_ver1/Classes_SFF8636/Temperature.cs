@@ -15,7 +15,7 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
             m_address = 22;
 
             m_TempRangeValidation = new TempRange();
-
+            m_TempWarRangeValidation = new TempWarRange();
             //max temperature
             //m_max = ((SByte)i2cReader.AAI2cEeprom.getByte(128, 3) << 8) + i2cReader.AAI2cEeprom.getByte(129, 3);
 
@@ -37,6 +37,11 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
                 {
                     throw new Exception();
                 }
+                if (!m_TempWarRangeValidation.ValidateValue(checker))
+                {
+                throw new Exception("Warning");
+
+            }
         }
 
         public int getMin()
@@ -59,6 +64,7 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
         //private int m_max =0;
         private int m_temp = 0;
         private TempRange m_TempRangeValidation;
+        private TempWarRange m_TempWarRangeValidation;
     }
 
 }

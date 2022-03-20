@@ -131,6 +131,8 @@ namespace OpticFiberTest_ver1
 
                     if (k.getColor() == "Red")
                         details_win.SelectionColor = Color.Red;
+                    else if(k.getColor() == "Black")
+                        details_win.SelectionColor = Color.Black;
                     //else
                     details_win.AppendText(k.GetAddress() + ": " + k.GetTitle() + "\n\t" + k.GethasRead() + "\n");
                 }

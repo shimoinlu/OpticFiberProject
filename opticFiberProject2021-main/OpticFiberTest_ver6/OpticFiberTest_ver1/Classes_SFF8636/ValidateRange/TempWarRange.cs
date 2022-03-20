@@ -2,17 +2,17 @@
 using Convers = OpticFiberTest_ver1.Converstions;
 namespace OpticFiberTest_ver1.Classes_SFF8636
 {
-    class TempRange : BaseRange
+    class TempWarRange : BaseRange
     {
         /****************************************************************
         * This function summing all the bytes for part of CC_BASE and CC_EXT
         ***************************************************************/
 
-        public TempRange()
+        public TempWarRange()
         {
-            m_title = "TEMPERATURE_RANGE_ERR_VALIDATION";
-            m_size = 8;
-            m_address = 128;
+            m_title = "TEMPERATURE_RANGE_WAR_VALIDATION";
+            m_size = 4;
+            m_address = 132;
             m_page = 3;
 
             int first = m_address + 2;
@@ -27,30 +27,18 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
         }
         override public bool ValidateValue(int val)
         {
-            UpdateMinMax();
             return base.ValidateValue(val);
-        }
-        void UpdateMinMax()
-        {
-
         }
         public override void EncodeValue(string name)
         {
 
             string[] bitsAdrr = name.Split(' '); //split the value
-            int MinErr, MaxErr, MinWar, MaxWar;                                     //            m_min = Convert.ToInt32(Convers.LsbMsb.MergeLsbMsb(bitsAdrr[0] + " " +bitsAdrr[1]));,
-                                                                                    //            m_max = Convert.ToInt32(Convers.LsbMsb.MergeLsbMsb(bitsAdrr[2] + " " +bitsAdrr[3]));
-            MaxErr = (int)Convers.HexToFloat.ConvertTwosComplementToInteger(Convers.HexToFloat.HexToFloadConverter(bitsAdrr[0] + bitsAdrr[1]), 2);
-            MinErr = (int)Convers.HexToFloat.ConvertTwosComplementToInteger(Convers.HexToFloat.HexToFloadConverter(bitsAdrr[2] + bitsAdrr[3]), 2);
-            MaxWar = (int)Convers.HexToFloat.ConvertTwosComplementToInteger(Convers.HexToFloat.HexToFloadConverter(bitsAdrr[4] + bitsAdrr[5]), 2);
-            MinWar = (int)Convers.HexToFloat.ConvertTwosComplementToInteger(Convers.HexToFloat.HexToFloadConverter(bitsAdrr[6] + bitsAdrr[7]), 2);
+            int  MinWar, MaxWar;                                     //            m_min = Convert.ToInt32(Convers.LsbMsb.MergeLsbMsb(bitsAdrr[0] + " " +bitsAdrr[1]));,
+                                                                     //            m_max = Convert.ToInt32(Convers.LsbMsb.MergeLsbMsb(bitsAdrr[2] + " " +bitsAdrr[3]));
+            MaxWar = (int)Convers.HexToFloat.ConvertTwosComplementToInteger(Convers.HexToFloat.HexToFloadConverter(bitsAdrr[0] + bitsAdrr[1]), 2);
+            MinWar = (int)Convers.HexToFloat.ConvertTwosComplementToInteger(Convers.HexToFloat.HexToFloadConverter(bitsAdrr[2] + bitsAdrr[3]), 2);
             m_storedValue = "max is: " + Convert.ToString(m_max) + " min is: " + Convert.ToString(m_min) + '\n';
-            base.ValidateMinMax((float)MinErr, (float)MaxErr);    
-            if (MaxWar > MaxErr || MinWar < MinErr)
-            {
-                m_storedValue += "Warning domain not contained in error domain\n";
-                throw new Exception();
-            }
+            base.ValidateMinMax((float)MinWar, (float)MaxWar);
             //            string s = e.Message;
             //m_min = Convert.ToInt32(Convers.HexToAsc.Convert2Asc(bitsAdrr[0] + " " +bitsAdrr[1])); //convert to ascii
             //     m_max = Convert.ToInt32(Convers.HexToAsc.Convert2Asc(bitsAdrr[2] + bitsAdrr[3])); //convect to ascii
