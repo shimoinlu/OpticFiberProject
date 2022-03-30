@@ -139,6 +139,7 @@
     <Compile Include="Classes_SFF8636\ValidateRange\BaseRange.cs" />
     <Compile Include="Classes_SFF8636\ValidateRange\TempRange.cs" />
     <Compile Include="Classes_SFF8636\ValidateRange\TempWarRange.cs" />
+    <Compile Include="Classes_SFF8636\ValidateRange\VccRange.cs" />
     <Compile Include="Classes_SFF8636\Vendor\Vendor.cs" />
     <Compile Include="Classes_SFF8636\Vendor\VendorName.cs" />
     <Compile Include="Classes_SFF8636\Vendor\VendorOUI.cs" />
