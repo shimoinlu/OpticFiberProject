@@ -25,7 +25,7 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
             m_storedValue = Convert.ToString(checker) + "\n";
 
             if ((checker < m_min || checker > m_max))
-            {//88
+            {
                 throw new Exception();
             }
         }
