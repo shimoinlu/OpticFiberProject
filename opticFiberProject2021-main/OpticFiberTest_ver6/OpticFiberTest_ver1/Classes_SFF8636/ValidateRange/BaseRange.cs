@@ -30,6 +30,7 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
         }
         public Double getMin() { return m_min; }
         public Double getMax() { return m_max; }
+
         protected Double m_min = 0; //hold low 8 bits of the sum of all bytes we counted
                                     //         int startIndex; //the index we start to take the sub string of the string of all the data
         protected Double m_max = 0;

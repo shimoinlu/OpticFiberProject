@@ -12,6 +12,7 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
             m_size = 2;
             m_address = 26;
             m_VccRangeValidator = new SupplyVoltageRange();
+            m_VccWarRangeValidator = new SupplyVoltageWarRange();
         }
         public override void EncodeValue(string name)
         {
@@ -20,6 +21,10 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
             if (!m_VccRangeValidator.ValidateValue((float)checker))
             {
                 throw new Exception();
+            }
+            if (!m_VccWarRangeValidator.ValidateValue((float)checker))
+            {
+                throw new Exception("Warning");
             }
         }
 
@@ -32,6 +37,7 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
         }
 
         private SupplyVoltageRange m_VccRangeValidator;
+        private SupplyVoltageWarRange m_VccWarRangeValidator;
     }
 
 }

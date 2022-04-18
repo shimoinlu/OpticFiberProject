@@ -34,14 +34,11 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
             UpdateMinMax();
             return base.ValidateValue(val);
         }
-        void UpdateMinMax()
-        {
-
-        }
+        void UpdateMinMax() {}
         public override void EncodeValue(string name)
         {
-
             string[] bitsAdrr = name.Split(' '); //split the value
+
             float MinErr, MaxErr, MinWar, MaxWar;
 
             MaxErr = Convert.ToSingle(Convert.ToUInt32(bitsAdrr[0] + bitsAdrr[1], 16) *0.0001) ;
@@ -49,7 +46,7 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
             MaxWar = Convert.ToSingle(Convert.ToUInt32(bitsAdrr[4] + bitsAdrr[5], 16) *0.0001) ;
             MinWar = Convert.ToSingle(Convert.ToUInt32(bitsAdrr[6] + bitsAdrr[7], 16) *0.0001) ;
     
-            m_storedValue = "max is: " + Convert.ToString(MaxErr) + "V min is: " + Convert.ToString(MinErr) + "V" + '\n';
+            m_storedValue = "max is: " + Convert.ToString(MaxErr) + " V min is: " + Convert.ToString(MinErr) + " V" + '\n';
             base.ValidateMinMax((float)MinErr, (float)MaxErr);
             if (MaxWar > MaxErr || MinWar < MinErr)
             {

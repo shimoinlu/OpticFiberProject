@@ -159,6 +159,7 @@
     <Compile Include="Dictionary\Dictionaries.cs" />
     <Compile Include="Validations\ValidBits.cs" />
     <Compile Include="Validations\ValidString.cs" />
+    <Compile Include="VccWarRange.cs" />
     <Compile Include="WinformAndFramework\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
