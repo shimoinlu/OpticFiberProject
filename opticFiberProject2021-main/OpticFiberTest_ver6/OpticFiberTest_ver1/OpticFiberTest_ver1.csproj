@@ -137,6 +137,7 @@
     <Compile Include="Classes_SFF8636\EncodingSFF.cs" />
     <Compile Include="Classes_SFF8636\Rates\ExtendedRateSelectCompliance.cs" />
     <Compile Include="Classes_SFF8636\ValidateRange\BaseRange.cs" />
+    <Compile Include="Classes_SFF8636\ValidateRange\RxPowerRange.cs" />
     <Compile Include="Classes_SFF8636\ValidateRange\TempRange.cs" />
     <Compile Include="Classes_SFF8636\ValidateRange\TempWarRange.cs" />
     <Compile Include="Classes_SFF8636\ValidateRange\VccRange.cs" />
