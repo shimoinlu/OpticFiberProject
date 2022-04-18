@@ -105,6 +105,7 @@ namespace OpticFiberTest_ver1
             MainDictionary.Add(69, new SupplyVoltageWarRange());
             MainDictionary.Add(70, new RxPowerRange());
             MainDictionary.Add(71, new RxPowerWarRange());
+            MainDictionary.Add(72, new TxBiasRange());
 
 
         }

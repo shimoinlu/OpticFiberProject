@@ -160,6 +160,7 @@
     <Compile Include="Data\I2cData.cs" />
     <Compile Include="Utility\Utilities.cs" />
     <Compile Include="Dictionary\Dictionaries.cs" />
+    <Compile Include="Validations\TxBiasRange.cs" />
     <Compile Include="Validations\ValidBits.cs" />
     <Compile Include="Validations\ValidString.cs" />
     <Compile Include="WinformAndFramework\Form1.cs">
