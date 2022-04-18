@@ -10,6 +10,8 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
             m_title = "Rx" + number + " power"; // Title of rx
             m_size = 2; // Rx Size
             m_address = address;// Rx Address
+            m_RxPowerRangeValidator = new RxPowerRange();
+            m_RxPowerWarRangeValidator = new RxPowerWarRange();
         }
         // Store the value of rx to print it later on the screen
         public override void EncodeValue(string name) 
@@ -19,12 +21,19 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
             m_storedValue = Convert.ToString(checker) + " mW\n";
 
             // check if the rx value is valid
-            if ((checker > 6.55 || checker < 0))
+            if (!m_RxPowerRangeValidator.ValidateValue((float)checker))
             {
                 throw new Exception();
             }
-        }
+            if (!m_RxPowerWarRangeValidator.ValidateValue((float)checker))
+            {
+                throw new Exception("Warning");
+            }
 
+        }
+        private RxPowerRange m_RxPowerRangeValidator;
+        private RxPowerWarRange m_RxPowerWarRangeValidator;
     }
+    
 
 }
