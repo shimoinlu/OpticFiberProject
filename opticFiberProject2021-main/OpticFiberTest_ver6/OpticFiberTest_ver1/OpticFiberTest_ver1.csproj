@@ -137,9 +137,12 @@
     <Compile Include="Classes_SFF8636\EncodingSFF.cs" />
     <Compile Include="Classes_SFF8636\Rates\ExtendedRateSelectCompliance.cs" />
     <Compile Include="Classes_SFF8636\ValidateRange\BaseRange.cs" />
+    <Compile Include="Classes_SFF8636\ValidateRange\RxPowerRange.cs" />
+    <Compile Include="Classes_SFF8636\ValidateRange\RxPowerWarRange.cs" />
     <Compile Include="Classes_SFF8636\ValidateRange\TempRange.cs" />
     <Compile Include="Classes_SFF8636\ValidateRange\TempWarRange.cs" />
     <Compile Include="Classes_SFF8636\ValidateRange\VccRange.cs" />
+    <Compile Include="Classes_SFF8636\ValidateRange\VccWarRange.cs" />
     <Compile Include="Classes_SFF8636\Vendor\Vendor.cs" />
     <Compile Include="Classes_SFF8636\Vendor\VendorName.cs" />
     <Compile Include="Classes_SFF8636\Vendor\VendorOUI.cs" />
@@ -159,7 +162,6 @@
     <Compile Include="Dictionary\Dictionaries.cs" />
     <Compile Include="Validations\ValidBits.cs" />
     <Compile Include="Validations\ValidString.cs" />
-    <Compile Include="VccWarRange.cs" />
     <Compile Include="WinformAndFramework\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
