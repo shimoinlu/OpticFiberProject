@@ -141,6 +141,7 @@
     <Compile Include="Classes_SFF8636\ValidateRange\RxPowerWarRange.cs" />
     <Compile Include="Classes_SFF8636\ValidateRange\TempRange.cs" />
     <Compile Include="Classes_SFF8636\ValidateRange\TempWarRange.cs" />
+    <Compile Include="Classes_SFF8636\ValidateRange\TxBiasWarRange.cs" />
     <Compile Include="Classes_SFF8636\ValidateRange\VccRange.cs" />
     <Compile Include="Classes_SFF8636\ValidateRange\VccWarRange.cs" />
     <Compile Include="Classes_SFF8636\Vendor\Vendor.cs" />
@@ -160,6 +161,7 @@
     <Compile Include="Data\I2cData.cs" />
     <Compile Include="Utility\Utilities.cs" />
     <Compile Include="Dictionary\Dictionaries.cs" />
+    <Compile Include="Validations\TxBiasRange.cs" />
     <Compile Include="Validations\ValidBits.cs" />
     <Compile Include="Validations\ValidString.cs" />
     <Compile Include="WinformAndFramework\Form1.cs">
@@ -229,6 +231,9 @@
     <Content Include="files\XMLFile1.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
