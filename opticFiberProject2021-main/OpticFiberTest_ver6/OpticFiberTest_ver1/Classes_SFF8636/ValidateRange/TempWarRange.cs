@@ -39,12 +39,6 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
             MinWar = (int)Convers.HexToFloat.ConvertTwosComplementToInteger(Convers.HexToFloat.HexToFloadConverter(bitsAdrr[2] + bitsAdrr[3]), 2);
             m_storedValue = "max is: " + Convert.ToString(m_max) + " min is: " + Convert.ToString(m_min) + '\n';
             base.ValidateMinMax((float)MinWar, (float)MaxWar);
-            //            string s = e.Message;
-            //m_min = Convert.ToInt32(Convers.HexToAsc.Convert2Asc(bitsAdrr[0] + " " +bitsAdrr[1])); //convert to ascii
-            //     m_max = Convert.ToInt32(Convers.HexToAsc.Convert2Asc(bitsAdrr[2] + bitsAdrr[3])); //convect to ascii
-
-
-
 
         }
 
