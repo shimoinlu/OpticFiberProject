@@ -11,18 +11,25 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
             m_title = "Tx" + number + " bias";
             m_size = 2; // The size of Tx bias
             m_address = address; // Thes addrss of Tx bias
+            m_TxBiasRange = new TxBiasRange();
+            m_TxBiasWarRange = new TxBiasWarRange();
         }
         public override void EncodeValue(string name)
         {
             double checker = Convert.ToDouble(Convers.HexToFloat.HexToFloadConverter(Convers.LsbMsb.MergeLsbMsb(name))) / 500;
             m_storedValue = Convert.ToString(checker) + " mA\n";
 
-            if ((checker > 6.55 || checker < 0))
+            if (!m_TxBiasRange.ValidateValue((float)checker))
             {
                 throw new Exception();
             }
+            if (!m_TxBiasWarRange.ValidateValue((float)checker))
+            {
+                throw new Exception("Warning");
+            }
         }
-
+        private TxBiasRange m_TxBiasRange;
+        private TxBiasWarRange m_TxBiasWarRange;
     }
 
 }
