@@ -100,6 +100,9 @@ namespace OpticFiberTest_ver1
             MainDictionary.Add(64, new CC_EXT());
             MainDictionary.Add(65, new VendorSpecific());
             MainDictionary.Add(66, new TempRange());
+            MainDictionary.Add(67, new TempWarRange());
+            MainDictionary.Add(68, new SupplyVoltageRange());
+
 
         }
         /****************************************************************

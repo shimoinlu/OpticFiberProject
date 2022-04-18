@@ -11,8 +11,11 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
         ***************************************************************/
         virtual public bool ValidateValue(int val)
         {
-            return val >=m_min && val <= m_max;
-
+            return val >= m_min && val <= m_max;
+        }
+        virtual public bool ValidateValue(float val)
+        {
+            return val >= m_min && val <= m_max;
         }
 
 

@@ -13,9 +13,13 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
             m_address = 26;
 
             //min V
-            m_max = (i2cReader.AAI2cEeprom.getByte(132, 3) << 8) + i2cReader.AAI2cEeprom.getByte(133, 3);
+            //            m_max = (i2cReader.AAI2cEeprom.getByte(144, 3) << 8) + i2cReader.AAI2cEeprom.getByte(145, 3);
+            m_max = i2cReader.AAI2cEeprom.getByte(144, 3) << 8;
+            m_max+= i2cReader.AAI2cEeprom.getByte(145, 3);
             //max V
-            m_min = (i2cReader.AAI2cEeprom.getByte(134, 3) << 8) + i2cReader.AAI2cEeprom.getByte(135, 3);
+            m_min = i2cReader.AAI2cEeprom.getByte(146, 3) << 8;
+            m_min += i2cReader.AAI2cEeprom.getByte(147, 3);
+//            m_min = (i2cReader.AAI2cEeprom.getByte(146, 3) << 8) + i2cReader.AAI2cEeprom.getByte(147, 3);
 
 
         }
