@@ -11,39 +11,27 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
             m_title = "Supply Voltage";
             m_size = 2;
             m_address = 26;
-
-            //min V
-            //            m_max = (i2cReader.AAI2cEeprom.getByte(144, 3) << 8) + i2cReader.AAI2cEeprom.getByte(145, 3);
-            m_max = i2cReader.AAI2cEeprom.getByte(144, 3) << 8;
-            m_max+= i2cReader.AAI2cEeprom.getByte(145, 3);
-            //max V
-            m_min = i2cReader.AAI2cEeprom.getByte(146, 3) << 8;
-            m_min += i2cReader.AAI2cEeprom.getByte(147, 3);
-//            m_min = (i2cReader.AAI2cEeprom.getByte(146, 3) << 8) + i2cReader.AAI2cEeprom.getByte(147, 3);
-
-
+            m_VccRangeValidator = new SupplyVoltageRange();
         }
         public override void EncodeValue(string name)
         {
             double checker = Convert.ToDouble(Convers.HexToFloat.HexToFloadConverter(name)) / Voltage.Utilities.Devide;
             m_storedValue = Convert.ToString(checker) + "\n";
-
-            if ((checker < m_min || checker > m_max))
-            {//88
+            if (!m_VccRangeValidator.ValidateValue((float)checker))
+            {
                 throw new Exception();
             }
         }
 
-        public float getMin() { return m_min; }
-        public float getMax() { return m_max; }
+        public float getMin() { return Convert.ToSingle(m_VccRangeValidator.getMin()); }
+        public float getMax() { return Convert.ToSingle(m_VccRangeValidator.getMax()); }
 
         public int getVolt()
         {
             return (i2cReader.AAI2cEeprom.getByte(26, 0) << 8) + i2cReader.AAI2cEeprom.getByte(27, 0);
         }
 
-        private float m_min = 0;
-        private float m_max = 0;
+        private SupplyVoltageRange m_VccRangeValidator;
     }
 
 }
