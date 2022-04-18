@@ -10,17 +10,25 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
             m_title = "Tx" + number + " power";
             m_size = 2;
             m_address = address;
+            m_TxPowerErrRangeValidator = new TxPowerRange();
+            m_TxPowerWarRangeValidator = new TxPowerWarRange();
         }
         public override void EncodeValue(string name)
         {
             double checker = Convert.ToDouble(Convers.HexToFloat.HexToFloadConverter(Convers.LsbMsb.MergeLsbMsb(name))) / 10000;
             m_storedValue = Convert.ToString(checker) + " mW\n";
 
-            if ((checker > 6.55 || checker < 0))
+            if (!m_TxPowerErrRangeValidator.ValidateValue((float)checker))
             {
                 throw new Exception();
             }
+            if (!m_TxPowerWarRangeValidator.ValidateValue((float)checker))
+            {
+                throw new Exception("Warning");
+            }
         }
+        private TxPowerRange m_TxPowerErrRangeValidator;
+        private TxPowerWarRange m_TxPowerWarRangeValidator;
 
     }
 
