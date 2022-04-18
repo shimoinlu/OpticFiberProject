@@ -11,6 +11,7 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
             m_size = 2;
             m_address = address;
             m_TxPowerErrRangeValidator = new TxPowerRange();
+            m_TxPowerWarRangeValidator = new TxPowerWarRange();
         }
         public override void EncodeValue(string name)
         {
@@ -21,8 +22,13 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
             {
                 throw new Exception();
             }
+            if (!m_TxPowerWarRangeValidator.ValidateValue((float)checker))
+            {
+                throw new Exception("Warning");
+            }
         }
         private TxPowerRange m_TxPowerErrRangeValidator;
+        private TxPowerWarRange m_TxPowerWarRangeValidator;
 
     }
 

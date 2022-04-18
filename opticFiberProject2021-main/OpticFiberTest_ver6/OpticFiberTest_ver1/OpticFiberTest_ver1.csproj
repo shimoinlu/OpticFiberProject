@@ -143,6 +143,7 @@
     <Compile Include="Classes_SFF8636\ValidateRange\TempWarRange.cs" />
     <Compile Include="Classes_SFF8636\ValidateRange\TxBiasWarRange.cs" />
     <Compile Include="Classes_SFF8636\ValidateRange\TxPowerRange.cs" />
+    <Compile Include="Classes_SFF8636\ValidateRange\TxPowerWarRange.cs" />
     <Compile Include="Classes_SFF8636\ValidateRange\VccRange.cs" />
     <Compile Include="Classes_SFF8636\ValidateRange\VccWarRange.cs" />
     <Compile Include="Classes_SFF8636\Vendor\Vendor.cs" />
