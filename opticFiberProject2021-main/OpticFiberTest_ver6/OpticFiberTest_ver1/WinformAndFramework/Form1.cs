@@ -100,7 +100,15 @@ namespace OpticFiberTest_ver1
             MainDictionary.Add(64, new CC_EXT());
             MainDictionary.Add(65, new VendorSpecific());
             MainDictionary.Add(66, new TempRange());
-
+            MainDictionary.Add(67, new TempWarRange());
+            MainDictionary.Add(68, new SupplyVoltageRange());
+            MainDictionary.Add(69, new SupplyVoltageWarRange());
+            MainDictionary.Add(70, new RxPowerRange());
+            MainDictionary.Add(71, new RxPowerWarRange());
+            MainDictionary.Add(72, new TxBiasRange());
+            MainDictionary.Add(73, new TxBiasWarRange());
+            MainDictionary.Add(74, new TxPowerRange());
+            MainDictionary.Add(75, new TxPowerWarRange());
         }
         /****************************************************************
         * This function reads all the data from I2cData class and validate
