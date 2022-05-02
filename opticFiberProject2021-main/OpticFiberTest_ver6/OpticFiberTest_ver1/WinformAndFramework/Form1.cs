@@ -118,12 +118,24 @@ namespace OpticFiberTest_ver1
         {
             for (int i = 0; i < MainDictionary.Keys.Count(); i++)
             {
-                int x = MainDictionary[i + 1].GetAddress();
-                if (x > 0)
-                    MainDictionary[i + 1].ValidateVal(Data.I2cData.Geti2cDataSub(MainDictionary[i + 1].GetAddress(), MainDictionary[i + 1].GetSize(), MainDictionary[i + 1].GetPage()));
+                SFF8636 current = MainDictionary[i + 1];
+                byte address = current.GetAddress();
+                short size = current.GetSize();
+
+                if (address > 0)
+                {
+
+                    string value = Data.I2cData.Geti2cDataSub(address, size);
+                    current.ValidateVal(value);
+
+                    //saving data for DB
+                    DB.SaveData.addNode(address, value);
+                }
                 else
                     MainDictionary[i + 1].ValidateVal("00");
             }
+            DB.SaveData.save();
+
         }
         /****************************************************************
          * This function is the event handler of the "details win". it called
@@ -162,7 +174,10 @@ namespace OpticFiberTest_ver1
             {
                 is_protocol = true;
             }
-
+            else if (SFFoptions.Text == "Choose protocol")  //if no protocol chosen 
+            {
+                is_protocol = false;
+            }
         }
         /****************************************************************
          * This function is the event handler of the "clear_btn" it called once
@@ -202,7 +217,7 @@ namespace OpticFiberTest_ver1
                 }
                 catch (Exception x)
                 {
-                    MessageBox.Show("Could not Connect to the i2c. The exception is:\n" + x.ToString());
+                    MessageBox.Show("Could not Connect to fiber \n please check fiber connections and try again");
                 }
 
 
@@ -308,6 +323,7 @@ namespace OpticFiberTest_ver1
             start_btn.Visible = false;
             excelButton.Visible = false;
             SFFoptions.Visible = false;
+            SFFoptions.Text = "Choose protocol";
             richTextBox1.Visible = false;
             richTextBox2.Visible = false;
             is_connected = false;
@@ -324,7 +340,7 @@ namespace OpticFiberTest_ver1
         private void ConnectedFunc()
         {
             is_connected = true;
-            MessageBox.Show("Connected. Choose 'Protocol' and Start the test.");
+            //MessageBox.Show("Connected. Choose 'Protocol' and Start the test.");
             Connect_btn.Text = "Disconnect";
             details_win.Visible = true;
             start_btn.Visible = true;
