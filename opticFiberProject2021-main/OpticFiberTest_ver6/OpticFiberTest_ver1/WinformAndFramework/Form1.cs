@@ -121,11 +121,11 @@ namespace OpticFiberTest_ver1
                 SFF8636 current = MainDictionary[i + 1];
                 byte address = current.GetAddress();
                 short size = current.GetSize();
-
+                int page = current.GetPage();
                 if (address > 0)
                 {
 
-                    string value = Data.I2cData.Geti2cDataSub(address, size);
+                    string value = Data.I2cData.Geti2cDataSub(address, size,page);
                     current.ValidateVal(value);
 
                     //saving data for DB

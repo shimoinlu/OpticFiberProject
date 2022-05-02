@@ -253,42 +253,42 @@
   </Byte>
   <Byte>
     <address>128</address>
-    <value>0F 00 23 00 00 70 00 00</value>
+    <value>00 7D FF D8 00 00 00 00</value>
   </Byte>
   <Byte>
     <address>132</address>
-    <value>00 70 00 00</value>
+    <value>00 00 00 00</value>
   </Byte>
   <Byte>
     <address>144</address>
-    <value>00 00 05 00 41 6D 70 68</value>
+    <value>FF FF 10 20 00 00 26 00</value>
   </Byte>
   <Byte>
     <address>148</address>
-    <value>41 6D 70 68</value>
+    <value>00 00 26 00</value>
   </Byte>
   <Byte>
     <address>176</address>
-    <value>20 20 20 20 20 20 20 20</value>
+    <value>FC 00 00 00 00 00 00 00</value>
   </Byte>
   <Byte>
     <address>180</address>
-    <value>20 20 20 20</value>
+    <value>00 00 00 00</value>
   </Byte>
   <Byte>
     <address>184</address>
-    <value>41 20 00 00 00 00 00 95</value>
+    <value>00 00 00 00 00 00 00 00</value>
   </Byte>
   <Byte>
     <address>188</address>
-    <value>00 00 00 95</value>
+    <value>00 00 00 00</value>
   </Byte>
   <Byte>
     <address>192</address>
-    <value>00 00 00 00 59 50 31 30</value>
+    <value>00 00 00 00 00 00 00 00</value>
   </Byte>
   <Byte>
     <address>196</address>
-    <value>59 50 31 30</value>
+    <value>00 00 00 00</value>
   </Byte>
 </body>
