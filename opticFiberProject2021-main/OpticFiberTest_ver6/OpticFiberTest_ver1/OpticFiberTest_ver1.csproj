@@ -161,6 +161,7 @@
     <Compile Include="Converstions\HexToAsc.cs" />
     <Compile Include="Converstions\HexToFloat.cs" />
     <Compile Include="Data\I2cData.cs" />
+    <Compile Include="DB\SaveXML.cs" />
     <Compile Include="Utility\Utilities.cs" />
     <Compile Include="Dictionary\Dictionaries.cs" />
     <Compile Include="Validations\TxBiasRange.cs" />
