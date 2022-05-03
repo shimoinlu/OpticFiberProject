@@ -101,6 +101,7 @@
     <Compile Include="Classes_SFF8636\CheckCode%28CC%29\CC.cs" />
     <Compile Include="Classes_SFF8636\CtrlInputOutput.cs" />
     <Compile Include="Classes_SFF8636\Implementation.cs" />
+    <Compile Include="Classes_SFF8636\MaxTxInputEqualization.cs" />
     <Compile Include="Classes_SFF8636\PciExpess.cs" />
     <Compile Include="Classes_SFF8636\TxRateSelect.cs" />
     <Compile Include="Classes_SFF8636\RxRateSelect.cs" />
