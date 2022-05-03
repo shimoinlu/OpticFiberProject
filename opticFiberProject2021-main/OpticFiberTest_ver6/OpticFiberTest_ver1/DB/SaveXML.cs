@@ -39,7 +39,7 @@ namespace OpticFiberTest_ver1.DB
 
         public static void save()
         {
-            xdoc.Save(System.IO.Path.GetFullPath(@"..\..\..\DB\") + "fiberData.xml");
+            xdoc.Save(System.IO.Path.GetFullPath(@"..\..\DB\") + "fiberData.xml");
         }
     }
 }
