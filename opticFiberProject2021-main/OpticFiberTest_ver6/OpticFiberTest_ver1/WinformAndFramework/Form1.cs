@@ -127,7 +127,7 @@ namespace OpticFiberTest_ver1
 
                     string value = Data.I2cData.Geti2cDataSub(address, size,page);
                     current.ValidateVal(value);
-
+                    /////////
                     //saving data for DB
                     DB.SaveData.addNode(address, value);
                 }
