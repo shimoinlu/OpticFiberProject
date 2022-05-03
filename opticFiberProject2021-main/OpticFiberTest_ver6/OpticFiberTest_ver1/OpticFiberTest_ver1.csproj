@@ -155,6 +155,7 @@
     <Compile Include="Classes_SFF8636\Vendor\VendorSpecific.cs" />
     <Compile Include="Classes_SFF8636\Lengths\WavelengthOrCopperCableAttenuation.cs" />
     <Compile Include="Classes_SFF8636\Lengths\WavelengthToleranceOrCopperCableAttenuation.cs" />
+    <Compile Include="Converstions\BitsFromByte.cs" />
     <Compile Include="Converstions\BitToStr.cs" />
     <Compile Include="Converstions\HexToBinary.cs" />
     <Compile Include="Converstions\LsbMsb.cs" />
