@@ -109,6 +109,10 @@ namespace OpticFiberTest_ver1
             MainDictionary.Add(73, new TxBiasWarRange());
             MainDictionary.Add(74, new TxPowerRange());
             MainDictionary.Add(75, new TxPowerWarRange());
+            MainDictionary.Add(76, new MaxTxInputEqualization());
+            MainDictionary.Add(77, new MaxRxOutputEmphasis());
+
+
         }
         /****************************************************************
         * This function reads all the data from I2cData class and validate

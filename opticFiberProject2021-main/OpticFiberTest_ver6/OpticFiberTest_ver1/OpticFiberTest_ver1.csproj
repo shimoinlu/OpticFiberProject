@@ -101,6 +101,7 @@
     <Compile Include="Classes_SFF8636\CheckCode%28CC%29\CC.cs" />
     <Compile Include="Classes_SFF8636\CtrlInputOutput.cs" />
     <Compile Include="Classes_SFF8636\Implementation.cs" />
+    <Compile Include="Classes_SFF8636\MaxTxInputEqualization.cs" />
     <Compile Include="Classes_SFF8636\PciExpess.cs" />
     <Compile Include="Classes_SFF8636\TxRateSelect.cs" />
     <Compile Include="Classes_SFF8636\RxRateSelect.cs" />
@@ -155,6 +156,7 @@
     <Compile Include="Classes_SFF8636\Vendor\VendorSpecific.cs" />
     <Compile Include="Classes_SFF8636\Lengths\WavelengthOrCopperCableAttenuation.cs" />
     <Compile Include="Classes_SFF8636\Lengths\WavelengthToleranceOrCopperCableAttenuation.cs" />
+    <Compile Include="Converstions\BitsFromByte.cs" />
     <Compile Include="Converstions\BitToStr.cs" />
     <Compile Include="Converstions\HexToBinary.cs" />
     <Compile Include="Converstions\LsbMsb.cs" />
@@ -162,6 +164,7 @@
     <Compile Include="Converstions\HexToFloat.cs" />
     <Compile Include="Data\I2cData.cs" />
     <Compile Include="DB\SaveXML.cs" />
+    <Compile Include="MaxRxOutputEmphasis.cs" />
     <Compile Include="Utility\Utilities.cs" />
     <Compile Include="Dictionary\Dictionaries.cs" />
     <Compile Include="Validations\TxBiasRange.cs" />
