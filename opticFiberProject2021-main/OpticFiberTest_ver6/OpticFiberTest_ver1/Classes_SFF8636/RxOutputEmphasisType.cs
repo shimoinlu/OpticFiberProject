@@ -9,14 +9,14 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
         {
             m_title = "Rx Output Emphasis Type";
             m_size = 1;
-            m_FirstBit = 5;
-            m_LastBit = 6;
+            m_FirstBit = 4;
+            m_LastBit = 5;
             m_address = 225;
             m_page = 3;
             dict1 = new Dictionary<string, string>() {
-                { "00", "=00b Peak-to-peak amplitude stays constant, or not/n/nimplemented, or no informationstays/nconstant, or not implemented, or no/ninformation/n" }, //7-2
+                { "00", "=00b Peak-to-peak amplitude stays constant, or not\n\timplemented, or no informationstays\n\tconstant, or not implemented, or no\n\tinformation\n\t" }, //7-2
                 { "11", "Reserved"}, //last bits is binary from here (00b 01b 10b 11b) we will use the decimal value
-                { "01", "Steady state amplitude stays constant stays/nconstant"},
+                { "01", "Steady state amplitude stays constant stays\n\tconstant"},
                 { "10", "Average of peak-to-peak and steady state amplitudes stays constant and steady state amplitudes stays constant"},
             };
         }
