@@ -61,6 +61,7 @@ namespace OpticFiberTest_ver1.Data
             if (!m_demoIsConnected)
             {
                 myDataLine = i2cReader.AAI2cEeprom.getData(0, 256); //REAL
+//                myDataLineP3 = i2cReader.AAI2cEeprom.getData(768, 768+100); //REAL
             }
             else
             {
