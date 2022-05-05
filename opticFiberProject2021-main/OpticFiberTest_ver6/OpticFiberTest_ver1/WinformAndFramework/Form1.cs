@@ -111,6 +111,8 @@ namespace OpticFiberTest_ver1
             MainDictionary.Add(75, new TxPowerWarRange());
             MainDictionary.Add(76, new MaxTxInputEqualization());
             MainDictionary.Add(77, new MaxRxOutputEmphasis());
+            MainDictionary.Add(78, new RxOutputEmphasisType());
+            MainDictionary.Add(79, new RxOutputEmphasisSupport());
 
 
         }
