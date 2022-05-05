@@ -9,8 +9,8 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
         {
             m_title = "Rx Output Emphasis Type";
             m_size = 1;
-            m_FirstBit = 5;
-            m_LastBit = 6;
+            m_FirstBit = 4;
+            m_LastBit = 5;
             m_address = 225;
             m_page = 3;
             dict1 = new Dictionary<string, string>() {
