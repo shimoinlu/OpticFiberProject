@@ -13,40 +13,38 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
             m_LastBit = 3;
             m_address = 225;
             m_page = 3;
-            dict = new Dictionary<int, string>[]() {
-                { 0, "=00b Peak-to-peak amplitude stays constant, or not\n\timplemented, or no informationstays\n\tconstant, or not implemented, or no\n\tinformation\n\t" }, //7-2
-                { 1, "Reserved"} //last bits is binary from here (00b 01b 10b 11b) we will use the decimal value
-            };
-            dict2 = new Dictionary<int, string>() {
-                { 0, "=00b Peak-to-peak amplitude stays constant, or not\n\timplemented, or no informationstays\n\tconstant, or not implemented, or no\n\tinformation\n\t" }, //7-2
-                { 1, "Reserved"} //last bits is binary from here (00b 01b 10b 11b) we will use the decimal value
-            };
-            dict3 = new Dictionary<int, string>() {
-                { 0, "=00b Peak-to-peak amplitude stays constant, or not\n\timplemented, or no informationstays\n\tconstant, or not implemented, or no\n\tinformation\n\t" }, //7-2
-                { 1, "Reserved"} //last bits is binary from here (00b 01b 10b 11b) we will use the decimal value
-            };
-            dict4 = new Dictionary<int, string>() {
-                { 0, "=00b Peak-to-peak amplitude stays constant, or not\n\timplemented, or no informationstays\n\tconstant, or not implemented, or no\n\tinformation\n\t" }, //7-2
-                { 1, "Reserved"} //last bits is binary from here (00b 01b 10b 11b) we will use the decimal value
-            };
+            m_dict = new Dictionary<uint, string>[4];
 
+            m_dict[0] = new Dictionary<uint, string>();
+            m_dict[0].Add(0, "\n\tAmplitude 0011 not supported or no \n\t informationsupported or no information");
+            m_dict[0].Add(1, "\n\tAmplitude 0011 supported");
+            m_dict[1] = new Dictionary<uint, string>();
+            m_dict[1].Add(0, "\n\tAmplitude 0010 not supported or no information \n\tsupported or no information");
+            m_dict[1].Add(1, "\n\tAmplitude 0010 supported");
+            m_dict[2] = new Dictionary<uint, string>();
+            m_dict[2].Add(0, "\n\tAmplitude 0001 not supported or no information \n\tsupported or no information");
+            m_dict[2].Add(1, "\n\tAmplitude 0001 supported");
+            m_dict[3] = new Dictionary<uint, string>();
+            m_dict[3].Add(0, "\n\tAmplitude 0000 not supported or no information \n\tsupported or no information");
+            m_dict[3].Add(1, "Amplitude 0000 supported");
         }
         /****************************************************************
         * This function is encoding, comparing and define the value according sff-8636
         ***************************************************************/
         public override void EncodeValue(string name)
         {
-            byte t = Convert.ToByte(name.Substring(0, 2), 16);
-            var r = Converstions.BitsFromByte.getStrBitAsUintFromByte(t, (int)m_FirstBit, (int)m_LastBit);
-            string hexid = $"{r:X2}";
+            byte b = Convert.ToByte(name.Substring(0, 2), 16);
+            uint bit;
+            for (uint i = m_FirstBit; i <= m_LastBit; ++i)
+            {
+                bit = Converstions.BitsFromByte.getStrBitAsUintFromByte(b, (int)i, (int)i);
+                m_storedValue += m_dict[i][bit];
+            }
         }
 
         private uint m_FirstBit;
         private uint m_LastBit;
-        private Dictionary<int, string>[] dict;  //the Dictionary of the ExtIdentifier
-        private Dictionary<int, string> dict2;  //the Dictionary of the ExtIdentifier
-        private Dictionary<int, string> dict3;  //the Dictionary of the ExtIdentifier
-        private Dictionary<int, string> dict4;  //the Dictionary of the ExtIdentifier
+        private Dictionary<uint, string>[] m_dict;  //the Dictionary of the ExtIdentifier
 
     }
 
