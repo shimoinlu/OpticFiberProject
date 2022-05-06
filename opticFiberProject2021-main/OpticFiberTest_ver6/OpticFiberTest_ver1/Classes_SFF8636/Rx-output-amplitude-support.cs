@@ -16,17 +16,17 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
             m_dict = new Dictionary<uint, string>[4];
 
             m_dict[0] = new Dictionary<uint, string>();
-            m_dict[0].Add(0, "\n\tAmplitude 0011 not supported or no \n\t informationsupported or no information");
-            m_dict[0].Add(1, "\n\tAmplitude 0011 supported");
+            m_dict[0].Add(0, "\n\tAmplitude 0011 not supported or no \n\t informationsupported or no information\n");
+            m_dict[0].Add(1, "\n\tAmplitude 0011 supported\n");
             m_dict[1] = new Dictionary<uint, string>();
-            m_dict[1].Add(0, "\n\tAmplitude 0010 not supported or no information \n\tsupported or no information");
-            m_dict[1].Add(1, "\n\tAmplitude 0010 supported");
+            m_dict[1].Add(0, "\n\tAmplitude 0010 not supported or no information \n\tsupported or no information\n");
+            m_dict[1].Add(1, "\n\tAmplitude 0010 supported\n");
             m_dict[2] = new Dictionary<uint, string>();
-            m_dict[2].Add(0, "\n\tAmplitude 0001 not supported or no information \n\tsupported or no information");
-            m_dict[2].Add(1, "\n\tAmplitude 0001 supported");
+            m_dict[2].Add(0, "\n\tAmplitude 0001 not supported or no information \n\tsupported or no information\n");
+            m_dict[2].Add(1, "\n\tAmplitude 0001 supported\n");
             m_dict[3] = new Dictionary<uint, string>();
-            m_dict[3].Add(0, "\n\tAmplitude 0000 not supported or no information \n\tsupported or no information");
-            m_dict[3].Add(1, "Amplitude 0000 supported");
+            m_dict[3].Add(0, "\n\tAmplitude 0000 not supported or no information \n\tsupported or no information\n");
+            m_dict[3].Add(1, "Amplitude 0000 supported\n");
         }
         /****************************************************************
         * This function is encoding, comparing and define the value according sff-8636

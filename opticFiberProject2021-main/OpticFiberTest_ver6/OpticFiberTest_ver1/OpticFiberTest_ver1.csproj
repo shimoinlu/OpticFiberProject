@@ -170,6 +170,7 @@
     <Compile Include="DB\SaveXML.cs" />
     <Compile Include="MaxRxOutputEmphasis.cs" />
     <Compile Include="RxLOSLFastMode.cs" />
+    <Compile Include="TxDisFastModeSupport.cs" />
     <Compile Include="TxForceSquelchImplemented.cs" />
     <Compile Include="Utility\Utilities.cs" />
     <Compile Include="Dictionary\Dictionaries.cs" />
