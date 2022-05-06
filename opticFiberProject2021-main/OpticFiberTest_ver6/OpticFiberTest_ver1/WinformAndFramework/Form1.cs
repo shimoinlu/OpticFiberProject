@@ -114,6 +114,7 @@ namespace OpticFiberTest_ver1
             MainDictionary.Add(78, new RxOutputEmphasisType());
             MainDictionary.Add(79, new RxOutputEmphasisSupport());
             MainDictionary.Add(80, new ControllableHostSideFEC_Support());
+            MainDictionary.Add(81, new ControllableMediaSideFEC_Support());
 
 
         }
