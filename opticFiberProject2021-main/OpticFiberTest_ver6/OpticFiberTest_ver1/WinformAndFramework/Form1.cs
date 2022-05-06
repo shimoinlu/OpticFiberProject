@@ -117,6 +117,7 @@ namespace OpticFiberTest_ver1
             MainDictionary.Add(81, new ControllableMediaSideFEC_Support());
             MainDictionary.Add(82, new TxForceSquelchImplemented());
             MainDictionary.Add(83, new RxLOSLFastMode());
+            MainDictionary.Add(84, new TxDisFastModeSupport());
 
 
         }
