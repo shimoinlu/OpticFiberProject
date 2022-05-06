@@ -99,6 +99,7 @@
     <Compile Include="Classes_SFF8636\Channel Monitoring Values\Rx.cs" />
     <Compile Include="Classes_SFF8636\Channel Status Interrupt Flags\InterruptFlags1.cs" />
     <Compile Include="Classes_SFF8636\CheckCode%28CC%29\CC.cs" />
+    <Compile Include="Classes_SFF8636\ControllableMediaSideFEC_Support.cs" />
     <Compile Include="Classes_SFF8636\CtrlInputOutput.cs" />
     <Compile Include="Classes_SFF8636\Implementation.cs" />
     <Compile Include="Classes_SFF8636\MaxTxInputEqualization.cs" />
