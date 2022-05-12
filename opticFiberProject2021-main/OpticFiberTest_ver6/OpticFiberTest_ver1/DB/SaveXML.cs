@@ -40,11 +40,9 @@ namespace OpticFiberTest_ver1.DB
         }
 
         public static void save()
-        {
+        {            
             Stream myStream;
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-
-            //lets see if you find it
 
             saveFileDialog1.Filter = "xml files (*.xml)|*.xml";
             saveFileDialog1.FilterIndex = 2;
@@ -54,7 +52,7 @@ namespace OpticFiberTest_ver1.DB
             {
                 if ((myStream = saveFileDialog1.OpenFile()) != null)
                 {
-                    // Code to write the stream goes here.
+                    xdoc.Save(myStream);
                     myStream.Close();
                 }
             }
