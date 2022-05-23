@@ -104,7 +104,8 @@
     <Compile Include="Classes_SFF8636\Implementation.cs" />
     <Compile Include="Classes_SFF8636\MaxTxInputEqualization.cs" />
     <Compile Include="Classes_SFF8636\PciExpess.cs" />
-    <Compile Include="Classes_SFF8636\Rx-output-amplitude-support.cs" />
+    <Compile Include="Classes_SFF8636\RxOutputAmplitude\RxOutputAmplitudeControl.cs" />
+    <Compile Include="Classes_SFF8636\RxOutputAmplitude\RxOutputAmplitudeSupport.cs" />
     <Compile Include="Classes_SFF8636\RxOutputEmphasisType.cs" />
     <Compile Include="Classes_SFF8636\RxOutputEmphasis\RxOutputEmphasisControl.cs" />
     <Compile Include="Classes_SFF8636\TxInputEqualizerControl\TxInputEqualizerControl.cs" />
