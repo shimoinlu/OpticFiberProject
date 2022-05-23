@@ -106,6 +106,7 @@
     <Compile Include="Classes_SFF8636\PciExpess.cs" />
     <Compile Include="Classes_SFF8636\Rx-output-amplitude-support.cs" />
     <Compile Include="Classes_SFF8636\RxOutputEmphasisType.cs" />
+    <Compile Include="Classes_SFF8636\RxOutputEmphasis\RxOutputEmphasisControl.cs" />
     <Compile Include="Classes_SFF8636\TxRateSelect.cs" />
     <Compile Include="Classes_SFF8636\RxRateSelect.cs" />
     <Compile Include="Classes_SFF8636\Control Function Bytes\Tx1Disable.cs" />
@@ -169,7 +170,7 @@
     <Compile Include="Data\I2cData.cs" />
     <Compile Include="DB\SaveXML.cs" />
     <Compile Include="MaximumTCstabilizationTime .cs" />
-    <Compile Include="MaxRxOutputEmphasis.cs" />
+    <Compile Include="Classes_SFF8636\RxOutputEmphasis\MaxRxOutputEmphasis.cs" />
     <Compile Include="RxLOSLFastMode.cs" />
     <Compile Include="TxDisFastModeSupport.cs" />
     <Compile Include="TxForceSquelchImplemented.cs" />
