@@ -200,3 +200,9 @@ C:\Users\rache\Desktop\Arigo project\OpticFiberProject\opticFiberProject2021-mai
 C:\Users\rache\Desktop\Arigo project\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\x64\Debug\OpticFiberTest_ver1.csproj.CoreCompileInputs.cache
 C:\Users\rache\Desktop\Arigo project\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\x64\Debug\OpticFiberTest_ver1.exe
 C:\Users\rache\Desktop\Arigo project\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\x64\Debug\OpticFiberTest_ver1.pdb
+C:\Users\rache\Desktop\Arigo project\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\x64\Debug\EntityFramework.dll
+C:\Users\rache\Desktop\Arigo project\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\x64\Debug\System.Data.SQLite.dll
+C:\Users\rache\Desktop\Arigo project\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\x64\Debug\System.Data.SQLite.EF6.dll
+C:\Users\rache\Desktop\Arigo project\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\x64\Debug\System.Data.SQLite.Linq.dll
+C:\Users\rache\Desktop\Arigo project\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\x64\Debug\EntityFramework.xml
+C:\Users\rache\Desktop\Arigo project\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\x64\Debug\System.Data.SQLite.xml
