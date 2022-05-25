@@ -29,6 +29,7 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
         {
             m_storedValue = "Max is: " + Convert.ToString(m_Max);
         }
+        public uint GetMax() { return m_Max; }
         private int m_FirstIndex;
         private int m_LastIndex;
         private uint m_Max;

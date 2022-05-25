@@ -116,13 +116,25 @@ namespace OpticFiberTest_ver1
             MainDictionary.Add(76, new MaxTxInputEqualization());
             MainDictionary.Add(77, new MaxRxOutputEmphasis());
             MainDictionary.Add(78, new RxOutputEmphasisType());
-            MainDictionary.Add(79, new RxOutputEmphasisSupport());
+            MainDictionary.Add(79, new RxOutputAmplitudeSupport());
             MainDictionary.Add(80, new ControllableHostSideFEC_Support());
             MainDictionary.Add(81, new ControllableMediaSideFEC_Support());
             MainDictionary.Add(82, new TxForceSquelchImplemented());
             MainDictionary.Add(83, new RxLOSLFastMode());
             MainDictionary.Add(84, new TxDisFastModeSupport());
             MainDictionary.Add(85, new MaximumTCstabilizationTime());
+            MainDictionary.Add(86, new TxInputEqualizerControl(1, 234, 4, 7));
+            MainDictionary.Add(87, new TxInputEqualizerControl(2, 234, 0, 3));
+            MainDictionary.Add(88, new TxInputEqualizerControl(3, 235, 4, 7));
+            MainDictionary.Add(89, new TxInputEqualizerControl(4, 235, 0, 3));
+            MainDictionary.Add(90, new RxOutputEmphasisControl(1,236,4,7));
+            MainDictionary.Add(91, new RxOutputEmphasisControl(2,236,0,3));
+            MainDictionary.Add(92, new RxOutputEmphasisControl(3,237,4,7));
+            MainDictionary.Add(93, new RxOutputEmphasisControl(4,237,0,3));
+            MainDictionary.Add(94, new RxOutputAmplitudeControl(1,238,4,7));
+            MainDictionary.Add(95, new RxOutputAmplitudeControl(2,238,0,3));
+            MainDictionary.Add(96, new RxOutputAmplitudeControl(3,239,4,7));
+            MainDictionary.Add(97, new RxOutputAmplitudeControl(4,239,0,3));
 
 
         }
