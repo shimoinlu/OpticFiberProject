@@ -4,6 +4,12 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
+using System.Text;
+using System.Threading.Tasks;
+using System.Xml;
+using System.Xml.Serialization;
+using System.Xml.Linq;
+using System.IO;
 
 
 //******************ClassesNamespaceSFF8636**********************//
@@ -19,8 +25,6 @@ namespace OpticFiberTest_ver1
             is_protocol = false,    //is_protocol will answer about if protocol has been choosen
             is_init = false,        //to build dictionary only once
             is_connected = false;
-
-
 
         public OpticFiberTest()
         {
@@ -148,18 +152,12 @@ namespace OpticFiberTest_ver1
                 int page = current.GetPage();
                 if (address > 0)
                 {
-
-                    string value = Data.I2cData.Geti2cDataSub(address, size,page);
+                    string value = Data.I2cData.Geti2cDataSub(address, size, page);
                     current.ValidateVal(value);
-
-                    //saving data for DB
-                    DB.SaveData.addNode(address, value);
                 }
                 else
                     MainDictionary[i + 1].ValidateVal("00");
             }
-            DB.SaveData.save();
-
         }
         /****************************************************************
          * This function is the event handler of the "details win". it called
@@ -198,7 +196,7 @@ namespace OpticFiberTest_ver1
             {
                 is_protocol = true;
             }
-            else if (SFFoptions.Text == "Choose protocol")  //if no protocol chosen 
+            else if (SFFoptions.Text == "Select protocol")  //if no protocol chosen 
             {
                 is_protocol = false;
             }
@@ -210,7 +208,7 @@ namespace OpticFiberTest_ver1
         private void clear_btn_Click(object sender, EventArgs e)
         {
           
-            excelButton.Visible = false;
+            excel_btn.Visible = false;
 
             if (is_clear)
             {
@@ -249,7 +247,7 @@ namespace OpticFiberTest_ver1
             else
             {
 
-                Connect_btn.Text = "Connect";
+                Connect_btn.Text = "Connect To Fiber";
                 DisConnectedFunc();
             }
         }
@@ -289,7 +287,10 @@ namespace OpticFiberTest_ver1
 ***************************************************************/
         private void start_btn_Click(object sender, EventArgs e)
         {
-            excelButton.Visible = true;
+            excel_btn.Visible = true;
+            XML_btn.Visible = true;
+            DB_btn.Visible = true;
+
             if (!is_clear)
             {
                 MessageBox.Show("To run a new Test, Make sure you clear the board first.\nTo clear the board, just use 'Clear' button.");
@@ -325,7 +326,7 @@ namespace OpticFiberTest_ver1
             }
             else
             {
-                MessageBox.Show("Please choose Protocol."); //well.. else, we cant proceed.
+                MessageBox.Show("Please select protocol."); //well.. else, we cant proceed.
             }
         }
         private void realTimeData(object sender, EventArgs e)
@@ -343,13 +344,13 @@ namespace OpticFiberTest_ver1
             timer1.Stop();
             is_connected = false;
             MessageBox.Show("Disconnected. Connect to run more tests.");
-            Connect_btn.Text = "Connect";
+            Connect_btn.Text = "Connect To Fiber";
             start_btn.Visible = false;
-            excelButton.Visible = false;
+            excel_btn.Visible = false;
             SFFoptions.Visible = false;
-            SFFoptions.Text = "Choose protocol";
-            richTextBox1.Visible = false;
-            richTextBox2.Visible = false;
+            SFFoptions.Text = "Select protocol";
+            Temperature_text_box.Visible = false;
+            Voltage_text_box.Visible = false;
             is_connected = false;
 
             Data.I2cData.disConnectToDemo();
@@ -365,28 +366,22 @@ namespace OpticFiberTest_ver1
         {
             is_connected = true;
             //MessageBox.Show("Connected. Choose 'Protocol' and Start the test.");
-            Connect_btn.Text = "Disconnect";
-            details_win.Visible = true;
+            if (Data.I2cData.demoIsConnected()) {
+                Demo_btn.Text = "disconnect";}
+            else{ 
+                Connect_btn.Text = "disconnect"; }
+            //details_win.Visible = true;
             start_btn.Visible = true;
             clear_btn.Visible = true;
             SFFoptions.Visible = true;
-            richTextBox1.Visible = true;
-            richTextBox2.Visible = true;
+            Temperature_text_box.Visible = true;
+            Voltage_text_box.Visible = true;
 
         }
 
 
         private Timer timer1;
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         public void InitTimer(EventHandler fun)
         {
@@ -396,46 +391,22 @@ namespace OpticFiberTest_ver1
             timer1.Start();
 
         }
-        private void WriteToExcel()
-        {
-
-        }
-
-        private void richTextBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void progressBar1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void progressBar1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
             float temp = Data.I2cData.getTemp();
 
             Temperature t = new Temperature();
-            richTextBox1.ForeColor = System.Drawing.Color.Green;
+            Temperature_text_box.ForeColor = System.Drawing.Color.Green;
             if (temp < t.getMin() || temp > t.getMax())
             {
-                richTextBox1.ForeColor = System.Drawing.Color.Red;
+                Temperature_text_box.ForeColor = System.Drawing.Color.Red;
 
             }
-            string tempStr = "Temperature: " + Convert.ToString(temp) + " °C";
+            string tempStr = Convert.ToString(temp) + " °C";
 
 
-            richTextBox1.Text = tempStr;
+            Temperature_text_box.Text = tempStr;
 
         }
 
@@ -445,10 +416,10 @@ namespace OpticFiberTest_ver1
             SupplyVoltage t = new SupplyVoltage();
             if (temp < t.getMin() || temp > t.getMax())
             {
-                richTextBox2.ForeColor = System.Drawing.Color.Red;
+                Voltage_text_box.ForeColor = System.Drawing.Color.Red;
 
             }
-            richTextBox2.Text = "VCC: " + Data.I2cData.getVol().ToString() + " V";
+            Voltage_text_box.Text = Data.I2cData.getVol().ToString() + " V";
         }
 
 
@@ -462,8 +433,8 @@ namespace OpticFiberTest_ver1
             DialogResult result = folderBrowserDialog1.ShowDialog();
             if (result == DialogResult.OK)
             {
-                progressBar1.Maximum = 200;
-                progressBar1.Visible = true;
+                saving_progress_bar.Maximum = 200;
+                saving_progress_bar.Visible = true;
 
                 string folderName = folderBrowserDialog1.SelectedPath;
 
@@ -477,7 +448,6 @@ namespace OpticFiberTest_ver1
                 xlWorkBook = xlApp.Workbooks.Add(misValue);
                 xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
 
-
                 xlWorkSheet.Cells[1, 1] = "Byte";
                 xlWorkSheet.Cells[1, 2] = "Name";
                 xlWorkSheet.Cells[1, 3] = "Data";
@@ -485,14 +455,12 @@ namespace OpticFiberTest_ver1
                 xlWorkSheet.Cells[1, 5] = "PageId";
                 xlWorkSheet.Cells[1, 6] = "testPassed";
 
-
-
                 int row = 2;
-                progressBar1.Visible = true;
+                saving_progress_bar.Visible = true;
                 for (int i = 0; i < MainDictionary.Keys.Count(); i++)
                 {
                     int col = 1;
-                    progressBar1.Value = i * progressBar1.Maximum / (MainDictionary.Keys.Count() - 1);
+                    saving_progress_bar.Value = i * saving_progress_bar.Maximum / (MainDictionary.Keys.Count() - 1);
 
                     xlWorkSheet.Cells[row, col++].Value = MainDictionary[i + 1].GetAddress();
                     xlWorkSheet.Cells[row, col++].Value = MainDictionary[i + 1].GetTitle();
@@ -500,36 +468,116 @@ namespace OpticFiberTest_ver1
                     xlWorkSheet.Cells[row, col++].Value = "sff_8636";
                     xlWorkSheet.Cells[row, col++].Value = "page_0";
 
-                    if (MainDictionary[i + 1].getColor() == "Green")
-                    {
-                        xlWorkSheet.Cells[row, col].Value = "Passed";
-                    }
-                    else
-                    {
-                        xlWorkSheet.Cells[row, col].Value = "Test Failed";
-                    }
-
-
+                    if (MainDictionary[i + 1].getColor() == "Green") {
+                        xlWorkSheet.Cells[row, col].Value = "Passed"; }
+                    else {
+                        xlWorkSheet.Cells[row, col].Value = "Test Failed";}
                     row++;
                 }
-                progressBar1.Visible = false;
+
+                saving_progress_bar.Visible = false;
+
                 try
                 {
                     xlWorkBook.SaveAs(folderName + "\\" + file_to_save, Excel.XlFileFormat.xlWorkbookNormal, misValue, misValue, misValue, misValue, Excel.XlSaveAsAccessMode.xlNoChange, misValue, misValue, misValue, misValue, misValue);
                 }
                 catch
                 {
-                    progressBar1.Visible = false;
+                    saving_progress_bar.Visible = false;
                     MessageBox.Show("The file is not saved");
                     return;
                 }
                 xlWorkBook.Close(true, misValue, misValue);
                 xlApp.Quit();
-                progressBar1.Visible = false;
-                MessageBox.Show("Excel file created , you can find the file " + folderName + "\\" + file_to_save);
+
+                saving_progress_bar.Visible = false;
+                //MessageBox.Show("Excel file created , you can find the file " + folderName + "\\" + file_to_save);
 
             }
 
         }
+
+        private void XML_btn_Click(object sender, EventArgs e)
+        {
+            Stream myStream;
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+
+            saveFileDialog1.Filter = "xml files (*.xml)|*.xml";
+            saveFileDialog1.FilterIndex = 2;
+            saveFileDialog1.RestoreDirectory = true;
+
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                if ((myStream = saveFileDialog1.OpenFile()) != null)
+                {
+                    XmlDocument xdoc;
+                    XmlElement rootElement;
+
+                    xdoc = new XmlDocument();
+                    rootElement = xdoc.CreateElement("body");
+                    xdoc.AppendChild(rootElement);
+
+                    saving_progress_bar.Maximum = 200;
+                    saving_progress_bar.Visible = true;
+
+                    for (int i = 0; i < MainDictionary.Keys.Count(); i++)
+                    {
+                        saving_progress_bar.Value = i * saving_progress_bar.Maximum / (MainDictionary.Keys.Count() - 1);
+
+                        XmlNode field = xdoc.CreateElement("Field");//represent one field in protocol
+
+                        XmlNode Byte = xdoc.CreateElement("Byte");
+                        Byte.InnerText = MainDictionary[i + 1].GetAddress().ToString(); //????? i added the toString() need to check
+                        field.AppendChild(Byte);
+
+                        XmlNode Name = xdoc.CreateElement("Name");
+                        Name.InnerText = MainDictionary[i + 1].GetTitle();
+                        field.AppendChild(Name);
+
+                        XmlNode Date = xdoc.CreateElement("Date");
+                        Date.InnerText = MainDictionary[i + 1].GethasRead();
+                        field.AppendChild(Date);
+
+                        XmlNode ID = xdoc.CreateElement("ID");
+                        ID.InnerText = "sff_8636";
+                        field.AppendChild(ID);
+
+                        XmlNode pageNum = xdoc.CreateElement("pageNum");
+                        pageNum.InnerText = "page 0";      ////////should be changed to current page
+                        field.AppendChild(pageNum);
+
+                        XmlNode test_status = xdoc.CreateElement("status");
+                        if (MainDictionary[i + 1].getColor() == "Green") { test_status.InnerText = "Test Passed"; }
+                        else { test_status.InnerText = "Test Failed"; }
+                        field.AppendChild(test_status);
+
+                        rootElement.AppendChild(field);
+                    }
+
+                    xdoc.Save(myStream);
+                    myStream.Close();
+                }
+            }
+
+            saving_progress_bar.Visible = false;
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e) { }
+        private void textBox1_TextChanged(object sender, EventArgs e) { }
+        private void WriteToExcel() { }
+        private void richTextBox3_TextChanged(object sender, EventArgs e) { }
+        private void progressBar1_Click(object sender, EventArgs e) { }
+        private void progressBar1_Click_1(object sender, EventArgs e) { }
+
+        private void DB_btn_Click(object sender, EventArgs e)
+        {
+            //connection to DB string
+            string str = SaveData.SaveDB.connect(MainDictionary);
+            MessageBox.Show(str);
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e) { }
+        private void label1_Click(object sender, EventArgs e) { }
+        private void voltage_label_Click(object sender, EventArgs e) { }
     }
 }
