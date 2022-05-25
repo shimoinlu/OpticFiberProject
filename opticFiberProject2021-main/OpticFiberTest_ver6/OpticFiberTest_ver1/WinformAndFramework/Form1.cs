@@ -121,27 +121,19 @@ namespace OpticFiberTest_ver1
             MainDictionary.Add(81, new RxOutputEmphasisType());
             MainDictionary.Add(82, new RxOutputAmplitudeSupport());
             MainDictionary.Add(83, new ReservedBytes(226,1));
-//////////////////////////////////////////////////////////////
             MainDictionary.Add(84, new ControllableHostSideFEC_Support());
             MainDictionary.Add(85, new ControllableMediaSideFEC_Support());
             MainDictionary.Add(86, new ReservedBits(227, 4,5));
             MainDictionary.Add(87, new ReservedBits(225, 6, 7));
-
             MainDictionary.Add(88, new TxForceSquelchImplemented());
             MainDictionary.Add(89, new RxLOSLFastMode());
             MainDictionary.Add(90, new TxDisFastModeSupport());
             MainDictionary.Add(91, new ReservedBits(227, 0, 0));
-/////////////////////////////////////////////////
-
             MainDictionary.Add(92, new MaximumTCstabilizationTime());
             MainDictionary.Add(93, new ReservedBits(230, 0, 5));
             MainDictionary.Add(94, new ReservedBits(231, 4, 7));
             MainDictionary.Add(95, new ReservedBytes(232,1));
             MainDictionary.Add(96, new ReservedBits(233, 4, 7));
-
-
-
-
             MainDictionary.Add(97, new TxInputEqualizerControl(1, 234, 4, 7));
             MainDictionary.Add(98, new TxInputEqualizerControl(2, 234, 0, 3));
             MainDictionary.Add(99, new TxInputEqualizerControl(3, 235, 4, 7));
@@ -154,8 +146,6 @@ namespace OpticFiberTest_ver1
             MainDictionary.Add(106, new RxOutputAmplitudeControl(2, 238, 0, 3));
             MainDictionary.Add(107, new RxOutputAmplitudeControl(3, 239, 4, 7));
             MainDictionary.Add(108, new RxOutputAmplitudeControl(4, 239, 0, 3));
-
-
         }
         /****************************************************************
         * This function reads all the data from I2cData class and validate
