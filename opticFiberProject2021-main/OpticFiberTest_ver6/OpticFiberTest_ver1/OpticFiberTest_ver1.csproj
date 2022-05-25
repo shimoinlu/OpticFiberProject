@@ -117,6 +117,7 @@
     <Compile Include="Classes_SFF8636\Implementation.cs" />
     <Compile Include="Classes_SFF8636\MaxTxInputEqualization.cs" />
     <Compile Include="Classes_SFF8636\PciExpess.cs" />
+    <Compile Include="Classes_SFF8636\Reserved Bytes\ReservedBits.cs" />
     <Compile Include="Classes_SFF8636\Reserved Bytes\ReservedBytes.cs" />
     <Compile Include="Classes_SFF8636\RxOutputAmplitude\RxOutputAmplitudeControl.cs" />
     <Compile Include="Classes_SFF8636\RxOutputAmplitude\RxOutputAmplitudeSupport.cs" />

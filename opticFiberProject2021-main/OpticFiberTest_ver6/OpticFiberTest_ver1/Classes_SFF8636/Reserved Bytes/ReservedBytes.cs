@@ -35,7 +35,10 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
             }
             if (Exception)
                 throw new Exception();
+            else
+                m_storedValue += "\n\tall bytes in " + m_address.ToString() + " - " + (m_address + m_size-1).ToString() + "is reserved\n";
         }
+
     }
 }
 
