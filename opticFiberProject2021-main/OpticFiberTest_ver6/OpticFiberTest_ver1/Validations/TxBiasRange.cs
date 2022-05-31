@@ -7,7 +7,7 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
     {
         public TxBiasRange()
         {
-            m_title = "Tx BIAS RANGE\nERR VALIDATION";
+            m_title = "Tx BIAS RANGE ERR VALIDATION";
             m_size = 8;
             m_address = 184;
             m_page = 3;

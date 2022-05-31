@@ -10,7 +10,7 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
 
         public TempWarRange()
         {
-            m_title = "TEMPERATURE_RANGE_WAR_VALIDATION";
+            m_title = "TEMPERATURE RANGE WAR VALIDATION";
             m_size = 4;
             m_address = 132;
             m_page = 3;
