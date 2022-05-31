@@ -23,7 +23,7 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
         {
             if (Min > Max)
             {
-                m_storedValue += "Min > Max\n";
+                m_storedValue += "\tMin > Max\n";
                 throw new Exception();
             }
 

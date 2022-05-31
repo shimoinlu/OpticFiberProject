@@ -10,7 +10,7 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
 
         public TempRange()
         {
-            m_title = "TEMPERATURE_RANGE_ERR_VALIDATION";
+            m_title = "TEMPERATURE RANGE ERR VALIDATION";
             m_size = 8;
             m_address = 128;
             m_page = 3;
