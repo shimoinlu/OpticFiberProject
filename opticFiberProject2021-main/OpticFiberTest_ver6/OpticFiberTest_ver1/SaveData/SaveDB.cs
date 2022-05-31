@@ -44,7 +44,7 @@ string createTableQuery = @"CREATE TABLE IF NOT EXISTS [test_results] (
                         string Byte = MainDictionary[i + 1].GetTitle();
                         string Name = MainDictionary[i + 1].GethasRead();
                         string Date = "sff_8636";
-                        string PageNum = "page_0";
+                        string PageNum = MainDictionary[i + 1].GetPage().ToString();
                         string Status;
                         if (MainDictionary[i + 1].getColor() == "Green")
                         {

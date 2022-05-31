@@ -475,7 +475,7 @@ namespace OpticFiberTest_ver1
                     xlWorkSheet.Cells[row, col++].Value = MainDictionary[i + 1].GetTitle();
                     xlWorkSheet.Cells[row, col++].Value = MainDictionary[i + 1].GethasRead();
                     xlWorkSheet.Cells[row, col++].Value = "sff_8636";
-                    xlWorkSheet.Cells[row, col++].Value = "page_0";
+                    xlWorkSheet.Cells[row, col++].Value = MainDictionary[i + 1].GetPage().ToString();
 
                     if (MainDictionary[i + 1].getColor() == "Green") {
                         xlWorkSheet.Cells[row, col].Value = "Passed"; }
@@ -552,7 +552,7 @@ namespace OpticFiberTest_ver1
                         field.AppendChild(ID);
 
                         XmlNode pageNum = xdoc.CreateElement("pageNum");
-                        pageNum.InnerText = "page 0";      ////////should be changed to current page
+                        pageNum.InnerText = MainDictionary[i + 1].GetPage().ToString();      ////////should be changed to current page
                         field.AppendChild(pageNum);
 
                         XmlNode test_status = xdoc.CreateElement("status");
