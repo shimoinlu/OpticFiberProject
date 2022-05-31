@@ -50,7 +50,10 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
 
         public string GethasRead()
         {
-            return m_storedValue;
+            if (m_storedValue != "")
+                return m_storedValue;
+            else
+                return "value not exist";
         }   //GethasRead will return the value that we read
         public void SethasRead(string x)
         {
