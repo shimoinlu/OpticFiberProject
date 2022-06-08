@@ -124,30 +124,35 @@ namespace i2cReader
 
 
             handle = AardvarkApi.aa_open(PORT);
-                
-     //       if (handle < 0)
-      //          throw new Exception();
+
+            //       if (handle < 0)
+            //          throw new Exception();
 
 
             //only for now until the module is replaced
-           if (pageNumber != 0)
-           {
-                AardvarkApi.aa_close(handle);
-                return Convert.ToByte(I2C.I2cData.getPage3Input(address), 16);
-                
-            }
-                
+            //if (pageNumber != 0)
+            //{
+            //     AardvarkApi.aa_close(handle);
+            //     return Convert.ToByte(I2C.I2cData.getPage3Input(address), 16);
+
+            // }
+
+            //if (pageNumber == 3)
+            //    address = 0;
 
             byte[] dataOut = { address };
             byte[] dataIn = new byte[1];
             byte[] page_select = { PAGE_SELECTOR, pageNumber};
 
             // Write the address
-            AardvarkApi.aa_i2c_write(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_FLAGS, (ushort)2, page_select);
+            //tmprary
 
-            AardvarkApi.aa_i2c_write(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_STOP, (ushort)1, dataOut);
+            int a, b, c;
+            a= AardvarkApi.aa_i2c_write(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_FLAGS, (ushort)2, page_select);
 
-            AardvarkApi.aa_i2c_read(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_FLAGS, (ushort)1, dataIn);
+            b = AardvarkApi.aa_i2c_write(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_STOP, (ushort)1, dataOut);
+
+            c = AardvarkApi.aa_i2c_read(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_FLAGS, (ushort)1, dataIn);
 
             AardvarkApi.aa_close(handle);
 
