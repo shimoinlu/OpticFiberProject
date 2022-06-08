@@ -302,3 +302,8 @@ C:\Users\aharont\Documents\OpticFiberProject\opticFiberProject2021-main\OpticFib
 C:\Users\aharont\Documents\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.csproj.CoreCompileInputs.cache
 C:\Users\aharont\Documents\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.exe
 C:\Users\aharont\Documents\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.pdb
+C:\Users\aharont\Documents\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\System.Data.SQLite.dll
+C:\Users\aharont\Documents\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\aharont\Documents\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\aharont\Documents\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\Debug\System.Data.SQLite.xml
+C:\Users\aharont\Documents\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\Debug\OpticFiberTest_ver1.csproj.CopyComplete

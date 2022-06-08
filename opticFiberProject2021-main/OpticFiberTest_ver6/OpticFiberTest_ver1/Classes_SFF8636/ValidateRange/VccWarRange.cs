@@ -10,7 +10,7 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
 
         public SupplyVoltageWarRange()
         {
-            m_title = "SUPPLY_VOLTAGE_RANGE_WAR_VALIDATION";
+            m_title = "SUPPLY VOLTAGE RANGE WAR VALIDATION";
             m_size = 4;
             m_address = 148;
             m_page = 3;
