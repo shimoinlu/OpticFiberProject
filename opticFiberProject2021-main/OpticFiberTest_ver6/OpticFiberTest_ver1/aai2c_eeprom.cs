@@ -5,6 +5,7 @@
  ========================================================================*/
 
 using System;
+using System.Diagnostics;
 using TotalPhase;
 using I2C = OpticFiberTest_ver1.Data;
 
@@ -18,23 +19,55 @@ namespace i2cReader
         public const int PAGE_SIZE = 8;
         public const int BUS_TIMEOUT = 150;  // ms
         public const int PORT = 0;
-        public const byte DEVICE = 80;
-        public const byte PAGE_SELECTOR = 127;
+        public const byte DEVICE = 0x50;
+        public const byte PAGE_SELECTOR = 0x7F;
         private static bool is_open = false;
 
 
         //this function read from the memory in a spesific address 
-        static string _readMemory(int handle, byte device, byte addr, short length)
+        static string _readMemory(int handle, byte device, byte addr, short length,int page)
         {
             int count, i;
             byte[] dataOut = { addr };
             byte[] dataIn = new byte[length];
-            int[] data = new int[length];
+            byte p = (byte)page;
+            byte[] page_select = { PAGE_SELECTOR, (byte)page };
 
             // Write the address
-            AardvarkApi.aa_i2c_write(handle, device, AardvarkI2cFlags.AA_I2C_NO_STOP, (ushort)1, dataOut);
+            //tmprary
 
-            count = AardvarkApi.aa_i2c_read(handle, device, AardvarkI2cFlags.AA_I2C_NO_FLAGS, (ushort)length, dataIn);
+            int a, b, c;
+            a = AardvarkApi.aa_i2c_write(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_FLAGS, (ushort)1, page_select);
+
+            b = AardvarkApi.aa_i2c_write(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_STOP, (ushort)1, dataOut);
+
+            count = AardvarkApi.aa_i2c_read(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_FLAGS, (ushort)length, dataIn);
+
+
+
+
+            //****************************************************************************************    
+            //****************************************************************************************    
+            //****************************************************************************************    
+            //****************************************************************************************    
+            //****************************************************************************************    
+            //****************************************************************************************    
+            //****************************************************************************************    
+            //****************************************************************************************    
+            //int count, i;
+            //byte[] dataOut = { addr };
+            //byte[] dataIn = new byte[length];
+            int[] data = new int[length];
+            
+            if(page == 3)
+                for(int y = 0; y < length;++y)
+                    Debug.WriteLine("dataIn.ToString()  "+ y.ToString()+ " "  + dataIn[y].ToString());
+
+
+            //// Write the address
+            //AardvarkApi.aa_i2c_write(handle, device, AardvarkI2cFlags.AA_I2C_NO_STOP, (ushort)1, dataOut);
+
+            //count = AardvarkApi.aa_i2c_read(handle, device, AardvarkI2cFlags.AA_I2C_NO_FLAGS, (ushort)length, dataIn);
 
             // Dump the data to the screen
             for (i = 0; i < count; ++i)
@@ -68,7 +101,7 @@ namespace i2cReader
         }
 
         //get data from device
-        public static string getData(byte addr, short length)
+        public static string getData(byte addr, short length,int page = 0)
         {
             //int bitrate = 100;
             int handle = AardvarkApi.aa_open(PORT);
@@ -76,7 +109,10 @@ namespace i2cReader
                 throw new Exception();
 
             //read the values from the device and validate them
-            string data = _readMemory(handle, DEVICE, addr, length);
+            string data = _readMemory(handle, DEVICE, addr, length, page);
+           
+
+
 
             // Close the device and exit
             AardvarkApi.aa_close(handle);
@@ -138,15 +174,14 @@ namespace i2cReader
             // }
 
             //if (pageNumber == 3)
-            //    address = 0;
-
+            //    address = 130;
+            
             byte[] dataOut = { address };
             byte[] dataIn = new byte[1];
             byte[] page_select = { PAGE_SELECTOR, pageNumber};
 
             // Write the address
             //tmprary
-
             int a, b, c;
             a= AardvarkApi.aa_i2c_write(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_FLAGS, (ushort)2, page_select);
 
@@ -155,6 +190,8 @@ namespace i2cReader
             c = AardvarkApi.aa_i2c_read(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_FLAGS, (ushort)1, dataIn);
 
             AardvarkApi.aa_close(handle);
+            //if(pageNumber == 3)
+            //    Debug.WriteLine("address is: " + address.ToString() + " "+ dataIn[0].ToString());
 
             return Convert.ToByte(dataIn[0] & 0xff);
 

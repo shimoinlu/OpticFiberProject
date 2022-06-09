@@ -5,7 +5,7 @@ using System.Numerics;
 using System.Xml.Linq;
 using OpticFiberTest_ver1.Classes_SFF8636;
 using System.Threading.Tasks;
-
+using System.Diagnostics;
 
 namespace OpticFiberTest_ver1.Data
 {
@@ -61,7 +61,8 @@ namespace OpticFiberTest_ver1.Data
             if (!m_demoIsConnected)
             {
                 myDataLine = i2cReader.AAI2cEeprom.getData(0, 256); //REAL
-//                myDataLineP3 = i2cReader.AAI2cEeprom.getData(768, 768+100); //REAL
+                myDataLineP3 = i2cReader.AAI2cEeprom.getData(0, 256,3); //REAL
+                Debug.WriteLine("line is: "+ myDataLineP3.ToString()) ;
             }
             else
             {
@@ -89,7 +90,7 @@ namespace OpticFiberTest_ver1.Data
                 
             }
 
-            myDataLineP3 = File.ReadAllText(@"files\dempDataP3.txt");
+//            myDataLineP3 = File.ReadAllText(@"files\dempDataP3.txt");
             myData = myDataLine.Split();
             myData1 = myDataLineP3.Split();
         }
@@ -97,7 +98,7 @@ namespace OpticFiberTest_ver1.Data
 
         static public string getPage3Input(int index)
         {
-            return myData1[index-128];  
+            return myData1[index];  
         }
 
 
@@ -110,7 +111,7 @@ namespace OpticFiberTest_ver1.Data
             else
             {
                 
-                result = myData1[index-128];
+                result = myData1[index];
             }
 
             for (int i = index + 1; i < index + buffer; i++)
@@ -121,7 +122,7 @@ namespace OpticFiberTest_ver1.Data
                 if (page == 1)
                     result += myData[i];
                 else
-                    result += myData1[i-128];
+                    result += myData1[i];
             }
             return result;
         }
