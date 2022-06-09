@@ -93,6 +93,8 @@ namespace OpticFiberTest_ver1.Data
 //            myDataLineP3 = File.ReadAllText(@"files\dempDataP3.txt");
             myData = myDataLine.Split();
             myData1 = myDataLineP3.Split();
+            for (int p = 0; p < myData1.Length; ++p)
+                Debug.WriteLine(p.ToString() + " " + myData1[p]);
         }
 
 
