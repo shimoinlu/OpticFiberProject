@@ -206,3 +206,24 @@ C:\Users\rache\Desktop\Arigo project\OpticFiberProject\opticFiberProject2021-mai
 C:\Users\rache\Desktop\Arigo project\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\x64\Debug\System.Data.SQLite.Linq.dll
 C:\Users\rache\Desktop\Arigo project\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\x64\Debug\EntityFramework.xml
 C:\Users\rache\Desktop\Arigo project\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\x64\Debug\System.Data.SQLite.xml
+C:\Users\meirm\Desktop\Arigo\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\x64\Debug\files\demoData.txt
+C:\Users\meirm\Desktop\Arigo\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\x64\Debug\files\dempDataP3.txt
+C:\Users\meirm\Desktop\Arigo\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\x64\Debug\files\XMLFile1.xml
+C:\Users\meirm\Desktop\Arigo\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\x64\Debug\OpticFiberTest_ver1.exe.config
+C:\Users\meirm\Desktop\Arigo\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\x64\Debug\OpticFiberTest_ver1.exe
+C:\Users\meirm\Desktop\Arigo\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\x64\Debug\OpticFiberTest_ver1.pdb
+C:\Users\meirm\Desktop\Arigo\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\x64\Debug\System.Data.SQLite.dll
+C:\Users\meirm\Desktop\Arigo\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\x64\Debug\System.Data.SQLite.EF6.dll
+C:\Users\meirm\Desktop\Arigo\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\x64\Debug\System.Data.SQLite.Linq.dll
+C:\Users\meirm\Desktop\Arigo\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\x64\Debug\EntityFramework.dll
+C:\Users\meirm\Desktop\Arigo\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\x64\Debug\System.Data.SQLite.xml
+C:\Users\meirm\Desktop\Arigo\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\x64\Debug\EntityFramework.xml
+C:\Users\meirm\Desktop\Arigo\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\x64\Debug\OpticFiberTest_ver1.csproj.AssemblyReference.cache
+C:\Users\meirm\Desktop\Arigo\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\x64\Debug\OpticFiberTest_ver1.csproj.SuggestedBindingRedirects.cache
+C:\Users\meirm\Desktop\Arigo\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\x64\Debug\OpticFiberTest_ver1.OpticFiberTest.resources
+C:\Users\meirm\Desktop\Arigo\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\x64\Debug\OpticFiberTest_ver1.Properties.Resources.resources
+C:\Users\meirm\Desktop\Arigo\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\x64\Debug\OpticFiberTest_ver1.csproj.GenerateResource.cache
+C:\Users\meirm\Desktop\Arigo\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\x64\Debug\OpticFiberTest_ver1.csproj.CoreCompileInputs.cache
+C:\Users\meirm\Desktop\Arigo\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\x64\Debug\OpticFiberTest_ver1.csproj.CopyComplete
+C:\Users\meirm\Desktop\Arigo\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\x64\Debug\OpticFiberTest_ver1.exe
+C:\Users\meirm\Desktop\Arigo\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\x64\Debug\OpticFiberTest_ver1.pdb
