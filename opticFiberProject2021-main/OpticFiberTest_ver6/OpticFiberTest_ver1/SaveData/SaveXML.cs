@@ -1,61 +1,94 @@
-﻿/*using system;
-using system.collections.generic;
-using system.linq;
-using system.text;
-using system.threading.tasks;
-using system.xml;
-using system.xml.serialization;
-using system.xml.linq;
-using system.windows.forms;
-using system.io;*/
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Windows.Forms;
+using System.Xml;
+using System.IO;
+using OpticFiberTest_ver1.Classes_SFF8636;
 
-namespace opticfibertest_ver1.savedata
+
+namespace OpticFiberTest_ver1.SaveData
 {
-    class savexml
+    class SaveXML
     {
 
-        //static xmldocument xdoc;
-        //static xmlelement rootelement;
+        static public string createXML(Dictionary<int, SFF8636> MainDictionary)
+        {
+            Stream myStream;
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
 
-        //static savexml()
-        //{
-        //    xdoc = new xmldocument();
-        //    rootelement = xdoc.createelement("body");
-        //    xdoc.appendchild(rootelement);
-        //}
+            saveFileDialog1.Filter = "xml files (*.xml)|*.xml";
+            saveFileDialog1.FilterIndex = 2;
+            saveFileDialog1.RestoreDirectory = true;
 
-        //public static void addnode(byte address, string value)
-        //{
-        //    xmlnode bytenode = xdoc.createelement("byte");
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                if ((myStream = saveFileDialog1.OpenFile()) != null)
+                {
+                    XmlDocument xdoc;
+                    XmlElement rootElement;
+                    XmlNode field, Byte, Name, Data, Test_status, page;
+                    int pageNum = -1;
 
-        //    xmlnode addressnode = xdoc.createelement("address");
-        //    addressnode.innertext = address.tostring();
-        //    bytenode.appendchild(addressnode);
+                    xdoc = new XmlDocument();
+                    rootElement = xdoc.CreateElement("body");
+                    xdoc.AppendChild(rootElement);
 
-        //    xmlnode valuenode = xdoc.createelement("value");
-        //    valuenode.innertext = value.tostring();
-        //    bytenode.appendchild(valuenode);
+                    page = xdoc.CreateElement("page_0"); //only for initializing. no using in it
 
-        //    rootelement.appendchild(bytenode);
-        //}
+                    //saving_progress_bar.Maximum = 200;
+                    //saving_progress_bar.Visible = true;
 
-        //public static void save()
-        //{            
-        //    stream mystream;
-        //    savefiledialog savefiledialog1 = new savefiledialog();
+                    for (int i = 0; i < MainDictionary.Keys.Count(); i++)
+                    {
+                        //saving_progress_bar.Value = i * saving_progress_bar.Maximum / (MainDictionary.Keys.Count() - 1);
 
-        //    savefiledialog1.filter = "xml files (*.xml)|*.xml";
-        //    savefiledialog1.filterindex = 2;
-        //    savefiledialog1.restoredirectory = true;
+                        field = xdoc.CreateElement("Field"); //represent one field in protocol
 
-        //    if (savefiledialog1.showdialog() == dialogresult.ok)
-        //    {
-        //        if ((mystream = savefiledialog1.openfile()) != null)
-        //        {
-        //            xdoc.save(mystream);
-        //            mystream.close();
-        //        }
-        //    }
-        //}
+                        if (MainDictionary[i + 1].GetPage() != pageNum)
+                        {
+                            pageNum = MainDictionary[i + 1].GetPage();
+                            //if (pageNum == 1) { pageNum--; }    //fix problem of pageNum is 1 instead 0
+                            page = xdoc.CreateElement("page_" + pageNum.ToString()); //current page
+                            rootElement.AppendChild(page);
+                        }
+
+                        Byte = xdoc.CreateElement("Byte");
+                        Byte.InnerText = MainDictionary[i + 1].GetAddress().ToString(); //????? i added the toString() need to check
+                        field.AppendChild(Byte);
+
+                        Name = xdoc.CreateElement("Name");
+                        Name.InnerText = MainDictionary[i + 1].GetTitle();
+                        field.AppendChild(Name);
+
+                        Data = xdoc.CreateElement("Data");
+                        Data.InnerText = MainDictionary[i + 1].GethasRead();
+                        field.AppendChild(Data);
+
+                        //ID = xdoc.CreateElement("Protocol");
+                        //ID.InnerText = "sff_8636";
+                        //field.AppendChild(ID);
+
+                        //XmlNode pageNum = xdoc.CreateElement("pageNum");
+                        //pageNum.InnerText = MainDictionary[i + 1].GetPage().ToString();      ////////should be changed to current page
+                        //field.AppendChild(pageNum);
+
+                        Test_status = xdoc.CreateElement("Test_status");
+                        if (MainDictionary[i + 1].getColor() == "Green") { Test_status.InnerText = "Test Passed"; }
+                        else { Test_status.InnerText = "Test Failed"; }
+                        field.AppendChild(Test_status);
+
+                        page.AppendChild(field);
+                    }
+
+                    //rootElement.AppendChild(page);
+
+                    xdoc.Save(myStream);
+                    myStream.Close();
+                }
+            }
+
+            return "data has been saved succesfully";
+            //saving_progress_bar.Visible = false;
+        }
     }
 }

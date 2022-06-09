@@ -3,22 +3,10 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using Excel = Microsoft.Office.Interop.Excel;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml;
-using System.Xml.Serialization;
-using System.Xml.Linq;
-using System.IO;
-
-
-//******************ClassesNamespaceSFF8636**********************//
 using OpticFiberTest_ver1.Classes_SFF8636;
-//******************EndOfClassesNamespaceSFF8636*****************//
 
 namespace OpticFiberTest_ver1
 {
-    /******************************Winform class*******************************/
     public partial class OpticFiberTest : Form
     {
         bool is_clear = true,   //is_clear will answer about if the board of text is clear
@@ -26,15 +14,18 @@ namespace OpticFiberTest_ver1
             is_init = false,        //to build dictionary only once
             is_connected = false;
 
+        private Timer timer1;
+
+        Dictionary<int, SFF8636> MainDictionary = new Dictionary<int, SFF8636>(); //hold all the data from fiber
+
+//-----------------------------------functions----------------------------------------------------        
         public OpticFiberTest()
         {
             InitializeComponent();
         }
 
-        /****************************************************************
-        * This function building the dictionary of the 256 bytes
-        ***************************************************************/
-        Dictionary<int, SFF8636> MainDictionary = new Dictionary<int, SFF8636>();
+
+        //This function building the dictionary of the 256 bytes
         public void fillMainDict()
         {
             MainDictionary.Clear();
@@ -146,10 +137,10 @@ namespace OpticFiberTest_ver1
             MainDictionary.Add(106, new RxOutputAmplitudeControl(3, 239, 4, 7));
             MainDictionary.Add(107, new RxOutputAmplitudeControl(4, 239, 0, 3));
         }
-        /****************************************************************
-        * This function reads all the data from I2cData class and validate
-        * the value. after that, handling it (encoded functions)
-        ***************************************************************/
+
+
+        //This function reads all the data from I2cData class and validate the value.
+        //after that, handling it (encoded functions)
         public void ReadAll()
         {
             for (int i = 0; i < MainDictionary.Keys.Count(); i++)
@@ -167,10 +158,9 @@ namespace OpticFiberTest_ver1
                     MainDictionary[i + 1].ValidateVal("00");
             }
         }
-        /****************************************************************
-         * This function is the event handler of the "details win". it called
-         * once the text is change.
-         ***************************************************************/
+
+
+        //This function is the event handler of the "details win". it called once the text is change.
         private void details_win_TextChanged(object sender, EventArgs e)
         {
             if (!is_clear)  //if the board now is not clear (prevent extra calls)
@@ -192,11 +182,8 @@ namespace OpticFiberTest_ver1
         }
 
 
-
-        /****************************************************************
-         * This function is the event handler of the "SFFoptions". once we choose
-         * a protocol this function is called.
-         ***************************************************************/
+        //This function is the event handler of the "SFFoptions".
+        //once we choose a protocol this function is called.
         private void SFFoptions_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -209,10 +196,9 @@ namespace OpticFiberTest_ver1
                 is_protocol = false;
             }
         }
-        /****************************************************************
-         * This function is the event handler of the "clear_btn" it called once
-         * we click on "Clear"
-         ***************************************************************/
+
+
+        //This function is the event handler of the "clear_btn" it called once we click on "Clear"
         private void clear_btn_Click(object sender, EventArgs e)
         {
           
@@ -228,11 +214,11 @@ namespace OpticFiberTest_ver1
             details_win.Text = "";  //clearing the board. it will call it's handler so we changed
                                     //the value of "is_clear"
         }
-        /****************************************************************
-        * This function is the event handler of the "Connect_btn". it for try to
-        * Connect the i2c Connection by read one data. once it connected, the button
-        * will be swiched to "Disconnect" Button for disconnection.
-        ***************************************************************/
+
+
+        //This function is the event handler of the "Connect_btn".
+        //it for try to Connect the i2c Connection by read one data.
+        //once it connected, the button will be swiched to "Disconnect" Button for disconnection.
         private void Connect_btn_Click(object sender, EventArgs e)
         {
             if (!is_connected)
@@ -254,16 +240,13 @@ namespace OpticFiberTest_ver1
             }
             else
             {
-
                 Connect_btn.Text = "Connect To Fiber";
                 DisConnectedFunc();
             }
         }
 
-        /****************************************************************
-         * This function is the event handler of the "export_btn" it called once
-         * we click on "Export"
-         ***************************************************************/
+
+        //This function is the event handler of the "export_btn" it called once we click on "Export"
         private void export_btn_Click(object sender, EventArgs e)
         {
             if (!is_clear)  //if the board is not clear that means we can export
@@ -276,11 +259,6 @@ namespace OpticFiberTest_ver1
 
         }
 
-        private void OpticFiberTest_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void ConnectToDemo_btn_Click(object sender, EventArgs e)
         {
             Data.I2cData.connectToDemo();
@@ -288,11 +266,10 @@ namespace OpticFiberTest_ver1
 
         }
 
-        /****************************************************************
-* This function is the event handler of the "start_btn" it called once
-* we click on "Start". it checks if the board is clear, if we connected (trying to
-* read all the data), if the program is inited and if we choose a protocol.
-***************************************************************/
+
+        //This function is the event handler of the "start_btn" it called once we click on "Start",
+        //it checks if the board is clear, if we connected (trying to read all the data),
+        //if the program is inited and if we choose a protocol.
         private void start_btn_Click(object sender, EventArgs e)
         {
             excel_btn.Visible = true;
@@ -337,16 +314,16 @@ namespace OpticFiberTest_ver1
                 MessageBox.Show("Please select protocol."); //well.. else, we cant proceed.
             }
         }
+
         private void realTimeData(object sender, EventArgs e)
         {
             richTextBox1_TextChanged(sender, e);
            richTextBox2_TextChanged(sender, e);
         }
-        /****************************************************************
-        * This function is to show Disconnected values on the winform.
-        * It will hide all the test buttons and change the Disconnected 
-        * button to connect button
-        ***************************************************************/
+
+
+        //This function is to show Disconnected values on the winform.
+        //It will hide all the test buttons and change the Disconnected button to connect button
         private void DisConnectedFunc()
         {
             timer1.Stop();
@@ -365,11 +342,10 @@ namespace OpticFiberTest_ver1
             
 
         }
-        /****************************************************************
-        * This function is to show Connected values on the winform.
-        * It will show buttons for the test and change the connect button
-        * to Disconnect button.
-        ***************************************************************/
+
+
+        //This function is to show Connected values on the winform.
+        //It will show buttons for the test and change the connect button to Disconnect button.
         private void ConnectedFunc()
         {
             is_connected = true;
@@ -386,10 +362,6 @@ namespace OpticFiberTest_ver1
             Voltage_text_box.Visible = true;
 
         }
-
-
-        private Timer timer1;
-
 
         public void InitTimer(EventHandler fun)
         {
@@ -431,183 +403,34 @@ namespace OpticFiberTest_ver1
         }
 
 
-
-
-
+//-----------------------------save data functions-----------------------------------
         private void excelButton_Click(object sender, EventArgs e)
         {
-
-            FolderBrowserDialog folderBrowserDialog1 = new FolderBrowserDialog();
-            DialogResult result = folderBrowserDialog1.ShowDialog();
-            if (result == DialogResult.OK)
-            {
-                saving_progress_bar.Maximum = 200;
-                saving_progress_bar.Visible = true;
-
-                string folderName = folderBrowserDialog1.SelectedPath;
-
-                Excel.Application xlApp;
-                Excel.Workbook xlWorkBook;
-                Excel.Worksheet xlWorkSheet;
-                object misValue = System.Reflection.Missing.Value;
-                string file_to_save = "Page_" + "Page" + ".xls";
-
-                xlApp = new Excel.Application();
-                xlWorkBook = xlApp.Workbooks.Add(misValue);
-                xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
-
-                xlWorkSheet.Cells[1, 1] = "Byte";
-                xlWorkSheet.Cells[1, 2] = "Name";
-                xlWorkSheet.Cells[1, 3] = "Data";
-                xlWorkSheet.Cells[1, 4] = "Id";
-                xlWorkSheet.Cells[1, 5] = "PageId";
-                xlWorkSheet.Cells[1, 6] = "testPassed";
-
-                int row = 2;
-                saving_progress_bar.Visible = true;
-                for (int i = 0; i < MainDictionary.Keys.Count(); i++)
-                {
-                    int col = 1;
-                    saving_progress_bar.Value = i * saving_progress_bar.Maximum / (MainDictionary.Keys.Count() - 1);
-
-                    xlWorkSheet.Cells[row, col++].Value = MainDictionary[i + 1].GetAddress();
-                    xlWorkSheet.Cells[row, col++].Value = MainDictionary[i + 1].GetTitle();
-                    string data = MainDictionary[i + 1].GethasRead();
-
-                    //when class RxOutputEmphasisType is invoked and the message is: "=00b Peak-to-peak amplitude stays constant, or not\n\timplemented, or no informationstays\n\tconstant, or not implemented, or no\n\tinformation\n\t"
-                    //some excel error occurs because the first character so i delete it from message
-                    if (i == 80)    
-                    {
-                        data = "Peak-to-peak amplitude stays constant, or not\n\timplemented, or no informationstays\n\tconstant, or not implemented, or no\n\tinformation\n\t";
-                    }
-
-                    xlWorkSheet.Cells[row, col++].Value = data;
-                    xlWorkSheet.Cells[row, col++].Value = "sff_8636";
-                    xlWorkSheet.Cells[row, col++].Value = MainDictionary[i + 1].GetPage().ToString();
-
-                    if (MainDictionary[i + 1].getColor() == "Green") {
-                        xlWorkSheet.Cells[row, col].Value = "Passed"; }
-                    else {
-                        xlWorkSheet.Cells[row, col].Value = "Test Failed";}
-                    row++;
-                }
-
-                saving_progress_bar.Visible = false;
-
-                try
-                {
-                    xlWorkBook.SaveAs(folderName + "\\" + file_to_save, Excel.XlFileFormat.xlWorkbookNormal, misValue, misValue, misValue, misValue, Excel.XlSaveAsAccessMode.xlNoChange, misValue, misValue, misValue, misValue, misValue);
-                }
-                catch
-                {
-                    saving_progress_bar.Visible = false;
-                    MessageBox.Show("The file is not saved");
-                    return;
-                }
-                xlWorkBook.Close(true, misValue, misValue);
-                xlApp.Quit();
-
-                saving_progress_bar.Visible = false;
-                //MessageBox.Show("Excel file created , you can find the file " + folderName + "\\" + file_to_save);
-
-            }
-
+            string str = SaveData.SaveExcel.createExcel(MainDictionary);//send dictionary of results to save it in XML
+            MessageBox.Show(str);
         }
 
         private void XML_btn_Click(object sender, EventArgs e)
         {
-            Stream myStream;
-            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-
-            saveFileDialog1.Filter = "xml files (*.xml)|*.xml";
-            saveFileDialog1.FilterIndex = 2;
-            saveFileDialog1.RestoreDirectory = true;
-
-            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                if ((myStream = saveFileDialog1.OpenFile()) != null)
-                {
-                    XmlDocument xdoc;
-                    XmlElement rootElement;
-                    XmlNode field, Byte, Name, Data, Test_status, page;
-                    int pageNum = -1;
-
-                    xdoc = new XmlDocument();
-                    rootElement = xdoc.CreateElement("body");
-                    xdoc.AppendChild(rootElement);
-
-                    page = xdoc.CreateElement("page_0"); //only for initializing. no using in it
-
-                    saving_progress_bar.Maximum = 200;
-                    saving_progress_bar.Visible = true;
-
-                    for (int i = 0; i < MainDictionary.Keys.Count(); i++)
-                    {
-                        saving_progress_bar.Value = i * saving_progress_bar.Maximum / (MainDictionary.Keys.Count() - 1);
-
-                        field = xdoc.CreateElement("Field"); //represent one field in protocol
-
-                        if (MainDictionary[i + 1].GetPage() != pageNum)
-                        {
-                            pageNum = MainDictionary[i + 1].GetPage();
-                            //if (pageNum == 1) { pageNum--; }    //fix problem of pageNum is 1 instead 0
-                            page = xdoc.CreateElement("page_" + pageNum.ToString()); //current page
-                            rootElement.AppendChild(page);
-                        }
-
-                        Byte = xdoc.CreateElement("Byte");
-                        Byte.InnerText = MainDictionary[i + 1].GetAddress().ToString(); //????? i added the toString() need to check
-                        field.AppendChild(Byte);
-
-                        Name = xdoc.CreateElement("Name");
-                        Name.InnerText = MainDictionary[i + 1].GetTitle();
-                        field.AppendChild(Name);
-
-                        Data = xdoc.CreateElement("Data");
-                        Data.InnerText = MainDictionary[i + 1].GethasRead();
-                        field.AppendChild(Data);
-
-                        //ID = xdoc.CreateElement("Protocol");
-                        //ID.InnerText = "sff_8636";
-                        //field.AppendChild(ID);
-
-                        //XmlNode pageNum = xdoc.CreateElement("pageNum");
-                        //pageNum.InnerText = MainDictionary[i + 1].GetPage().ToString();      ////////should be changed to current page
-                        //field.AppendChild(pageNum);
-
-                        Test_status = xdoc.CreateElement("Test_status");
-                        if (MainDictionary[i + 1].getColor() == "Green") { Test_status.InnerText = "Test Passed"; }
-                        else { Test_status.InnerText = "Test Failed"; }
-                        field.AppendChild(Test_status);
-
-                        page.AppendChild(field);
-                    }
-
-                    //rootElement.AppendChild(page);
-
-                    xdoc.Save(myStream);
-                    myStream.Close();
-                }
-            }
-
-            MessageBox.Show("data has been saved succesfully");
-            saving_progress_bar.Visible = false;
+            string str = SaveData.SaveXML.createXML(MainDictionary);//send dictionary of results to save it in XML
+            MessageBox.Show(str);
         }
 
+        private void DB_btn_Click(object sender, EventArgs e)
+        {
+            string str = SaveData.SaveDB.createDB(MainDictionary);//send dictionary of results to save it in DB
+            MessageBox.Show(str);
+        }
+
+//----------------------------unused functions---------------------------------------------------
+
+        private void OpticFiberTest_Load(object sender, EventArgs e) { }
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e) { }
         private void textBox1_TextChanged(object sender, EventArgs e) { }
         private void WriteToExcel() { }
         private void richTextBox3_TextChanged(object sender, EventArgs e) { }
         private void progressBar1_Click(object sender, EventArgs e) { }
         private void progressBar1_Click_1(object sender, EventArgs e) { }
-
-        private void DB_btn_Click(object sender, EventArgs e)
-        {
-            //connection to DB string
-            string str = SaveData.SaveDB.connect(MainDictionary);
-            MessageBox.Show(str);
-        }
-
         private void pictureBox2_Click(object sender, EventArgs e) { }
         private void label1_Click(object sender, EventArgs e) { }
         private void voltage_label_Click(object sender, EventArgs e) { }

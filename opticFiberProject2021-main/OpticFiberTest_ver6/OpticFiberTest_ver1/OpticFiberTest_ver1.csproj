@@ -186,7 +186,7 @@
     <Compile Include="Converstions\HexToFloat.cs" />
     <Compile Include="Data\I2cData.cs" />
     <Compile Include="SaveData\SaveDB.cs" />
-    <Compile Include="SaveData\SaveExel.cs" />
+    <Compile Include="SaveData\SaveExcel.cs" />
     <Compile Include="SaveData\SaveXML.cs" />
     <Compile Include="MaximumTCstabilizationTime .cs" />
     <Compile Include="Classes_SFF8636\RxOutputEmphasis\MaxRxOutputEmphasis.cs" />

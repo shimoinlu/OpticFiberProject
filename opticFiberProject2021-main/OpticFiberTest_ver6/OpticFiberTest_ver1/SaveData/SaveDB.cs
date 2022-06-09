@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.SqlClient;
-using System.Data.SQLite;
 using OpticFiberTest_ver1.Classes_SFF8636;
 
 namespace OpticFiberTest_ver1.SaveData
@@ -12,18 +8,18 @@ namespace OpticFiberTest_ver1.SaveData
     class SaveDB
     {
 
-        static public string connect(Dictionary<int, SFF8636> MainDictionary)
+        static public string createDB(Dictionary<int, SFF8636> MainDictionary)
         {
 
-// This is the query which will create a new table in our database file with three columns. An auto increment column called "ID", and two NVARCHAR type columns with the names "Key" and "Value"
-string createTableQuery = @"CREATE TABLE IF NOT EXISTS [test_results] (
-                          [Number] INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-                          [Byte] NVARCHAR(2048) NOT NULL,
-                          [Name] VARCHAR(2048)  NOT NULL,
-                          [Data] VARCHAR(2048)  NOT NULL,
-                          [PageNum] VARCHAR(2048)  NOT NULL,
-                          [Status] VARCHAR(2048)  NOT NULL
-                          )";
+            // This is the query which will create a new table in our database file with three columns. An auto increment column called "ID", and two NVARCHAR type columns with the names "Key" and "Value"
+            string createTableQuery = @"CREATE TABLE IF NOT EXISTS [test_results] (
+                [Number] INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+                [Byte] NVARCHAR(2048) NOT NULL,
+                [Name] VARCHAR(2048)  NOT NULL,
+                [Data] VARCHAR(2048)  NOT NULL,
+                [PageNum] VARCHAR(2048)  NOT NULL,
+                [Status] VARCHAR(2048)  NOT NULL
+             )";
 
             string filePath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\opticFiberTestResult.db3";
 
@@ -61,7 +57,7 @@ string createTableQuery = @"CREATE TABLE IF NOT EXISTS [test_results] (
                 }
             }
 
-            return "The data was added successfully";
+            return "data has been saved succesfully";
         }
     }
 }
