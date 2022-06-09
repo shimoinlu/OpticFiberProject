@@ -472,7 +472,16 @@ namespace OpticFiberTest_ver1
 
                     xlWorkSheet.Cells[row, col++].Value = MainDictionary[i + 1].GetAddress();
                     xlWorkSheet.Cells[row, col++].Value = MainDictionary[i + 1].GetTitle();
-                    xlWorkSheet.Cells[row, col++].Value = MainDictionary[i + 1].GethasRead();
+                    string data = MainDictionary[i + 1].GethasRead();
+
+                    //when class RxOutputEmphasisType is invoked and the message is: "=00b Peak-to-peak amplitude stays constant, or not\n\timplemented, or no informationstays\n\tconstant, or not implemented, or no\n\tinformation\n\t"
+                    //some excel error occurs because the first character so i delete it from message
+                    if (i == 80)    
+                    {
+                        data = "Peak-to-peak amplitude stays constant, or not\n\timplemented, or no informationstays\n\tconstant, or not implemented, or no\n\tinformation\n\t";
+                    }
+
+                    xlWorkSheet.Cells[row, col++].Value = data;
                     xlWorkSheet.Cells[row, col++].Value = "sff_8636";
                     xlWorkSheet.Cells[row, col++].Value = MainDictionary[i + 1].GetPage().ToString();
 
@@ -520,53 +529,68 @@ namespace OpticFiberTest_ver1
                 {
                     XmlDocument xdoc;
                     XmlElement rootElement;
+                    XmlNode field, Byte, Name, Data, Test_status, page;
+                    int pageNum = -1;
 
                     xdoc = new XmlDocument();
                     rootElement = xdoc.CreateElement("body");
                     xdoc.AppendChild(rootElement);
 
-                    saving_progress_bar.Maximum = 200;
+                    page = xdoc.CreateElement("page_0"); //only for initializing. no using in it
+
+                    saving_progress_bar.Maximum = 200;
                     saving_progress_bar.Visible = true;
 
                     for (int i = 0; i < MainDictionary.Keys.Count(); i++)
                     {
                         saving_progress_bar.Value = i * saving_progress_bar.Maximum / (MainDictionary.Keys.Count() - 1);
 
-                        XmlNode field = xdoc.CreateElement("Field");//represent one field in protocol
+                        field = xdoc.CreateElement("Field"); //represent one field in protocol
 
-                        XmlNode Byte = xdoc.CreateElement("Byte");
+                        if (MainDictionary[i + 1].GetPage() != pageNum)
+                        {
+                            pageNum = MainDictionary[i + 1].GetPage();
+                            //if (pageNum == 1) { pageNum--; }    //fix problem of pageNum is 1 instead 0
+                            page = xdoc.CreateElement("page_" + pageNum.ToString()); //current page
+                            rootElement.AppendChild(page);
+                        }
+
+                        Byte = xdoc.CreateElement("Byte");
                         Byte.InnerText = MainDictionary[i + 1].GetAddress().ToString(); //????? i added the toString() need to check
-                        field.AppendChild(Byte);
+                        field.AppendChild(Byte);
 
-                        XmlNode Name = xdoc.CreateElement("Name");
+                        Name = xdoc.CreateElement("Name");
                         Name.InnerText = MainDictionary[i + 1].GetTitle();
                         field.AppendChild(Name);
 
-                        XmlNode Date = xdoc.CreateElement("Date");
-                        Date.InnerText = MainDictionary[i + 1].GethasRead();
-                        field.AppendChild(Date);
+                        Data = xdoc.CreateElement("Data");
+                        Data.InnerText = MainDictionary[i + 1].GethasRead();
+                        field.AppendChild(Data);
 
-                        XmlNode ID = xdoc.CreateElement("ID");
-                        ID.InnerText = "sff_8636";
-                        field.AppendChild(ID);
+                        //ID = xdoc.CreateElement("Protocol");
+                        //ID.InnerText = "sff_8636";
+                        //field.AppendChild(ID);
 
-                        XmlNode pageNum = xdoc.CreateElement("pageNum");
-                        pageNum.InnerText = MainDictionary[i + 1].GetPage().ToString();      ////////should be changed to current page
-                        field.AppendChild(pageNum);
+                        //XmlNode pageNum = xdoc.CreateElement("pageNum");
+                        //pageNum.InnerText = MainDictionary[i + 1].GetPage().ToString();      ////////should be changed to current page
+                        //field.AppendChild(pageNum);
 
-                        XmlNode test_status = xdoc.CreateElement("status");
-                        if (MainDictionary[i + 1].getColor() == "Green") { test_status.InnerText = "Test Passed"; }
-                        else { test_status.InnerText = "Test Failed"; }
-                        field.AppendChild(test_status);
+                        Test_status = xdoc.CreateElement("Test_status");
+                        if (MainDictionary[i + 1].getColor() == "Green") { Test_status.InnerText = "Test Passed"; }
+                        else { Test_status.InnerText = "Test Failed"; }
+                        field.AppendChild(Test_status);
 
-                        rootElement.AppendChild(field);
+                        page.AppendChild(field);
                     }
 
-                    xdoc.Save(myStream);
+                    //rootElement.AppendChild(page);
+
+                    xdoc.Save(myStream);
                     myStream.Close();
                 }
             }
 
+            MessageBox.Show("data has been saved succesfully");
             saving_progress_bar.Visible = false;
         }
 
