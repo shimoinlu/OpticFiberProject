@@ -62,7 +62,8 @@ namespace OpticFiberTest_ver1.Data
             {
                 myDataLine = i2cReader.AAI2cEeprom.getData(0, 256); //REAL
                 myDataLineP3 = i2cReader.AAI2cEeprom.getData(0, 256,3); //REAL
-                Debug.WriteLine("line is: "+ myDataLineP3.ToString()) ;
+                Debug.WriteLine("line1 is: "+ myDataLine.ToString()) ;
+                Debug.WriteLine("line3 is: "+ myDataLineP3.ToString()) ;
             }
             else
             {

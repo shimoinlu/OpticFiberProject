@@ -172,22 +172,80 @@ namespace i2cReader
             //     return Convert.ToByte(I2C.I2cData.getPage3Input(address), 16);
 
             // }
-
             //if (pageNumber == 3)
             //    address = 130;
-            
+
             byte[] dataOut = { address };
             byte[] dataIn = new byte[1];
-            byte[] page_select = { PAGE_SELECTOR, pageNumber};
+            byte[] page_select = { PAGE_SELECTOR };
+            byte[] page_num = { pageNumber };
 
             // Write the address
             //tmprary
             int a, b, c;
-            a= AardvarkApi.aa_i2c_write(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_FLAGS, (ushort)2, page_select);
+            a = AardvarkApi.aa_i2c_write(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_FLAGS, (ushort)1, page_select);
+
+            b = AardvarkApi.aa_i2c_write(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_STOP, (ushort)1, page_num);
 
             b = AardvarkApi.aa_i2c_write(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_STOP, (ushort)1, dataOut);
 
             c = AardvarkApi.aa_i2c_read(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_FLAGS, (ushort)1, dataIn);
+
+
+
+
+
+
+            //byte[] dataOut = { address };
+            //byte[] dataIn = new byte[256];
+            //byte[] page_select = { PAGE_SELECTOR, pageNumber };
+
+            //// Write the address
+            ////tmprary
+            //int a, b, c;
+            //a = AardvarkApi.aa_i2c_write(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_FLAGS, (ushort)2, page_select);
+
+            //b = AardvarkApi.aa_i2c_write(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_STOP, (ushort)1, dataOut);
+
+            //c = AardvarkApi.aa_i2c_read(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_FLAGS, (ushort)256, dataIn);
+
+
+
+
+            //// byte[] dataOut = { 0 };
+            //// byte[] dataIn = new byte[256];
+            //// byte[] page_select = { PAGE_SELECTOR };
+            //// byte[] page_num = { pageNumber };
+
+            //// Write the address
+            ////tmprary
+            //// int a, b, c;
+            //// a = AardvarkApi.aa_i2c_write(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_FLAGS, (ushort)1, page_select);
+
+            //// b = AardvarkApi.aa_i2c_write(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_STOP, (ushort)1, page_num);
+
+            //// b = AardvarkApi.aa_i2c_write(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_STOP, (ushort)1, dataOut);
+
+            //// c = AardvarkApi.aa_i2c_read(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_FLAGS, (ushort)256, dataIn);
+            //// Int32 t = Convert.ToInt32(address); 
+            // return Convert.ToByte(dataIn[0] & 0xff);
+
+
+
+
+
+            //byte[] dataOut = { address };
+            //byte[] dataIn = new byte[1];
+            //byte[] page_select = { PAGE_SELECTOR, pageNumber};
+
+            //// Write the address
+            ////tmprary
+            //int a, b, c;
+            //a= AardvarkApi.aa_i2c_write(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_FLAGS, (ushort)2, page_select);
+
+            //b = AardvarkApi.aa_i2c_write(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_STOP, (ushort)1, dataOut);
+
+            //c = AardvarkApi.aa_i2c_read(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_FLAGS, (ushort)1, dataIn);
 
             AardvarkApi.aa_close(handle);
             //if(pageNumber == 3)
