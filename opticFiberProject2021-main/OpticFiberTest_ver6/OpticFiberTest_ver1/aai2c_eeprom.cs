@@ -27,21 +27,49 @@ namespace i2cReader
         //this function read from the memory in a spesific address 
         static string _readMemory(int handle, byte device, byte addr, short length,int page)
         {
-            int count, i;
             byte[] dataOut = { addr };
             byte[] dataIn = new byte[length];
-            byte p = (byte)page;
-            byte[] page_select = { PAGE_SELECTOR, (byte)page };
+            byte[] page_select = { PAGE_SELECTOR };
+            byte[] page_num = { (byte)page };
+            int count, i;
 
             // Write the address
             //tmprary
-
             int a, b, c;
             a = AardvarkApi.aa_i2c_write(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_FLAGS, (ushort)1, page_select);
+
+            b = AardvarkApi.aa_i2c_write(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_STOP, (ushort)1, page_num);
 
             b = AardvarkApi.aa_i2c_write(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_STOP, (ushort)1, dataOut);
 
             count = AardvarkApi.aa_i2c_read(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_FLAGS, (ushort)length, dataIn);
+
+            //****************************************************************************************    
+            //****************************************************************************************    
+            //****************************************************************************************    
+            //****************************************************************************************    
+            //****************************************************************************************    
+            //****************************************************************************************    
+            //****************************************************************************************    
+            //****************************************************************************************    
+
+
+
+            //int count, i;
+            //byte[] dataOut = { addr };
+            //byte[] dataIn = new byte[length];
+            //byte p = (byte)page;
+            //byte[] page_select = { PAGE_SELECTOR, (byte)page };
+
+            //// Write the address
+            ////tmprary
+
+            //int a, b, c;
+            //a = AardvarkApi.aa_i2c_write(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_FLAGS, (ushort)1, page_select);
+
+            //b = AardvarkApi.aa_i2c_write(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_STOP, (ushort)1, dataOut);
+
+            //count = AardvarkApi.aa_i2c_read(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_FLAGS, (ushort)length, dataIn);
 
 
 
