@@ -44,58 +44,9 @@ namespace i2cReader
 
             count = AardvarkApi.aa_i2c_read(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_FLAGS, (ushort)length, dataIn);
 
-            //****************************************************************************************    
-            //****************************************************************************************    
-            //****************************************************************************************    
-            //****************************************************************************************    
-            //****************************************************************************************    
-            //****************************************************************************************    
-            //****************************************************************************************    
-            //****************************************************************************************    
-
-
-
-            //int count, i;
-            //byte[] dataOut = { addr };
-            //byte[] dataIn = new byte[length];
-            //byte p = (byte)page;
-            //byte[] page_select = { PAGE_SELECTOR, (byte)page };
-
-            //// Write the address
-            ////tmprary
-
-            //int a, b, c;
-            //a = AardvarkApi.aa_i2c_write(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_FLAGS, (ushort)1, page_select);
-
-            //b = AardvarkApi.aa_i2c_write(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_STOP, (ushort)1, dataOut);
-
-            //count = AardvarkApi.aa_i2c_read(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_FLAGS, (ushort)length, dataIn);
-
-
-
-
-            //****************************************************************************************    
-            //****************************************************************************************    
-            //****************************************************************************************    
-            //****************************************************************************************    
-            //****************************************************************************************    
-            //****************************************************************************************    
-            //****************************************************************************************    
-            //****************************************************************************************    
-            //int count, i;
-            //byte[] dataOut = { addr };
-            //byte[] dataIn = new byte[length];
             int[] data = new int[length];
             
-            if(page == 3)
-                for(int y = 0; y < length;++y)
-                    Debug.WriteLine("dataIn.ToString()  "+ y.ToString()+ " "  + dataIn[y].ToString());
 
-
-            //// Write the address
-            //AardvarkApi.aa_i2c_write(handle, device, AardvarkI2cFlags.AA_I2C_NO_STOP, (ushort)1, dataOut);
-
-            //count = AardvarkApi.aa_i2c_read(handle, device, AardvarkI2cFlags.AA_I2C_NO_FLAGS, (ushort)length, dataIn);
 
             // Dump the data to the screen
             for (i = 0; i < count; ++i)
@@ -189,19 +140,6 @@ namespace i2cReader
 
             handle = AardvarkApi.aa_open(PORT);
 
-            //       if (handle < 0)
-            //          throw new Exception();
-
-
-            //only for now until the module is replaced
-            //if (pageNumber != 0)
-            //{
-            //     AardvarkApi.aa_close(handle);
-            //     return Convert.ToByte(I2C.I2cData.getPage3Input(address), 16);
-
-            // }
-            //if (pageNumber == 3)
-            //    address = 130;
 
             byte[] dataOut = { address };
             byte[] dataIn = new byte[1];
@@ -224,60 +162,8 @@ namespace i2cReader
 
 
 
-            //byte[] dataOut = { address };
-            //byte[] dataIn = new byte[256];
-            //byte[] page_select = { PAGE_SELECTOR, pageNumber };
-
-            //// Write the address
-            ////tmprary
-            //int a, b, c;
-            //a = AardvarkApi.aa_i2c_write(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_FLAGS, (ushort)2, page_select);
-
-            //b = AardvarkApi.aa_i2c_write(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_STOP, (ushort)1, dataOut);
-
-            //c = AardvarkApi.aa_i2c_read(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_FLAGS, (ushort)256, dataIn);
-
-
-
-
-            //// byte[] dataOut = { 0 };
-            //// byte[] dataIn = new byte[256];
-            //// byte[] page_select = { PAGE_SELECTOR };
-            //// byte[] page_num = { pageNumber };
-
-            //// Write the address
-            ////tmprary
-            //// int a, b, c;
-            //// a = AardvarkApi.aa_i2c_write(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_FLAGS, (ushort)1, page_select);
-
-            //// b = AardvarkApi.aa_i2c_write(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_STOP, (ushort)1, page_num);
-
-            //// b = AardvarkApi.aa_i2c_write(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_STOP, (ushort)1, dataOut);
-
-            //// c = AardvarkApi.aa_i2c_read(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_FLAGS, (ushort)256, dataIn);
-            //// Int32 t = Convert.ToInt32(address); 
-            // return Convert.ToByte(dataIn[0] & 0xff);
-
-
-
-
-
-            //byte[] dataOut = { address };
-            //byte[] dataIn = new byte[1];
-            //byte[] page_select = { PAGE_SELECTOR, pageNumber};
-
-            //// Write the address
-            ////tmprary
-            //int a, b, c;
-            //a= AardvarkApi.aa_i2c_write(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_FLAGS, (ushort)2, page_select);
-
-            //b = AardvarkApi.aa_i2c_write(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_STOP, (ushort)1, dataOut);
-
-            //c = AardvarkApi.aa_i2c_read(handle, DEVICE, AardvarkI2cFlags.AA_I2C_NO_FLAGS, (ushort)1, dataIn);
 
             AardvarkApi.aa_close(handle);
-            //if(pageNumber == 3)
-            //    Debug.WriteLine("address is: " + address.ToString() + " "+ dataIn[0].ToString());
 
             return Convert.ToByte(dataIn[0] & 0xff);
 
