@@ -87,7 +87,7 @@ namespace OpticFiberTest_ver1.Data
                 }
                 
             }
-
+            myData = new Dictionary<int, string[]>(pages.Length);
             for (int i = 0; i < pages.Length; ++i)
                 myData.Add(pages[i],myDataLine[i].Split());
             //Debug.WriteLine("##################################################################");
@@ -102,51 +102,38 @@ namespace OpticFiberTest_ver1.Data
         }
 
 
-        static public string getPage3Input(int index)
-        {
-            return myData1[index];  
-        }
+        //static public string getPage3Input(int index)
+        //{
+        //    return myData1[index];  
+        //}
 
 
         //taking part of the data string and return it as substring
-        static public String Geti2cDataSub(int index, int buffer,int page = 1)
+        static public String Geti2cDataSub(int index, int buffer,int page = 0)
         {
-            String result;
-            if (page == 1)
-                result = myData[index];
-            else
+            String result = "";
+            for (int i = index; i < index + buffer; i++)
             {
-                
-                result = myData1[index];
-            }
-
-            for (int i = index + 1; i < index + buffer; i++)
-            {
-
+                result += myData[page][i];
                 result += ' ';
-
-                if (page == 1)
-                    result += myData[i];
-                else
-                    result += myData1[i];
             }
             return result;
         }
-        static public String[] GetData() //get all the data
-        {
-            return myData;
-        }
+        //static public String[] GetData() //get all the data
+        //{
+        //    return myData;
+        //}
         /****************************************************************
         * This function counting all the given bytes from startIndex till buffer
         * and return the result.
         ***************************************************************/
-        static public BigInteger HexaCounterOfHexString(int startIndex, int buffer) 
+        static public BigInteger HexaCounterOfHexString(int startIndex, int buffer,int page = 0) 
         {
-            String[] hexValuesSplit = myDataLine.Substring(startIndex, buffer).Split();
+//            String[] hexValuesSplit = myDataLine.Substring(startIndex, buffer).Split();
             BigInteger sumOfAllBytes = 0;
             for(int i = startIndex; i < startIndex + buffer;++i)
             {
-                sumOfAllBytes += Convert.ToInt32(myData[i], 16);
+                sumOfAllBytes += Convert.ToInt32(myData[page][i], 16);
 
             }
 

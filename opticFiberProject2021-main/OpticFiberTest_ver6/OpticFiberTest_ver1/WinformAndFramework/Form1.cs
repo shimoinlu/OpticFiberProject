@@ -284,7 +284,8 @@ namespace OpticFiberTest_ver1
             
             try
             {
-                Data.I2cData.ReadTheData();
+                int[] a = { 0, 3 };
+                Data.I2cData.ReadTheData(a);
             }
             catch (Exception x)
             {
