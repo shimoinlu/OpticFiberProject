@@ -117,6 +117,9 @@ namespace OpticFiberTest_ver1.Data
                 result += myData[page][i];
                 result += ' ';
             }
+
+            result = result.Substring(0, result.Length - 1);
+
             return result;
         }
         //static public String[] GetData() //get all the data

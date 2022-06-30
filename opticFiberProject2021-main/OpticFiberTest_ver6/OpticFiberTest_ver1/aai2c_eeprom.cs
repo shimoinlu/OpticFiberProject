@@ -128,7 +128,7 @@ namespace i2cReader
         {
             if (I2C.I2cData.demoIsConnected())
             {
-                    return Convert.ToByte(I2C.I2cData.Geti2cDataSub(address,pageNumber),16);
+                    return Convert.ToByte(I2C.I2cData.Geti2cDataSub(address,1,pageNumber),16);
             }
 
             int handle = 0;

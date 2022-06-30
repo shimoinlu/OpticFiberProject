@@ -69,7 +69,7 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
         protected string m_storedValue = ""; //m_storedValue protected int member for all classes
         protected string m_title;
         protected string m_textColor = "Green";
-        protected int m_page = 1;
+        protected int m_page = 0;
 
     }
 
