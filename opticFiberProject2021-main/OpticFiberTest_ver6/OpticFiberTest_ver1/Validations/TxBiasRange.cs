@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 using Convers = OpticFiberTest_ver1.Converstions;
-namespace OpticFiberTest_ver1.Classes_SFF8636
+namespace OpticFiberTest_ver1.Protocols_classes.Classes_SFF8636
 {
     class TxBiasRange : BaseRange
     {

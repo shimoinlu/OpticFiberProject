@@ -3,7 +3,7 @@ using System.IO;
 using System.Linq;
 using System.Numerics;
 using System.Xml.Linq;
-using OpticFiberTest_ver1.Classes_SFF8636;
+using OpticFiberTest_ver1.Protocols_classes.Classes_SFF8636;
 using System.Threading.Tasks;
 using System.Diagnostics;
 

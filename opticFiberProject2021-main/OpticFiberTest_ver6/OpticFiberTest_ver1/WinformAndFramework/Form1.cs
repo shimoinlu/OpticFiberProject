@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using OpticFiberTest_ver1.Classes_SFF8636;
+using OpticFiberTest_ver1.Protocols_classes;
+using OpticFiberTest_ver1.Protocols_classes.Classes_SFF8636;
+using OpticFiberTest_ver1.Protocols_classes.Classes_SFF8472;
 
 namespace OpticFiberTest_ver1
 {
@@ -15,8 +17,11 @@ namespace OpticFiberTest_ver1
             is_connected = false;
 
         private Timer timer1;
-
-        Dictionary<int, SFF8636> MainDictionary = new Dictionary<int, SFF8636>(); //hold all the data from fiber
+        string[] protocols = {"SFF-8636", "SFF-8472"};
+        string current_protocol = "";
+        delegate void fillDict();
+        static fillDict[] fillDictArr = {new fillDict(fill_sff8472_dict), new fillDict(fill_sff8636_dict) };
+        static Dictionary<int, Protocols> MainDictionary = new Dictionary<int, Protocols>(); //hold all the data from fiber
 
 //-----------------------------------functions----------------------------------------------------        
         public OpticFiberTest()
@@ -24,9 +29,13 @@ namespace OpticFiberTest_ver1
             InitializeComponent();
         }
 
+        static void fill_sff8472_dict()
+        {
+            MainDictionary.Add(1, new sff8472_demo_field());
+        }
 
-        //This function building the dictionary of the 256 bytes
-        public void fillMainDict()
+        //This function building the dictionary of the 256 bytes according the sff-8636 protocol
+        static void fill_sff8636_dict()
         {
             MainDictionary.Clear();
             MainDictionary.Add(1, new LowerPageIdentifier());
@@ -145,7 +154,7 @@ namespace OpticFiberTest_ver1
         {
             for (int i = 0; i < MainDictionary.Keys.Count(); i++)
             {
-                SFF8636 current = MainDictionary[i + 1];
+                Protocols current = MainDictionary[i + 1];
                 byte address = current.GetAddress();
                 short size = current.GetSize();
                 int page = current.GetPage();
@@ -294,7 +303,7 @@ namespace OpticFiberTest_ver1
             }
             if (!is_init)
             {
-                fillMainDict();
+                fill_sff8636_dict();
                 is_init = true;
             }
             if (is_protocol)    //if we chose a protocol we can proceed
@@ -304,7 +313,6 @@ namespace OpticFiberTest_ver1
                 richTextBox2_TextChanged(null, null);
 
                 ReadAll(); //real function
-                WriteToExcel();
                 is_clear = false;
                 details_win_TextChanged(sender, e);
                 details_win.Text = "";
@@ -427,7 +435,6 @@ namespace OpticFiberTest_ver1
         private void OpticFiberTest_Load(object sender, EventArgs e) { }
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e) { }
         private void textBox1_TextChanged(object sender, EventArgs e) { }
-        private void WriteToExcel() { }
         private void richTextBox3_TextChanged(object sender, EventArgs e) { }
         private void progressBar1_Click(object sender, EventArgs e) { }
         private void progressBar1_Click_1(object sender, EventArgs e) { }
