@@ -1,4 +1,7 @@
-﻿namespace OpticFiberTest_ver1
+﻿using System.Linq;
+using System.Xml.Linq;
+
+namespace OpticFiberTest_ver1
 {
     partial class OpticFiberTest
     {
@@ -19,7 +22,24 @@
             }
             base.Dispose(disposing);
         }
+        private string[] GetProtocolsFromXml()
+        {
+            string[] protocols;
+            int count = 0;
 
+//            var xml = XDocument.Load("files/XMLProtocols.xml");
+            var xml = XDocument.Load("files/XMLFile1.xml");
+
+
+            // Query the data and write out a subset of contacts
+            var query = from c in xml.Root.Descendants("Protocol")
+                        select c.Element("ProtocolName").Value;
+            int q = query.Count();
+            protocols = new string[q];
+            foreach (string prtcl in query)
+                protocols[count++] = prtcl;
+            return protocols;
+        }
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -52,8 +72,10 @@
             // SFFoptions
             // 
             this.SFFoptions.FormattingEnabled = true;
-            this.SFFoptions.Items.AddRange(new object[] {
-            "SFF-8636"});
+            string[] protocols = GetProtocolsFromXml();
+            // this.SFFoptions.Items.AddRange(new object[] {
+            // "SFF-8636","shimon"});
+            this.SFFoptions.Items.AddRange(GetProtocolsFromXml());
             this.SFFoptions.Location = new System.Drawing.Point(608, 81);
             this.SFFoptions.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.SFFoptions.Name = "SFFoptions";

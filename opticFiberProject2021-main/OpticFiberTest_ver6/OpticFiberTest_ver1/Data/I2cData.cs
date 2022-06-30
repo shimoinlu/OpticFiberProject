@@ -79,7 +79,6 @@ namespace OpticFiberTest_ver1.Data
                     var query = from c in xml.Root.Descendants("Byte")
                                 select c.Element("ByteVal").Value;
 
-
                     foreach (string name in query)
                     {
                         myDataLine[i] += name + " ";
