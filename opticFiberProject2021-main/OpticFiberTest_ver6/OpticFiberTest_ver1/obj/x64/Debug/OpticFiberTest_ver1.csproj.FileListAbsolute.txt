@@ -244,3 +244,4 @@ C:\Users\aharont\Documents\OpticFiberProject\opticFiberProject2021-main\OpticFib
 C:\Users\aharont\Documents\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\x64\Debug\System.Data.SQLite.xml
 C:\Users\aharont\Documents\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\x64\Debug\OpticFiberTest_ver1.csproj.CopyComplete
 C:\Users\aharont\Documents\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\x64\Debug\files\XMLProtocols.xml
+C:\Users\aharont\Documents\OpticFiberProject\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\x64\Debug\OpticFiberTest_ver1.csprojAssemblyReference.cache

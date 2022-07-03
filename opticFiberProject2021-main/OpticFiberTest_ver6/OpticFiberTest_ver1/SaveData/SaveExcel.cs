@@ -3,14 +3,14 @@ using System.Linq;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
 
-using OpticFiberTest_ver1.Classes_SFF8636;
+using OpticFiberTest_ver1.Protocols_classes;
 
 
 namespace OpticFiberTest_ver1.SaveData
 {
     class SaveExcel
     {
-        public static string createExcel(Dictionary<int, SFF8636> MainDictionary)
+        public static string createExcel(Dictionary<int, Protocols> MainDictionary)
         {
             FolderBrowserDialog folderBrowserDialog1 = new FolderBrowserDialog();
             DialogResult result = folderBrowserDialog1.ShowDialog();

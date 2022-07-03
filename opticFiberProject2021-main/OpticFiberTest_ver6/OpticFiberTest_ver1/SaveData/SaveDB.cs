@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using OpticFiberTest_ver1.Classes_SFF8636;
+using OpticFiberTest_ver1.Protocols_classes;
 
 namespace OpticFiberTest_ver1.SaveData
 {
     class SaveDB
     {
 
-        static public string createDB(Dictionary<int, SFF8636> MainDictionary)
+        static public string createDB(Dictionary<int, Protocols> MainDictionary)
         {
 
             // This is the query which will create a new table in our database file with three columns. An auto increment column called "ID", and two NVARCHAR type columns with the names "Key" and "Value"

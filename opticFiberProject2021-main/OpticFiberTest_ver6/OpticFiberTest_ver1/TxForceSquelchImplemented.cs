@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace OpticFiberTest_ver1.Classes_SFF8636
+namespace OpticFiberTest_ver1.Protocols_classes.Classes_SFF8636
 {
     class TxForceSquelchImplemented : SFF8636
     {
