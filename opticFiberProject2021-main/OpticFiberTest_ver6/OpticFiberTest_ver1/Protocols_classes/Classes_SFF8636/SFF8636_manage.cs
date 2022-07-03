@@ -9,7 +9,8 @@ namespace OpticFiberTest_ver1.Protocols_classes.Classes_SFF8636
     //this class manages all functions ralated to sff8636 protocol. like filling dictionary, reading etc.
     public class SFF8636_manage: Protocol_manage
     {
-        public void fillDictionary(ref Dictionary<int, Protocols> MainDictionary)
+        public SFF8636_manage(string name): base(name) { }
+        public override void fillDictionary(ref Dictionary<int, Protocols> MainDictionary)
         {
             MainDictionary.Clear();
             MainDictionary.Add(1, new LowerPageIdentifier());
@@ -121,7 +122,7 @@ namespace OpticFiberTest_ver1.Protocols_classes.Classes_SFF8636
             MainDictionary.Add(107, new RxOutputAmplitudeControl(4, 239, 0, 3));
         }
 
-        public void read(ref Dictionary<int, Protocols> MainDictionary)
+        public override void read(ref Dictionary<int, Protocols> MainDictionary)
         {
             for (int i = 0; i < MainDictionary.Keys.Count(); i++)
             {

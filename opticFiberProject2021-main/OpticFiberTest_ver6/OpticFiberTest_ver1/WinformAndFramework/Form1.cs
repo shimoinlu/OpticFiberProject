@@ -7,7 +7,7 @@ using OpticFiberTest_ver1.Protocols_classes;
 using OpticFiberTest_ver1.Protocols_classes.Classes_SFF8636;
 using OpticFiberTest_ver1.Protocols_classes.Classes_SFF8472;
 using System.Xml.Linq;
-using OpticFiberTest_ver1.Classes_SFF8636;
+using OpticFiberTest_ver1;
 
 namespace OpticFiberTest_ver1
 {
@@ -24,9 +24,9 @@ namespace OpticFiberTest_ver1
         Protocol_manage current_protocol;
         static Dictionary<int, Protocols> MainDictionary = new Dictionary<int, Protocols>(); //hold all the data from fiber
 
-//-----------------------------------functions----------------------------------------------------        
+//=================================== functions ===============================================        
         public OpticFiberTest() { InitializeComponent(); }
-
+//----------------------------------------------------------------------------------------------
 
         //This function is the event handler of the "details win". it called once the text is change.
         private void details_win_TextChanged(object sender, EventArgs e)
@@ -48,20 +48,19 @@ namespace OpticFiberTest_ver1
             else   //if the board is clear now, it means we cleard it.
                 MessageBox.Show("The test has been cleared.");
         }
-
-
+//----------------------------------------------------------------------------------------------
         //This function is the event handler of the "SFFoptions".
         //once we choose a protocol this function is called.
         private void SFFoptions_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(SFFoptions.Text == "SFF-8636")
             {
-                current_protocol = new SFF8636_manage();
+                current_protocol = new SFF8636_manage("SFF-8636");
                 is_protocol = true;
             }
             else if (SFFoptions.Text == "SFF-8472")
             {
-                current_protocol = new SFF8472_manage();
+                current_protocol = new SFF8472_manage("SFF-8472");
                 is_protocol = true;
             }
             else if (SFFoptions.Text == "")  //if no protocol chosen 
@@ -69,26 +68,26 @@ namespace OpticFiberTest_ver1
                 is_protocol = false;
             }
         }
-
-
+//----------------------------------------------------------------------------------------------
         //This function is the event handler of the "clear_btn" it called once we click on "Clear"
         private void clear_btn_Click(object sender, EventArgs e)
         {
-          
-            excel_btn.Visible = false;
-
             if (is_clear)
             {
                 MessageBox.Show("The board is already cleared.");
                 return;
             }
+
+            MainDictionary.Clear();
+            excel_btn.Visible = false;
+            XML_btn.Visible = false;
+            DB_btn.Visible = false;
             is_clear = true;
             is_init = false;
             details_win.Text = "";  //clearing the board. it will call it's handler so we changed
                                     //the value of "is_clear"
         }
-
-
+//----------------------------------------------------------------------------------------------
         //This function is the event handler of the "Connect_btn".
         //it for try to Connect the i2c Connection by read one data.
         //once it connected, the button will be swiched to "Disconnect" Button for disconnection.
@@ -101,15 +100,12 @@ namespace OpticFiberTest_ver1
                     Data.I2cData.Connect();
                     Data.I2cData.getVol();
                     is_connected = true;
-                    ConnectedFunc();
-                    
+                    ConnectedFunc();                    
                 }
                 catch (Exception x)
                 {
                     MessageBox.Show("Could not Connect to fiber \n please check fiber connections and try again");
                 }
-
-
             }
             else
             {
@@ -117,8 +113,7 @@ namespace OpticFiberTest_ver1
                 DisConnectedFunc();
             }
         }
-
-
+//----------------------------------------------------------------------------------------------
         //This function is the event handler of the "export_btn" it called once we click on "Export"
         private void export_btn_Click(object sender, EventArgs e)
         {
@@ -131,15 +126,14 @@ namespace OpticFiberTest_ver1
 
 
         }
-
+//----------------------------------------------------------------------------------------------
         private void ConnectToDemo_btn_Click(object sender, EventArgs e)
         {
             Data.I2cData.connectToDemo();
             ConnectedFunc();
 
         }
-
-
+//----------------------------------------------------------------------------------------------
         //This function is the event handler of the "start_btn" it called once we click on "Start",
         //it checks if the board is clear, if we connected (trying to read all the data),
         //if the program is inited and if we choose a protocol.
@@ -187,32 +181,31 @@ namespace OpticFiberTest_ver1
                 MessageBox.Show("Please select protocol."); //well.. else, we cant proceed.
             }
         }
+//----------------------------------------------------------------------------------------------
         private int[] GetProtocolsPagesFromXml()
         {
-            int[] protocolsPages;
-            int count = 0;
+            int[] protocolsPages = {};
             var xml = XDocument.Load("files/XMLProtocols.xml");
 
-
-            // Query the data and write out a subset of contacts
-            var query = from c in xml.Root.Descendants("Protocol")
-                        select c.Element("ProtocolPages").Value;
-//            string[] p  = query;
-            protocolsPages = new int[query.Count()];
-            string[] p;
-            foreach (string prtcl in query)
-                protocolsPages[count++] = Convert.ToInt32( prtcl);
+            var values = xml.Descendants("Protocol");
+            foreach (var item in values)
+            {
+                //var pname = item.Element("ProtocolName")
+                if (item.Element("ProtocolName").Value == current_protocol.protocol_name)
+                {
+                    var pages = item.Element("ProtocolPages").Value;
+                    protocolsPages = pages.Split(' ').Select(Int32.Parse).ToArray();
+                }
+            }
             return protocolsPages;
         }
-
-
+//----------------------------------------------------------------------------------------------
         private void realTimeData(object sender, EventArgs e)
         {
             richTextBox1_TextChanged(sender, e);
            richTextBox2_TextChanged(sender, e);
         }
-
-
+//----------------------------------------------------------------------------------------------
         //This function is to show Disconnected values on the winform.
         //It will hide all the test buttons and change the Disconnected button to connect button
         private void DisConnectedFunc()
@@ -230,11 +223,8 @@ namespace OpticFiberTest_ver1
             is_connected = false;
 
             Data.I2cData.disConnectToDemo();
-            
-
         }
-
-
+//----------------------------------------------------------------------------------------------
         //This function is to show Connected values on the winform.
         //It will show buttons for the test and change the connect button to Disconnect button.
         private void ConnectedFunc()
@@ -253,16 +243,15 @@ namespace OpticFiberTest_ver1
             Voltage_text_box.Visible = true;
 
         }
-
+//----------------------------------------------------------------------------------------------
         public void InitTimer(EventHandler fun)
         {
             timer1 = new Timer();
             timer1.Tick += new EventHandler(fun);
             timer1.Interval = 20000; // in miliseconds
             timer1.Start();
-
         }
-
+//----------------------------------------------------------------------------------------------
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
             float temp = Data.I2cData.getTemp();
@@ -280,7 +269,7 @@ namespace OpticFiberTest_ver1
             Temperature_text_box.Text = tempStr;
 
         }
-
+//----------------------------------------------------------------------------------------------
         private void richTextBox2_TextChanged(object sender, EventArgs e)
         {
             float temp = Data.I2cData.getVol();
@@ -294,7 +283,7 @@ namespace OpticFiberTest_ver1
         }
 
 
-//-----------------------------save data functions-----------------------------------
+// ===================================== save data functions =========================================
         private void excelButton_Click(object sender, EventArgs e)
         {
             string str = SaveData.SaveExcel.createExcel(MainDictionary);//send dictionary of results to save it in XML
@@ -313,7 +302,7 @@ namespace OpticFiberTest_ver1
             MessageBox.Show(str);
         }
 
-//----------------------------unused functions---------------------------------------------------
+//========================= unused functions ==========================================
 
         private void OpticFiberTest_Load(object sender, EventArgs e) { }
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e) { }
