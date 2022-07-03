@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Xml;
 using System.Xml.Linq;
 
 namespace OpticFiberTest_ver1
@@ -26,9 +27,8 @@ namespace OpticFiberTest_ver1
         {
             string[] protocols;
             int count = 0;
-
-//            var xml = XDocument.Load("files/XMLProtocols.xml");
-            var xml = XDocument.Load("files/XMLFile1.xml");
+            XmlDocument document = new XmlDocument();
+            var xml = XDocument.Load("files/XMLProtocols.xml");
 
 
             // Query the data and write out a subset of contacts

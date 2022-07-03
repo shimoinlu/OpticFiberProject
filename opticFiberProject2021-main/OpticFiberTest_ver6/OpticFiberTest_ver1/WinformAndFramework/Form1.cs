@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using OpticFiberTest_ver1.Classes_SFF8636;
 
 namespace OpticFiberTest_ver1
@@ -284,8 +285,8 @@ namespace OpticFiberTest_ver1
             
             try
             {
-                int[] a = { 0, 3 };
-                Data.I2cData.ReadTheData(a);
+                int[] pages = GetProtocolsPagesFromXml();
+                Data.I2cData.ReadTheData(pages);
             }
             catch (Exception x)
             {
@@ -315,6 +316,24 @@ namespace OpticFiberTest_ver1
                 MessageBox.Show("Please select protocol."); //well.. else, we cant proceed.
             }
         }
+        private int[] GetProtocolsPagesFromXml()
+        {
+            int[] protocolsPages;
+            int count = 0;
+            var xml = XDocument.Load("files/XMLProtocols.xml");
+
+
+            // Query the data and write out a subset of contacts
+            var query = from c in xml.Root.Descendants("Protocol")
+                        select c.Element("ProtocolPages").Value;
+//            string[] p  = query;
+            protocolsPages = new int[query.Count()];
+            string[] p;
+            foreach (string prtcl in query)
+                protocolsPages[count++] = Convert.ToInt32( prtcl);
+            return protocolsPages;
+        }
+
 
         private void realTimeData(object sender, EventArgs e)
         {
