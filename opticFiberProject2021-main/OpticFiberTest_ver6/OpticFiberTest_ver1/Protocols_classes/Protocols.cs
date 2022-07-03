@@ -62,5 +62,6 @@ namespace OpticFiberTest_ver1.Protocols_classes
         protected string m_title;
         protected string m_textColor = "Green";
         protected int m_page = 1;
+
     }
 }

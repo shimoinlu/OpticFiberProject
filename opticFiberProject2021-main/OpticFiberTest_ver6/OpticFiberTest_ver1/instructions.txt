@@ -2,6 +2,6 @@
 	1: create folder with the protocol name inside Protocol_classes folder
 	2: create base abstract protocol class that inherit from Protocol.cs
 	3: create all inherited classes, each class should implement all Protocol.cs functions.
-	4: add to Form1.cs the namespace of new created protocol folder
-	5: in Form1.cs add the protocol name to the array protcols
-	6: in Form1.cs add function to fill the main dictionary
+	4: also create <protocol name>_manage.cs class the inherit from Protocol_manage interface
+	5: add to Form1.cs the namespace of new created protocol folder
+	6: in Form1.cs add to function SFFoptions_SelectedIndexChanged(), the new protocol

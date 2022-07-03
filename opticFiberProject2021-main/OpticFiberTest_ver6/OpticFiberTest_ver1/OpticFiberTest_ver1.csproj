@@ -107,6 +107,7 @@
     <Compile Include="aardvark.cs" />
     <Compile Include="Protocols_classes\Classes_SFF8472\SFF8472.cs" />
     <Compile Include="Protocols_classes\Classes_SFF8472\sff8472_demo_field.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8472\SFF8472_manage.cs" />
     <Compile Include="Protocols_classes\Classes_SFF8636\Byte93Bit.cs" />
     <Compile Include="Protocols_classes\Classes_SFF8636\CDRControl.cs" />
     <Compile Include="Protocols_classes\Classes_SFF8636\Channel Monitoring Values\TxPower.cs" />
@@ -189,6 +190,7 @@
     <Compile Include="Converstions\HexToFloat.cs" />
     <Compile Include="Data\I2cData.cs" />
     <Compile Include="Protocols_classes\Protocols.cs" />
+    <Compile Include="Protocols_classes\Protocol_manage.cs" />
     <Compile Include="SaveData\SaveDB.cs" />
     <Compile Include="SaveData\SaveExcel.cs" />
     <Compile Include="SaveData\SaveXML.cs" />
