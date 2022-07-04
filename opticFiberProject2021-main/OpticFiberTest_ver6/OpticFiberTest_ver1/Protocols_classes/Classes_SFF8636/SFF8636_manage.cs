@@ -19,7 +19,7 @@ namespace OpticFiberTest_ver1.Protocols_classes.Classes_SFF8636
             {
                 return -1;
             }
-            return 0;
+            return 1;
         }
 
         public override int GetRealTemp() 
@@ -34,7 +34,7 @@ namespace OpticFiberTest_ver1.Protocols_classes.Classes_SFF8636
             {
                 return -1;
             }
-            return 0;
+            return 1;
         }
 
         public override float GetVol()

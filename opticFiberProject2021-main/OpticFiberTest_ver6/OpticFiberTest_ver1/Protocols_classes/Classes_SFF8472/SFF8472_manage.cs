@@ -13,7 +13,7 @@ namespace OpticFiberTest_ver1.Protocols_classes.Classes_SFF8472
 
         public override int CheckTemp(float temp)
         {
-            return 0;
+            return 1;
         }
 
         public override int GetRealTemp()
@@ -23,7 +23,7 @@ namespace OpticFiberTest_ver1.Protocols_classes.Classes_SFF8472
 
         public override int CheckVol(float vol)
         {
-            return 0;
+            return 1;
         }
 
         public override float GetVol()
