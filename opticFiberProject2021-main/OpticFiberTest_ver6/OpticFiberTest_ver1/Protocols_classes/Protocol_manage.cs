@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace OpticFiberTest_ver1.Protocols_classes
 {
@@ -17,5 +18,7 @@ namespace OpticFiberTest_ver1.Protocols_classes
         //This function reads all the data from I2cData class and validate the value.
         //after that, handling it(encoded functions)
         public abstract void read(ref Dictionary<int, Protocols> MainDictionary);
+        public abstract bool CheckTemp(float temp, RichTextBox tx);
+        public abstract float GetRealTemp();
     }
 }

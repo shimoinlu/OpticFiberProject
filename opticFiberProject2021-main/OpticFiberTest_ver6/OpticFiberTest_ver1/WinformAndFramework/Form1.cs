@@ -254,10 +254,10 @@ namespace OpticFiberTest_ver1
 //----------------------------------------------------------------------------------------------
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
-            float temp = Data.I2cData.getTemp();
-
-            Temperature t = new Temperature();
+            float temp = current_protocol.GetRealTemp();
             Temperature_text_box.ForeColor = System.Drawing.Color.Green;
+            current_protocol.CheckTemp(temp, Temperature_text_box);
+            Temperature t = new Temperature();
             if (temp < t.getMin() || temp > t.getMax())
             {
                 Temperature_text_box.ForeColor = System.Drawing.Color.Red;
