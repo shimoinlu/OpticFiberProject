@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,8 +11,36 @@ namespace OpticFiberTest_ver1.Protocols_classes.Classes_SFF8636
     public class SFF8636_manage: Protocol_manage
     {
         public SFF8636_manage(string name): base(name) { }
-        public bool CheckTemp(float temp) { returm true; }
-        public abstract float GetRealTemp();
+        //public override bool CheckTemp(float temp) { returm true; }
+        public override int CheckTemp(float temp) 
+        {
+            Temperature t = new Temperature();
+            if (temp < t.getMin() || temp > t.getMax())
+            {
+                return -1;
+            }
+            return 0;
+        }
+
+        public override int GetRealTemp() 
+        {
+            return Data.I2cData.getTemp();
+        }
+
+        public override int CheckVol(float vol)
+        {
+            SupplyVoltage t = new SupplyVoltage();
+            if (vol < t.getMin() || vol > t.getMax())
+            {
+                return -1;
+            }
+            return 0;
+        }
+
+        public override float GetVol()
+        {
+            return Data.I2cData.getVol();
+        }
 
         public override void fillDictionary(ref Dictionary<int, Protocols> MainDictionary)
         {

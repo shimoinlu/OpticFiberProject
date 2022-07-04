@@ -255,33 +255,43 @@ namespace OpticFiberTest_ver1
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
             float temp = current_protocol.GetRealTemp();
-            Temperature_text_box.ForeColor = System.Drawing.Color.Green;
-            current_protocol.CheckTemp(temp, Temperature_text_box);
-            Temperature t = new Temperature();
-            if (temp < t.getMin() || temp > t.getMax())
-            {
-                Temperature_text_box.ForeColor = System.Drawing.Color.Red;
+            int status = current_protocol.CheckTemp(temp); // -1 means fail, 0 means warrning, 1 means success
 
+            if (status == -1)
+            {
+                Temperature_text_box.ForeColor = System.Drawing.Color.Red;  
+            }
+            else if(status == 0)
+            {
+                Temperature_text_box.ForeColor = System.Drawing.Color.Black;
+            }
+            else if (status == 1)
+            {
+                Temperature_text_box.ForeColor = System.Drawing.Color.Green;
             }
             string tempStr = Convert.ToString(temp) + " °C";
-
-
             Temperature_text_box.Text = tempStr;
-
         }
 //----------------------------------------------------------------------------------------------
         private void richTextBox2_TextChanged(object sender, EventArgs e)
         {
-            float temp = Data.I2cData.getVol();
-            SupplyVoltage t = new SupplyVoltage();
-            if (temp < t.getMin() || temp > t.getMax())
+            float vol = current_protocol.GetVol();
+            int status = current_protocol.CheckTemp(vol); // -1 means fail, 0 means warrning, 1 means success
+
+            if (status == -1)
             {
-                Voltage_text_box.ForeColor = System.Drawing.Color.Red;
-
+                Voltage_text_box.ForeColor = System.Drawing.Color.Red;  
             }
-            Voltage_text_box.Text = Data.I2cData.getVol().ToString() + " V";
+            else if(status == 0)
+            {
+                Voltage_text_box.ForeColor = System.Drawing.Color.Black;
+            }
+            else if (status == 1)
+            {
+                Voltage_text_box.ForeColor = System.Drawing.Color.Green;
+            }
+            Voltage_text_box.Text = vol.ToString() + " VCC";
         }
-
 
 // ===================================== save data functions =========================================
         private void excelButton_Click(object sender, EventArgs e)
