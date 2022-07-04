@@ -296,7 +296,7 @@ namespace OpticFiberTest_ver1
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(123, 25);
             this.richTextBox1.TabIndex = 18;
-            this.richTextBox1.Text = "";
+            this.richTextBox1.Text = "not connected";
             // 
             // OpticFiberTest
             // 

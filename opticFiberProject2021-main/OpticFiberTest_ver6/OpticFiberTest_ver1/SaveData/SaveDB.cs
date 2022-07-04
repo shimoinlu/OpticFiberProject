@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using OpticFiberTest_ver1.Protocols_classes;
@@ -10,16 +11,17 @@ namespace OpticFiberTest_ver1.SaveData
 
         static public string createDB(Dictionary<int, Protocols> MainDictionary)
         {
-            string table_name = "test" + DateTime.Now.ToString().Replace(' ', '-');
+            string date = DateTime.Now.ToString();
 
             // This is the query which will create a new table in our database file with three columns. An auto increment column called "ID", and two NVARCHAR type columns with the names "Key" and "Value"
-            string createTableQuery = @"CREATE TABLE IF NOT EXISTS [" + table_name + @"] (
+            string createTableQuery = @"CREATE TABLE IF NOT EXISTS [test_results] (
                 [Number] INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
                 [Byte] NVARCHAR(2048) NOT NULL,
                 [Name] VARCHAR(2048)  NOT NULL,
                 [Data] VARCHAR(2048)  NOT NULL,
                 [PageNum] VARCHAR(2048)  NOT NULL,
-                [Status] VARCHAR(2048)  NOT NULL
+                [Status] VARCHAR(2048)  NOT NULL,
+                [Date] VARCHAR(2048)  NOT NULL
              )";
 
             string filePath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\opticFiberTestResult.db3";
@@ -50,7 +52,7 @@ namespace OpticFiberTest_ver1.SaveData
                             Status = "Test Failed";
                         }
 
-                        com.CommandText = "INSERT INTO " + table_name + @" (Byte, Name, Data, PageNum, Status) Values ('" + Byte + "','" + Name + "','" + Data + "','" + PageNum + "','" + Status + "')";     // Add the first entry into our database 
+                        com.CommandText = "INSERT INTO test_results (Byte, Name, Data, PageNum, Status, Date) Values ('" + Byte + "','" + Name + "','" + Data + "','" + PageNum + "','" + Status + "','" + date + "')";     // Add the first entry into our database 
                         com.ExecuteNonQuery();      // Execute the query
                     }
 

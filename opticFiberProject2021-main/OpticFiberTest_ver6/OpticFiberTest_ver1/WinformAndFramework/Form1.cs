@@ -221,7 +221,7 @@ namespace OpticFiberTest_ver1
             Temperature_text_box.Visible = false;
             Voltage_text_box.Visible = false;
             is_connected = false;
-
+            richTextBox1.Text = "not connected";
             Data.I2cData.disConnectToDemo();
         }
 //----------------------------------------------------------------------------------------------
@@ -241,7 +241,7 @@ namespace OpticFiberTest_ver1
             SFFoptions.Visible = true;
             Temperature_text_box.Visible = true;
             Voltage_text_box.Visible = true;
-
+            richTextBox1.Text = "connected";
         }
 //----------------------------------------------------------------------------------------------
         public void InitTimer(EventHandler fun)
