@@ -10,6 +10,9 @@ namespace OpticFiberTest_ver1.Protocols_classes.Classes_SFF8636
     public class SFF8636_manage: Protocol_manage
     {
         public SFF8636_manage(string name): base(name) { }
+        public bool CheckTemp(float temp) { returm true; }
+        public abstract float GetRealTemp();
+
         public override void fillDictionary(ref Dictionary<int, Protocols> MainDictionary)
         {
             MainDictionary.Clear();
