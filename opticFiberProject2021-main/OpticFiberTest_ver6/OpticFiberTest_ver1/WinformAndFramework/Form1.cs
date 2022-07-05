@@ -7,7 +7,7 @@ using OpticFiberTest_ver1.Protocols_classes;
 using OpticFiberTest_ver1.Protocols_classes.Classes_SFF8636;
 using OpticFiberTest_ver1.Protocols_classes.Classes_SFF8472;
 using System.Xml.Linq;
-using OpticFiberTest_ver1;
+using OpticFiberTest_ver1.Utility;
 
 namespace OpticFiberTest_ver1
 {
@@ -16,6 +16,8 @@ namespace OpticFiberTest_ver1
         bool is_clear = true,   //is_clear will answer about if the board of text is clear
             is_protocol = false,    //is_protocol will answer about if protocol has been choosen
             is_init = false,        //to build dictionary only once
+            //connected_demo = false,
+            //connected_real = true;
             is_connected = false;
 
         private Timer timer1;
@@ -23,8 +25,9 @@ namespace OpticFiberTest_ver1
         //string current_protocol = "";
         Protocol_manage current_protocol;
         static Dictionary<int, Protocols> MainDictionary = new Dictionary<int, Protocols>(); //hold all the data from fiber
+        Utilities util = new Utilities();
 
-//=================================== functions ===============================================        
+        //=================================== functions ===============================================        
         public OpticFiberTest() { InitializeComponent(); }
 //----------------------------------------------------------------------------------------------
 
@@ -53,14 +56,14 @@ namespace OpticFiberTest_ver1
         //once we choose a protocol this function is called.
         private void SFFoptions_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(SFFoptions.Text == "SFF-8636")
+            if(SFFoptions.Text == util.sff8636)
             {
-                current_protocol = new SFF8636_manage("SFF-8636");
+                current_protocol = new SFF8636_manage(util.sff8636);
                 is_protocol = true;
             }
-            else if (SFFoptions.Text == "SFF-8472")
+            else if (SFFoptions.Text == util.sff8472)
             {
-                current_protocol = new SFF8472_manage("SFF-8472");
+                current_protocol = new SFF8472_manage(util.sff8472);
                 is_protocol = true;
             }
             else if (SFFoptions.Text == "")  //if no protocol chosen 
@@ -79,6 +82,8 @@ namespace OpticFiberTest_ver1
             }
 
             MainDictionary.Clear();
+            Temperature_text_box.Text = "";
+            Voltage_text_box.Text = "";
             excel_btn.Visible = false;
             XML_btn.Visible = false;
             DB_btn.Visible = false;
@@ -100,7 +105,8 @@ namespace OpticFiberTest_ver1
                     Data.I2cData.Connect();
                     Data.I2cData.getVol();
                     is_connected = true;
-                    ConnectedFunc();                    
+                    ConnectedFunc();
+                    Connect_btn.Text = util.disconnect_from_fiber;
                 }
                 catch (Exception x)
                 {
@@ -109,7 +115,7 @@ namespace OpticFiberTest_ver1
             }
             else
             {
-                Connect_btn.Text = "Connect To Fiber";
+                Connect_btn.Text = util.connect_to_fiber;
                 DisConnectedFunc();
             }
         }
@@ -129,9 +135,18 @@ namespace OpticFiberTest_ver1
 //----------------------------------------------------------------------------------------------
         private void ConnectToDemo_btn_Click(object sender, EventArgs e)
         {
-            Data.I2cData.connectToDemo();
-            ConnectedFunc();
-
+            if (!is_connected)
+            {
+                Demo_btn.Text = util.disconnect_from_demo;
+                Data.I2cData.connectToDemo();
+                ConnectedFunc();
+            }
+            else
+            {
+                Demo_btn.Text = util.connect_to_demo;
+                Data.I2cData.disConnectToDemo();
+                DisConnectedFunc();
+            }
         }
 //----------------------------------------------------------------------------------------------
         //This function is the event handler of the "start_btn" it called once we click on "Start",
@@ -139,37 +154,39 @@ namespace OpticFiberTest_ver1
         //if the program is inited and if we choose a protocol.
         private void start_btn_Click(object sender, EventArgs e)
         {
-            excel_btn.Visible = true;
-            XML_btn.Visible = true;
-            DB_btn.Visible = true;
-
             if (!is_clear)
             {
                 MessageBox.Show("To run a new Test, Make sure you clear the board first.\nTo clear the board, just use 'Clear' button.");
                 return;
             }
-            
-            try
-            {
-                int[] pages = GetProtocolsPagesFromXml();
-                Data.I2cData.ReadTheData(pages);
-            }
-            catch (Exception x)
-            {
-                MessageBox.Show("The Connection has been failed. Try to reconnect!:\n" + x.ToString());
-                DisConnectedFunc();
-                return;
-            }
-            if (!is_init)
-            {
-                current_protocol.fillDictionary(ref MainDictionary);
-                is_init = true;
-            }
+
             if (is_protocol)    //if we chose a protocol we can proceed
             {
+                try
+                {
+                    int[] pages = GetProtocolsPagesFromXml();
+                    Data.I2cData.ReadTheData(pages);
+                }
+                catch (Exception x)
+                {
+                    MessageBox.Show("The Connection has been failed. Try to reconnect!:\n" + x.ToString());
+                    DisConnectedFunc();
+                    return;
+                }
+
+                excel_btn.Visible = true;
+                XML_btn.Visible = true;
+                DB_btn.Visible = true;
+
                 InitTimer(realTimeData);
                 richTextBox1_TextChanged(null, null);
                 richTextBox2_TextChanged(null, null);
+
+                if (!is_init)
+                {
+                    current_protocol.fillDictionary(ref MainDictionary);
+                    is_init = true;
+                }
 
                 current_protocol.read(ref MainDictionary);
                 is_clear = false;
@@ -210,38 +227,79 @@ namespace OpticFiberTest_ver1
         //It will hide all the test buttons and change the Disconnected button to connect button
         private void DisConnectedFunc()
         {
-            timer1.Stop();
+            if (is_protocol)
+            {
+                timer1.Stop();
+            }
             is_connected = false;
-            MessageBox.Show("Disconnected. Connect to run more tests.");
-            Connect_btn.Text = "Connect To Fiber";
             start_btn.Visible = false;
+            clear_btn.Visible = false;
             excel_btn.Visible = false;
             SFFoptions.Visible = false;
+            //temperature_label.Visible = false;
+            //voltage_label.Visible = false;
+            details_win.Text = "";
             SFFoptions.Text = "Select protocol";
-            Temperature_text_box.Visible = false;
-            Voltage_text_box.Visible = false;
-            is_connected = false;
-            richTextBox1.Text = "not connected";
-            Data.I2cData.disConnectToDemo();
+            Temperature_text_box.Text = "";
+            Voltage_text_box.Text = "";
+            connection_status.Text = "not connected";
+            connection_status.ForeColor = Color.Red;
+            MessageBox.Show("Disconnected.");
         }
 //----------------------------------------------------------------------------------------------
+        //This function clears current test and the data
+        //will be called when clear button pressed or disconnection
+        private void clear()
+        {
+            if (is_clear)
+            {
+                MessageBox.Show("The board is already cleared.");
+                return;
+            }
+            if (is_protocol)
+            {
+                timer1.Stop();
+            }
+
+            is_connected = false;
+            is_clear = true;
+            is_init = false;
+
+            start_btn.Visible = false;
+            clear_btn.Visible = false;
+            excel_btn.Visible = false;
+            XML_btn.Visible = false;
+            DB_btn.Visible = false;
+            SFFoptions.Visible = false;
+
+            details_win.Text = "";
+            SFFoptions.Text = "Select protocol";
+            Temperature_text_box.Text = "";
+            Voltage_text_box.Text = "";
+            connection_status.Text = "not connected";
+            connection_status.ForeColor = Color.Red;
+            MainDictionary.Clear();
+            Temperature_text_box.Text = "";
+            Voltage_text_box.Text = "";
+
+            details_win.Text = "";  //clearing the board. it will call it's handler so we changed
+                                    //the value of "is_clear"
+            MessageBox.Show("Disconnected.");
+        }
+        //----------------------------------------------------------------------------------------------
         //This function is to show Connected values on the winform.
         //It will show buttons for the test and change the connect button to Disconnect button.
         private void ConnectedFunc()
         {
             is_connected = true;
-            //MessageBox.Show("Connected. Choose 'Protocol' and Start the test.");
-            if (Data.I2cData.demoIsConnected()) {
-                Demo_btn.Text = "disconnect";}
-            else{ 
-                Connect_btn.Text = "disconnect"; }
             //details_win.Visible = true;
             start_btn.Visible = true;
             clear_btn.Visible = true;
             SFFoptions.Visible = true;
             Temperature_text_box.Visible = true;
             Voltage_text_box.Visible = true;
-            richTextBox1.Text = "connected";
+            connection_status.Text = "connected";
+            connection_status.ForeColor = Color.Green;
         }
 //----------------------------------------------------------------------------------------------
         public void InitTimer(EventHandler fun)
@@ -290,7 +348,7 @@ namespace OpticFiberTest_ver1
             {
                 Voltage_text_box.ForeColor = System.Drawing.Color.Green;
             }
-            Voltage_text_box.Text = vol.ToString() + " VCC";
+            Voltage_text_box.Text = vol.ToString() + " V";
         }
 
 // ===================================== save data functions =========================================

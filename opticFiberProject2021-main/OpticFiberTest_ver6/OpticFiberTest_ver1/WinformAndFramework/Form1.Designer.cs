@@ -65,7 +65,7 @@ namespace OpticFiberTest_ver1
             this.temperature_label = new System.Windows.Forms.Label();
             this.voltage_label = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.connection_status = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.logo_pic)).BeginInit();
             this.SuspendLayout();
             // 
@@ -122,7 +122,7 @@ namespace OpticFiberTest_ver1
             this.Connect_btn.Name = "Connect_btn";
             this.Connect_btn.Size = new System.Drawing.Size(103, 43);
             this.Connect_btn.TabIndex = 5;
-            this.Connect_btn.Text = "Connect To Fiber";
+            this.Connect_btn.Text = util.connect_to_fiber;
             this.Connect_btn.UseVisualStyleBackColor = false;
             this.Connect_btn.Click += new System.EventHandler(this.Connect_btn_Click);
             // 
@@ -289,14 +289,14 @@ namespace OpticFiberTest_ver1
             this.label1.TabIndex = 17;
             this.label1.Text = "Connection status:";
             // 
-            // richTextBox1
+            // connection_status
             // 
-            this.richTextBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.richTextBox1.Location = new System.Drawing.Point(18, 97);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(123, 25);
-            this.richTextBox1.TabIndex = 18;
-            this.richTextBox1.Text = "not connected";
+            this.connection_status.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.connection_status.Location = new System.Drawing.Point(18, 97);
+            this.connection_status.Name = "connection_status";
+            this.connection_status.Size = new System.Drawing.Size(123, 25);
+            this.connection_status.TabIndex = 18;
+            this.connection_status.Text = "not connected";
             // 
             // OpticFiberTest
             // 
@@ -304,7 +304,7 @@ namespace OpticFiberTest_ver1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(733, 426);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.connection_status);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.voltage_label);
             this.Controls.Add(this.temperature_label);
@@ -350,7 +350,7 @@ namespace OpticFiberTest_ver1
         private System.Windows.Forms.Label temperature_label;
         private System.Windows.Forms.Label voltage_label;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox connection_status;
     }
 }
 
