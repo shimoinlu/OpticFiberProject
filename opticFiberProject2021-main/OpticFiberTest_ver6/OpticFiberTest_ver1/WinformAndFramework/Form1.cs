@@ -13,7 +13,7 @@ namespace OpticFiberTest_ver1
 {
     public partial class OpticFiberTest : Form
     {
-        bool is_clear = true,   //is_clear will answer about if the board of text is clear
+        bool is_clear = true,       //is_clear will answer about if the board of text is clear
             is_protocol = false,    //is_protocol will answer about if protocol has been choosen
             is_init = false,        //to build dictionary only once
             //connected_demo = false,
@@ -42,14 +42,17 @@ namespace OpticFiberTest_ver1
 
                     if (k.getColor() == "Red")
                         details_win.SelectionColor = Color.Red;
-                    else if(k.getColor() == "Black")
+                    else if (k.getColor() == "Black")
                         details_win.SelectionColor = Color.Black;
                     //else
                     details_win.AppendText(k.GetAddress() + ": " + k.GetTitle() + "\n\t" + k.GethasRead() + "\n");
                 }
             }
-            else   //if the board is clear now, it means we cleard it.
-                MessageBox.Show("The test has been cleared.");
+            else        //if the board is clear now, it means we cleard it.
+            {
+                //MessageBox.Show("The test has been cleared.");
+                details_win.Text = "";
+            }
         }
 //----------------------------------------------------------------------------------------------
         //This function is the event handler of the "SFFoptions".
@@ -75,22 +78,7 @@ namespace OpticFiberTest_ver1
         //This function is the event handler of the "clear_btn" it called once we click on "Clear"
         private void clear_btn_Click(object sender, EventArgs e)
         {
-            if (is_clear)
-            {
-                MessageBox.Show("The board is already cleared.");
-                return;
-            }
-
-            MainDictionary.Clear();
-            Temperature_text_box.Text = "";
-            Voltage_text_box.Text = "";
-            excel_btn.Visible = false;
-            XML_btn.Visible = false;
-            DB_btn.Visible = false;
-            is_clear = true;
-            is_init = false;
-            details_win.Text = "";  //clearing the board. it will call it's handler so we changed
-                                    //the value of "is_clear"
+            clear(); //clear data and board
         }
 //----------------------------------------------------------------------------------------------
         //This function is the event handler of the "Connect_btn".
@@ -98,13 +86,11 @@ namespace OpticFiberTest_ver1
         //once it connected, the button will be swiched to "Disconnect" Button for disconnection.
         private void Connect_btn_Click(object sender, EventArgs e)
         {
-            if (!is_connected)
+            if (!is_connected)  //connect to real fiber if nothing is connected
             {
                 try
                 {
                     Data.I2cData.Connect();
-                    Data.I2cData.getVol();
-                    is_connected = true;
                     ConnectedFunc();
                     Connect_btn.Text = util.disconnect_from_fiber;
                 }
@@ -113,39 +99,38 @@ namespace OpticFiberTest_ver1
                     MessageBox.Show("Could not Connect to fiber \n please check fiber connections and try again");
                 }
             }
-            else
+
+            else if(!Data.I2cData.demoIsConnected())    //if real fiber connected allready, disconnect it
             {
-                Connect_btn.Text = util.connect_to_fiber;
                 DisConnectedFunc();
+                Connect_btn.Text = util.connect_to_fiber;
             }
-        }
-//----------------------------------------------------------------------------------------------
-        //This function is the event handler of the "export_btn" it called once we click on "Export"
-        private void export_btn_Click(object sender, EventArgs e)
-        {
-            if (!is_clear)  //if the board is not clear that means we can export
+
+            else    //means the dempo is connected, warn user
             {
-                MessageBox.Show("Fiber Check Logs Exported to XML file.");
+                MessageBox.Show("demo mode is connected, please disconnect it first");
             }
-            else
-                MessageBox.Show("No test logs to export.");
-
-
         }
 //----------------------------------------------------------------------------------------------
         private void ConnectToDemo_btn_Click(object sender, EventArgs e)
         {
-            if (!is_connected)
+            if (!is_connected)  //if is not connected, connect to demo 
             {
-                Demo_btn.Text = util.disconnect_from_demo;
                 Data.I2cData.connectToDemo();
                 ConnectedFunc();
+                Demo_btn.Text = util.disconnect_from_demo;
             }
-            else
+
+            else if(Data.I2cData.demoIsConnected())  //if connected to demo. disconnect
             {
-                Demo_btn.Text = util.connect_to_demo;
                 Data.I2cData.disConnectToDemo();
                 DisConnectedFunc();
+                Demo_btn.Text = util.connect_to_demo;
+            }
+
+            else    //means it connected to real fiber, warn the user
+            {
+                MessageBox.Show("fiber is connected, please disconnect it first");
             }
         }
 //----------------------------------------------------------------------------------------------
@@ -160,43 +145,46 @@ namespace OpticFiberTest_ver1
                 return;
             }
 
-            if (is_protocol)    //if we chose a protocol we can proceed
-            {
-                try
-                {
-                    int[] pages = GetProtocolsPagesFromXml();
-                    Data.I2cData.ReadTheData(pages);
-                }
-                catch (Exception x)
-                {
-                    MessageBox.Show("The Connection has been failed. Try to reconnect!:\n" + x.ToString());
-                    DisConnectedFunc();
-                    return;
-                }
-
-                excel_btn.Visible = true;
-                XML_btn.Visible = true;
-                DB_btn.Visible = true;
-
-                InitTimer(realTimeData);
-                richTextBox1_TextChanged(null, null);
-                richTextBox2_TextChanged(null, null);
-
-                if (!is_init)
-                {
-                    current_protocol.fillDictionary(ref MainDictionary);
-                    is_init = true;
-                }
-
-                current_protocol.read(ref MainDictionary);
-                is_clear = false;
-                details_win_TextChanged(sender, e);
-                details_win.Text = "";
-            }
-            else
+            if (!is_protocol)    //if we chose a protocol we can proceed
             {
                 MessageBox.Show("Please select protocol."); //well.. else, we cant proceed.
+                return;
             }
+
+            connection_status.Text = "running test";
+            connection_status.ForeColor = Color.Red;
+            excel_btn.Visible = true;
+            XML_btn.Visible = true;
+            DB_btn.Visible = true;
+            InitTimer(realTimeData);
+            richTextBox1_TextChanged(null, null);
+            richTextBox2_TextChanged(null, null);
+
+            try
+            {
+                int[] pages = GetProtocolsPagesFromXml();   //read from xml which pages to read
+                Data.I2cData.ReadTheData(pages);    //read those pages
+            }
+            catch (Exception x)
+            {
+                MessageBox.Show("The Connection has been failed. Try to reconnect!:\n" + x.ToString());
+                DisConnectedFunc();
+                return;
+            }
+
+            if (!is_init)
+            {
+                current_protocol.fillDictionary(ref MainDictionary);
+                is_init = true;
+            }
+
+            current_protocol.read(ref MainDictionary);
+            is_clear = false;
+            details_win_TextChanged(sender, e);
+            details_win.Text = "";
+
+            connection_status.Text = "test done";
+            connection_status.ForeColor = Color.Green;
         }
 //----------------------------------------------------------------------------------------------
         private int[] GetProtocolsPagesFromXml()
@@ -220,31 +208,22 @@ namespace OpticFiberTest_ver1
         private void realTimeData(object sender, EventArgs e)
         {
             richTextBox1_TextChanged(sender, e);
-           richTextBox2_TextChanged(sender, e);
+            richTextBox2_TextChanged(sender, e);
         }
 //----------------------------------------------------------------------------------------------
         //This function is to show Disconnected values on the winform.
         //It will hide all the test buttons and change the Disconnected button to connect button
         private void DisConnectedFunc()
         {
-            if (is_protocol)
-            {
-                timer1.Stop();
-            }
+            clear();    //first clear the board and data
+            SFFoptions.Text = "Select Protocol";
+            is_protocol = false;
             is_connected = false;
             start_btn.Visible = false;
             clear_btn.Visible = false;
-            excel_btn.Visible = false;
             SFFoptions.Visible = false;
-            //temperature_label.Visible = false;
-            //voltage_label.Visible = false;
-            details_win.Text = "";
-            SFFoptions.Text = "Select protocol";
-            Temperature_text_box.Text = "";
-            Voltage_text_box.Text = "";
             connection_status.Text = "not connected";
-            connection_status.ForeColor = Color.Red;
-            MessageBox.Show("Disconnected.");
+            connection_status.ForeColor = Color.Black;
         }
 //----------------------------------------------------------------------------------------------
         //This function clears current test and the data
@@ -256,43 +235,30 @@ namespace OpticFiberTest_ver1
                 MessageBox.Show("The board is already cleared.");
                 return;
             }
-            if (is_protocol)
+            if (timer1 != null)
             {
                 timer1.Stop();
             }
 
-            is_connected = false;
             is_clear = true;
             is_init = false;
-
-            start_btn.Visible = false;
-            clear_btn.Visible = false;
             excel_btn.Visible = false;
             XML_btn.Visible = false;
             DB_btn.Visible = false;
-            SFFoptions.Visible = false;
-
-            details_win.Text = "";
-            SFFoptions.Text = "Select protocol";
             Temperature_text_box.Text = "";
             Voltage_text_box.Text = "";
-            connection_status.Text = "not connected";
-            connection_status.ForeColor = Color.Red;
+            connection_status.Text = "connected";
+            connection_status.ForeColor = Color.Green;
             MainDictionary.Clear();
-            Temperature_text_box.Text = "";
-            Voltage_text_box.Text = "";
-
-            details_win.Text = "";  //clearing the board. it will call it's handler so we changed
-                                    //the value of "is_clear"
-            MessageBox.Show("Disconnected.");
+            details_win.Text = "";  //clearing the board. it will call it's handler so we changed the value of "is_clear"
+            MessageBox.Show("The board has been cleared.");
         }
-        //----------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------
         //This function is to show Connected values on the winform.
         //It will show buttons for the test and change the connect button to Disconnect button.
         private void ConnectedFunc()
         {
             is_connected = true;
-            //details_win.Visible = true;
             start_btn.Visible = true;
             clear_btn.Visible = true;
             SFFoptions.Visible = true;
@@ -312,45 +278,72 @@ namespace OpticFiberTest_ver1
 //----------------------------------------------------------------------------------------------
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
-            float temp = current_protocol.GetRealTemp();
-            int status = current_protocol.CheckTemp(temp); // -1 means fail, 0 means warrning, 1 means success
+            if (is_init)
+            {
+                float temp = current_protocol.GetRealTemp();
+                int status = current_protocol.CheckTemp(temp); // -1 means fail, 0 means warrning, 1 means success
 
-            if (status == -1)
-            {
-                Temperature_text_box.ForeColor = System.Drawing.Color.Red;  
+                if (status == -1)
+                {
+                    Temperature_text_box.ForeColor = System.Drawing.Color.Red;
+                }
+                else if (status == 0)
+                {
+                    Temperature_text_box.ForeColor = System.Drawing.Color.Black;
+                }
+                else if (status == 1)
+                {
+                    Temperature_text_box.ForeColor = System.Drawing.Color.Green;
+                }
+                string tempStr = Convert.ToString(temp) + " °C";
+                Temperature_text_box.Text = tempStr;
             }
-            else if(status == 0)
+            else
             {
-                Temperature_text_box.ForeColor = System.Drawing.Color.Black;
+                Temperature_text_box.Text = "";
             }
-            else if (status == 1)
-            {
-                Temperature_text_box.ForeColor = System.Drawing.Color.Green;
-            }
-            string tempStr = Convert.ToString(temp) + " °C";
-            Temperature_text_box.Text = tempStr;
+
         }
 //----------------------------------------------------------------------------------------------
         private void richTextBox2_TextChanged(object sender, EventArgs e)
         {
-            float vol = current_protocol.GetVol();
-            int status = current_protocol.CheckTemp(vol); // -1 means fail, 0 means warrning, 1 means success
+            if (is_init)
+            {
+                float vol = current_protocol.GetVol();
+                int status = current_protocol.CheckTemp(vol); // -1 means fail, 0 means warrning, 1 means success
 
-            if (status == -1)
-            {
-                Voltage_text_box.ForeColor = System.Drawing.Color.Red;  
+                if (status == -1)
+                {
+                    Voltage_text_box.ForeColor = System.Drawing.Color.Red;
+                }
+                else if (status == 0)
+                {
+                    Voltage_text_box.ForeColor = System.Drawing.Color.Black;
+                }
+                else if (status == 1)
+                {
+                    Voltage_text_box.ForeColor = System.Drawing.Color.Green;
+                }
+                Voltage_text_box.Text = vol.ToString() + " V";
             }
-            else if(status == 0)
+            else
             {
-                Voltage_text_box.ForeColor = System.Drawing.Color.Black;
+                Voltage_text_box.Text = "";
             }
-            else if (status == 1)
-            {
-                Voltage_text_box.ForeColor = System.Drawing.Color.Green;
-            }
-            Voltage_text_box.Text = vol.ToString() + " V";
         }
+//----------------------------------------------------------------------------------------------
+        //This function is the event handler of the "export_btn" it called once we click on "Export"
+        private void export_btn_Click(object sender, EventArgs e)
+        {
+            if (!is_clear)  //if the board is not clear that means we can export
+            {
+                MessageBox.Show("Fiber Check Logs Exported to XML file.");
+            }
+            else
+                MessageBox.Show("No test logs to export.");
 
+
+        }
 // ===================================== save data functions =========================================
         private void excelButton_Click(object sender, EventArgs e)
         {

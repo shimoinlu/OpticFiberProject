@@ -154,7 +154,7 @@ namespace OpticFiberTest_ver1
             this.Demo_btn.Name = "Demo_btn";
             this.Demo_btn.Size = new System.Drawing.Size(103, 43);
             this.Demo_btn.TabIndex = 6;
-            this.Demo_btn.Text = "Demo Mode";
+            this.Demo_btn.Text = util.connect_to_demo;
             this.Demo_btn.UseVisualStyleBackColor = false;
             this.Demo_btn.Click += new System.EventHandler(this.ConnectToDemo_btn_Click);
             // 

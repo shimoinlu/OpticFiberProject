@@ -16,9 +16,9 @@ namespace OpticFiberTest_ver1.Utility
         public const int Devide = 10000;
         //--------------------------------------------------
         public string connect_to_demo = "connect to demo";
-        public string disconnect_from_demo = "exit demo";
+        public string disconnect_from_demo = "disconnect demo";
         public string connect_to_fiber = "connect to fiber";
-        public string disconnect_from_fiber = "disconnect from fiber";
+        public string disconnect_from_fiber = "disconnect fiber";
         public string sff8636 = "SFF-8636";
         public string sff8472 = "SFF-8472";
 
