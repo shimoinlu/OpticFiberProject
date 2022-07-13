@@ -156,9 +156,6 @@ namespace OpticFiberTest_ver1
             excel_btn.Visible = true;
             XML_btn.Visible = true;
             DB_btn.Visible = true;
-            InitTimer(realTimeData);
-            richTextBox1_TextChanged(null, null);
-            richTextBox2_TextChanged(null, null);
 
             try
             {
@@ -182,7 +179,9 @@ namespace OpticFiberTest_ver1
             is_clear = false;
             details_win_TextChanged(sender, e);
             details_win.Text = "";
-
+            InitTimer(realTimeData);
+            richTextBox1_TextChanged(null, null);
+            richTextBox2_TextChanged(null, null);
             connection_status.Text = "test done";
             connection_status.ForeColor = Color.Green;
         }
