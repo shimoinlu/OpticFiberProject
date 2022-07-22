@@ -51,12 +51,6 @@ namespace OpticFiberTest_ver1.Classes_SFF8636
                 m_storedValue += "Warning domain not contained in error domain\n";
                 throw new Exception();
             }
-            //            string s = e.Message;
-            //m_min = Convert.ToInt32(Convers.HexToAsc.Convert2Asc(bitsAdrr[0] + " " +bitsAdrr[1])); //convert to ascii
-            //     m_max = Convert.ToInt32(Convers.HexToAsc.Convert2Asc(bitsAdrr[2] + bitsAdrr[3])); //convect to ascii
-            //121212121
-
-
 
         }
 
