@@ -116,7 +116,7 @@ namespace OpticFiberTest_ver1.Data
                 result += myData[page][i];
                 result += ' ';
             }
-
+            //delee last space
             result = result.Substring(0, result.Length - 1);
 
             return result;
