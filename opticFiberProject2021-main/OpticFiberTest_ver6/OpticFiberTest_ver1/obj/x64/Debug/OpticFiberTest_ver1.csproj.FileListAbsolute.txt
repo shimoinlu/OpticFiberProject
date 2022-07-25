@@ -265,3 +265,22 @@ C:\Users\meirm.LAPTOP-JI00PF6J\Desktop\פרויקט גמר\Arigo\opticFiberProje
 C:\Users\meirm.LAPTOP-JI00PF6J\Desktop\פרויקט גמר\Arigo\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\x64\Debug\System.Data.SQLite.Linq.dll
 C:\Users\meirm.LAPTOP-JI00PF6J\Desktop\פרויקט גמר\Arigo\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\x64\Debug\System.Data.SQLite.xml
 C:\Users\meirm.LAPTOP-JI00PF6J\Desktop\פרויקט גמר\Arigo\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\x64\Debug\OpticFiberTest_ver1.csproj.CopyComplete
+C:\OpticFiberProj\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\x64\Debug\files\XMLProtocols.xml
+C:\OpticFiberProj\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\x64\Debug\files\demoData.txt
+C:\OpticFiberProj\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\x64\Debug\files\dempDataP3.txt
+C:\OpticFiberProj\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\x64\Debug\files\XMLFile1.xml
+C:\OpticFiberProj\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\x64\Debug\OpticFiberTest_ver1.exe.config
+C:\OpticFiberProj\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\x64\Debug\OpticFiberTest_ver1.exe
+C:\OpticFiberProj\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\x64\Debug\OpticFiberTest_ver1.pdb
+C:\OpticFiberProj\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\x64\Debug\System.Data.SQLite.dll
+C:\OpticFiberProj\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\x64\Debug\System.Data.SQLite.EF6.dll
+C:\OpticFiberProj\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\x64\Debug\System.Data.SQLite.Linq.dll
+C:\OpticFiberProj\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\bin\x64\Debug\System.Data.SQLite.xml
+C:\OpticFiberProj\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\x64\Debug\OpticFiberTest_ver1.csprojAssemblyReference.cache
+C:\OpticFiberProj\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\x64\Debug\OpticFiberTest_ver1.OpticFiberTest.resources
+C:\OpticFiberProj\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\x64\Debug\OpticFiberTest_ver1.Properties.Resources.resources
+C:\OpticFiberProj\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\x64\Debug\OpticFiberTest_ver1.csproj.GenerateResource.cache
+C:\OpticFiberProj\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\x64\Debug\OpticFiberTest_ver1.csproj.CoreCompileInputs.cache
+C:\OpticFiberProj\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\x64\Debug\OpticFiberTest_ver1.csproj.CopyComplete
+C:\OpticFiberProj\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\x64\Debug\OpticFiberTest_ver1.exe
+C:\OpticFiberProj\opticFiberProject2021-main\OpticFiberTest_ver6\OpticFiberTest_ver1\obj\x64\Debug\OpticFiberTest_ver1.pdb
