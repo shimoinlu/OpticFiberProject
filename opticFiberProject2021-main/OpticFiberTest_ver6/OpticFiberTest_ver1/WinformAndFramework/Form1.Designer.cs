@@ -1,4 +1,8 @@
-﻿namespace OpticFiberTest_ver1
+﻿using System.Linq;
+using System.Xml;
+using System.Xml.Linq;
+
+namespace OpticFiberTest_ver1
 {
     partial class OpticFiberTest
     {
@@ -19,7 +23,23 @@
             }
             base.Dispose(disposing);
         }
+        private string[] GetProtocolsFromXml()
+        {
+            string[] protocols;
+            int count = 0;
+            XmlDocument document = new XmlDocument();
+            var xml = XDocument.Load("files/XMLProtocols.xml");
 
+
+            // Query the data and write out a subset of contacts
+            var query = from c in xml.Root.Descendants("Protocol")
+                        select c.Element("ProtocolName").Value;
+            int q = query.Count();
+            protocols = new string[q];
+            foreach (string prtcl in query)
+                protocols[count++] = prtcl;
+            return protocols;
+        }
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -45,15 +65,17 @@
             this.temperature_label = new System.Windows.Forms.Label();
             this.voltage_label = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.connection_status = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.logo_pic)).BeginInit();
             this.SuspendLayout();
             // 
             // SFFoptions
             // 
             this.SFFoptions.FormattingEnabled = true;
-            this.SFFoptions.Items.AddRange(new object[] {
-            "SFF-8636"});
+            string[] protocols = GetProtocolsFromXml();
+            // this.SFFoptions.Items.AddRange(new object[] {
+            // "SFF-8636","shimon"});
+            this.SFFoptions.Items.AddRange(GetProtocolsFromXml());
             this.SFFoptions.Location = new System.Drawing.Point(608, 81);
             this.SFFoptions.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.SFFoptions.Name = "SFFoptions";
@@ -100,7 +122,7 @@
             this.Connect_btn.Name = "Connect_btn";
             this.Connect_btn.Size = new System.Drawing.Size(103, 43);
             this.Connect_btn.TabIndex = 5;
-            this.Connect_btn.Text = "Connect To Fiber";
+            this.Connect_btn.Text = util.connect_to_fiber;
             this.Connect_btn.UseVisualStyleBackColor = false;
             this.Connect_btn.Click += new System.EventHandler(this.Connect_btn_Click);
             // 
@@ -132,7 +154,7 @@
             this.Demo_btn.Name = "Demo_btn";
             this.Demo_btn.Size = new System.Drawing.Size(103, 43);
             this.Demo_btn.TabIndex = 6;
-            this.Demo_btn.Text = "Demo Mode";
+            this.Demo_btn.Text = util.connect_to_demo;
             this.Demo_btn.UseVisualStyleBackColor = false;
             this.Demo_btn.Click += new System.EventHandler(this.ConnectToDemo_btn_Click);
             // 
@@ -267,14 +289,14 @@
             this.label1.TabIndex = 17;
             this.label1.Text = "Connection status:";
             // 
-            // richTextBox1
+            // connection_status
             // 
-            this.richTextBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.richTextBox1.Location = new System.Drawing.Point(18, 97);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(123, 25);
-            this.richTextBox1.TabIndex = 18;
-            this.richTextBox1.Text = "";
+            this.connection_status.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.connection_status.Location = new System.Drawing.Point(18, 97);
+            this.connection_status.Name = "connection_status";
+            this.connection_status.Size = new System.Drawing.Size(123, 25);
+            this.connection_status.TabIndex = 18;
+            this.connection_status.Text = "not connected";
             // 
             // OpticFiberTest
             // 
@@ -282,7 +304,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(733, 426);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.connection_status);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.voltage_label);
             this.Controls.Add(this.temperature_label);
@@ -328,7 +350,7 @@
         private System.Windows.Forms.Label temperature_label;
         private System.Windows.Forms.Label voltage_label;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox connection_status;
     }
 }
 

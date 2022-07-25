@@ -3,7 +3,7 @@ using System.Linq;
 using System.Windows.Forms;
 using System.Xml;
 using System.IO;
-using OpticFiberTest_ver1.Classes_SFF8636;
+using OpticFiberTest_ver1.Protocols_classes;
 
 
 namespace OpticFiberTest_ver1.SaveData
@@ -11,7 +11,7 @@ namespace OpticFiberTest_ver1.SaveData
     class SaveXML
     {
 
-        static public string createXML(Dictionary<int, SFF8636> MainDictionary)
+        static public string createXML(Dictionary<int, Protocols> MainDictionary)
         {
             Stream myStream;
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();

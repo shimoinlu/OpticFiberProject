@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<body>
+	<Protocol>
+		<ProtocolName>SFF-8636</ProtocolName>
+		<ProtocolPages>0 3</ProtocolPages>
+	</Protocol>
+	<Protocol>
+		<ProtocolName>SFF-8472</ProtocolName>
+		<ProtocolPages>1 2</ProtocolPages>
+	</Protocol>
+</body>  

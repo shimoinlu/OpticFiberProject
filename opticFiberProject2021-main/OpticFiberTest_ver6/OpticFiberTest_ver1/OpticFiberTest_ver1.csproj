@@ -14,6 +14,8 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -28,8 +30,6 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -105,78 +105,82 @@
   <ItemGroup>
     <Compile Include="aai2c_eeprom.cs" />
     <Compile Include="aardvark.cs" />
-    <Compile Include="Classes_SFF8636\Byte93Bit.cs" />
-    <Compile Include="Classes_SFF8636\CDRControl.cs" />
-    <Compile Include="Classes_SFF8636\Channel Monitoring Values\TxPower.cs" />
-    <Compile Include="Classes_SFF8636\Channel Monitoring Values\TxBias.cs" />
-    <Compile Include="Classes_SFF8636\Channel Monitoring Values\Rx.cs" />
-    <Compile Include="Classes_SFF8636\Channel Status Interrupt Flags\InterruptFlags1.cs" />
-    <Compile Include="Classes_SFF8636\CheckCode%28CC%29\CC.cs" />
-    <Compile Include="Classes_SFF8636\ControllableMediaSideFEC_Support.cs" />
-    <Compile Include="Classes_SFF8636\CtrlInputOutput.cs" />
-    <Compile Include="Classes_SFF8636\Implementation.cs" />
-    <Compile Include="Classes_SFF8636\MaxTxInputEqualization.cs" />
-    <Compile Include="Classes_SFF8636\PciExpess.cs" />
-    <Compile Include="Classes_SFF8636\Reserved Bytes\ReservedBits.cs" />
-    <Compile Include="Classes_SFF8636\Reserved Bytes\ReservedBytes.cs" />
-    <Compile Include="Classes_SFF8636\RxOutputAmplitude\RxOutputAmplitudeControl.cs" />
-    <Compile Include="Classes_SFF8636\RxOutputAmplitude\RxOutputAmplitudeSupport.cs" />
-    <Compile Include="Classes_SFF8636\RxOutputEmphasisType.cs" />
-    <Compile Include="Classes_SFF8636\RxOutputEmphasis\RxOutputEmphasisControl.cs" />
-    <Compile Include="Classes_SFF8636\TxInputEqualizerControl\TxInputEqualizerControl.cs" />
-    <Compile Include="Classes_SFF8636\TxRateSelect.cs" />
-    <Compile Include="Classes_SFF8636\RxRateSelect.cs" />
-    <Compile Include="Classes_SFF8636\Control Function Bytes\Tx1Disable.cs" />
-    <Compile Include="Classes_SFF8636\Dictionarys.cs" />
-    <Compile Include="Classes_SFF8636\Rx.cs" />
-    <Compile Include="Classes_SFF8636\Status.cs" />
-    <Compile Include="Classes_SFF8636\RevisionCompliance.cs" />
-    <Compile Include="Classes_SFF8636\LowerPageIdentifier.cs" />
-    <Compile Include="Classes_SFF8636\Reserve.cs" />
-    <Compile Include="Classes_SFF8636\SupplyVoltage .cs" />
-    <Compile Include="Classes_SFF8636\Temperature.cs" />
-    <Compile Include="Classes_SFF8636\Lengths\Length.cs" />
-    <Compile Include="Classes_SFF8636\Lengths\Wavelength.cs" />
-    <Compile Include="Classes_SFF8636\Rates\BaudRate.cs" />
-    <Compile Include="Classes_SFF8636\Rates\BitRate.cs" />
-    <Compile Include="Classes_SFF8636\Rates\SingalingRate.cs" />
-    <Compile Include="Classes_SFF8636\CheckCode%28CC%29\CC_BASE.cs" />
-    <Compile Include="Classes_SFF8636\CheckCode%28CC%29\CC_EXT.cs" />
-    <Compile Include="Classes_SFF8636\ConnectorType.cs" />
-    <Compile Include="Classes_SFF8636\DateCode.cs" />
-    <Compile Include="Classes_SFF8636\DeviceTechnology.cs" />
-    <Compile Include="Classes_SFF8636\DiagnosticMonitoringType.cs" />
-    <Compile Include="Classes_SFF8636\EnhancedOptions.cs" />
-    <Compile Include="Classes_SFF8636\ExtendedModule.cs" />
-    <Compile Include="Classes_SFF8636\Identifier\ExtIdentifier.cs" />
-    <Compile Include="Classes_SFF8636\Lengths\LengthOM1_62d5um.cs" />
-    <Compile Include="Classes_SFF8636\Lengths\LengthOM2_50um.cs" />
-    <Compile Include="Classes_SFF8636\Lengths\LengthPassiveCopperOrActiveCableOrOM4_50um.cs" />
-    <Compile Include="Classes_SFF8636\LinkCodes.cs" />
-    <Compile Include="Classes_SFF8636\MaxCaseTemp.cs" />
-    <Compile Include="Classes_SFF8636\Options.cs" />
-    <Compile Include="Classes_SFF8636\SpecificationCompliance.cs" />
-    <Compile Include="Classes_SFF8636\EncodingSFF.cs" />
-    <Compile Include="Classes_SFF8636\Rates\ExtendedRateSelectCompliance.cs" />
-    <Compile Include="Classes_SFF8636\ValidateRange\BaseRange.cs" />
-    <Compile Include="Classes_SFF8636\ValidateRange\RxPowerRange.cs" />
-    <Compile Include="Classes_SFF8636\ValidateRange\RxPowerWarRange.cs" />
-    <Compile Include="Classes_SFF8636\ValidateRange\TempRange.cs" />
-    <Compile Include="Classes_SFF8636\ValidateRange\TempWarRange.cs" />
-    <Compile Include="Classes_SFF8636\ValidateRange\TxBiasWarRange.cs" />
-    <Compile Include="Classes_SFF8636\ValidateRange\TxPowerRange.cs" />
-    <Compile Include="Classes_SFF8636\ValidateRange\TxPowerWarRange.cs" />
-    <Compile Include="Classes_SFF8636\ValidateRange\VccRange.cs" />
-    <Compile Include="Classes_SFF8636\ValidateRange\VccWarRange.cs" />
-    <Compile Include="Classes_SFF8636\Vendor\Vendor.cs" />
-    <Compile Include="Classes_SFF8636\Vendor\VendorName.cs" />
-    <Compile Include="Classes_SFF8636\Vendor\VendorOUI.cs" />
-    <Compile Include="Classes_SFF8636\Vendor\VendorPN.cs" />
-    <Compile Include="Classes_SFF8636\Vendor\VendorRev.cs" />
-    <Compile Include="Classes_SFF8636\Vendor\VendorSN.cs" />
-    <Compile Include="Classes_SFF8636\Vendor\VendorSpecific.cs" />
-    <Compile Include="Classes_SFF8636\Lengths\WavelengthOrCopperCableAttenuation.cs" />
-    <Compile Include="Classes_SFF8636\Lengths\WavelengthToleranceOrCopperCableAttenuation.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8472\SFF8472.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8472\sff8472_demo_field.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8472\SFF8472_manage.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\Byte93Bit.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\CDRControl.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\Channel Monitoring Values\TxPower.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\Channel Monitoring Values\TxBias.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\Channel Monitoring Values\Rx.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\Channel Status Interrupt Flags\InterruptFlags1.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\CheckCode%28CC%29\CC.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\ControllableMediaSideFEC_Support.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\CtrlInputOutput.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\Implementation.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\MaxTxInputEqualization.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\PciExpess.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\Reserved Bytes\ReservedBits.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\Reserved Bytes\ReservedBytes.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\RxOutputAmplitude\RxOutputAmplitudeControl.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\RxOutputAmplitude\RxOutputAmplitudeSupport.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\RxOutputEmphasisType.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\RxOutputEmphasis\RxOutputEmphasisControl.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\SFF8636_manage.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\TxInputEqualizerControl\TxInputEqualizerControl.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\TxRateSelect.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\RxRateSelect.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\Control Function Bytes\Tx1Disable.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\Dictionarys.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\Rx.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\Status.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\RevisionCompliance.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\LowerPageIdentifier.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\Reserve.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\SupplyVoltage .cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\Temperature.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\Lengths\Length.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\Lengths\Wavelength.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\Rates\BaudRate.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\Rates\BitRate.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\Rates\SingalingRate.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\CheckCode%28CC%29\CC_BASE.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\CheckCode%28CC%29\CC_EXT.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\ConnectorType.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\DateCode.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\DeviceTechnology.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\DiagnosticMonitoringType.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\EnhancedOptions.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\ExtendedModule.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\Identifier\ExtIdentifier.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\Lengths\LengthOM1_62d5um.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\Lengths\LengthOM2_50um.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\Lengths\LengthPassiveCopperOrActiveCableOrOM4_50um.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\LinkCodes.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\MaxCaseTemp.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\Options.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\SpecificationCompliance.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\EncodingSFF.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\Rates\ExtendedRateSelectCompliance.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\ValidateRange\BaseRange.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\ValidateRange\RxPowerRange.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\ValidateRange\RxPowerWarRange.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\ValidateRange\TempRange.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\ValidateRange\TempWarRange.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\ValidateRange\TxBiasWarRange.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\ValidateRange\TxPowerRange.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\ValidateRange\TxPowerWarRange.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\ValidateRange\VccRange.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\ValidateRange\VccWarRange.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\Vendor\Vendor.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\Vendor\VendorName.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\Vendor\VendorOUI.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\Vendor\VendorPN.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\Vendor\VendorRev.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\Vendor\VendorSN.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\Vendor\VendorSpecific.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\Lengths\WavelengthOrCopperCableAttenuation.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\Lengths\WavelengthToleranceOrCopperCableAttenuation.cs" />
     <Compile Include="ControllableHostSideFEC_Support.cs" />
     <Compile Include="Converstions\BitsFromByte.cs" />
     <Compile Include="Converstions\BitToStr.cs" />
@@ -185,11 +189,13 @@
     <Compile Include="Converstions\HexToAsc.cs" />
     <Compile Include="Converstions\HexToFloat.cs" />
     <Compile Include="Data\I2cData.cs" />
+    <Compile Include="Protocols_classes\Protocols.cs" />
+    <Compile Include="Protocols_classes\Protocol_manage.cs" />
     <Compile Include="SaveData\SaveDB.cs" />
     <Compile Include="SaveData\SaveExcel.cs" />
     <Compile Include="SaveData\SaveXML.cs" />
     <Compile Include="MaximumTCstabilizationTime .cs" />
-    <Compile Include="Classes_SFF8636\RxOutputEmphasis\MaxRxOutputEmphasis.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\RxOutputEmphasis\MaxRxOutputEmphasis.cs" />
     <Compile Include="RxLOSLFastMode.cs" />
     <Compile Include="TxDisFastModeSupport.cs" />
     <Compile Include="TxForceSquelchImplemented.cs" />
@@ -204,11 +210,11 @@
     <Compile Include="WinformAndFramework\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes_SFF8636\Lengths\LengthOM3_50um.cs" />
-    <Compile Include="Classes_SFF8636\Lengths\LengthSMF.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\Lengths\LengthOM3_50um.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\Lengths\LengthSMF.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Classes_SFF8636\SFF8636.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\SFF8636.cs" />
     <EmbeddedResource Include="WinformAndFramework\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -218,7 +224,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Classes_SFF8636\Identifier\Identifier.cs" />
+    <Compile Include="Protocols_classes\Classes_SFF8636\Identifier\Identifier.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
@@ -254,7 +260,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Classes_SFF8636\Dictionarys\" />
+    <Folder Include="Protocols_classes\Classes_SFF8636\Dictionarys\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="files\demoData.txt">
@@ -263,9 +269,13 @@
     <Content Include="files\dempDataP3.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="files\XMLProtocols.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="files\XMLFile1.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="instructions.txt" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
