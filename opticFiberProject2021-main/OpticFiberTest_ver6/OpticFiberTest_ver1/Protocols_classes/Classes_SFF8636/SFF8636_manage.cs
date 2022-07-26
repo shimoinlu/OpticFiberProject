@@ -164,6 +164,7 @@ namespace OpticFiberTest_ver1.Protocols_classes.Classes_SFF8636
                 int page = current.GetPage();
                 if (address > 0)
                 {
+                    
                     string value = Data.I2cData.Geti2cDataSub(address, size, page);
                     current.ValidateVal(value);
                 }
