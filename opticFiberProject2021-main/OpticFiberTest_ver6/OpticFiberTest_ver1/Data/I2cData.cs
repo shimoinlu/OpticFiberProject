@@ -110,8 +110,7 @@ namespace OpticFiberTest_ver1.Data
         //taking part of the data string and return it as substring
         static public String Geti2cDataSub(int index, int buffer,int page = 0)
         {
-            Debug.WriteLine("indedx is: "+ index.ToString() +
-                " buffer is: " + buffer.ToString() + " page is: " +page.ToString());
+            
             String result = "";
             for (int i = index; i < index + buffer; i++)
             {
