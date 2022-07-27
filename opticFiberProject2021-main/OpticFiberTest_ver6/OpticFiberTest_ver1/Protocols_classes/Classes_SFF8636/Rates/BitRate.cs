@@ -17,7 +17,7 @@ namespace OpticFiberTest_ver1.Protocols_classes.Classes_SFF8636
         public override void EncodeValue(string name)
         {
             SingalingRate sinRate = new SingalingRate(); //we will take singalingrate value
-            sinRate.EncodeValue(Data.I2cData.Geti2cDataSub(sinRate.GetAddress()-128, sinRate.GetSize()-128));
+            sinRate.EncodeValue(Data.I2cData.Geti2cDataSub(sinRate.GetAddress(), sinRate.GetSize()));
             float dec = sinRate.GetDec();
             if (dec < 25.4)
             {

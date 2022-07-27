@@ -12,8 +12,6 @@ namespace OpticFiberTest_ver1.Data
 {
     class I2cData {
         private static String[] myDataLine; //will hold as string all the data that we read, 128 bytes
-        private static String myDataLineP3; //will hold as string all the data that we read, 128 bytes
-//        private static String[] myData; //data will be splited to here
         private static Dictionary<int, String[]>myData; //data will be splited to here
         private static bool m_demoIsConnected = false;
 
@@ -89,22 +87,7 @@ namespace OpticFiberTest_ver1.Data
             myData = new Dictionary<int, string[]>(pages.Length);
             for (int i = 0; i < pages.Length; ++i)
                 myData.Add(pages[i],myDataLine[i].Split());
-            //Debug.WriteLine("##################################################################");
-            //for (int i = 0; i < myData.Length; ++i)
-            //    Debug.WriteLine(i.ToString() + " " + myData[i]);
-            //Debug.WriteLine("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-            //for (int i = 0; i < myData1.Length; ++i)
-            //    Debug.WriteLine(i.ToString() + " " + myData1[i]);
-            //Debug.WriteLine("##################################################################");
-
-
         }
-
-
-        //static public string getPage3Input(int index)
-        //{
-        //    return myData1[index];  
-        //}
 
 
         //taking part of the data string and return it as substring
@@ -123,17 +106,12 @@ namespace OpticFiberTest_ver1.Data
 
             return result;
         }
-        //static public String[] GetData() //get all the data
-        //{
-        //    return myData;
-        //}
         /****************************************************************
         * This function counting all the given bytes from startIndex till buffer
         * and return the result.
         ***************************************************************/
         static public BigInteger HexaCounterOfHexString(int startIndex, int buffer,int page = 0) 
         {
-//            String[] hexValuesSplit = myDataLine.Substring(startIndex, buffer).Split();
             BigInteger sumOfAllBytes = 0;
             for(int i = startIndex; i < startIndex + buffer;++i)
             {
