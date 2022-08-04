@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using OpticFiberTest_ver1.Protocols_classes;
 
@@ -8,9 +9,20 @@ namespace OpticFiberTest_ver1.SaveData
 {
     class SaveDB
     {
+        private static void createQueryDoc()    //create query on user pc for running as sql query on db
+        {
+            string query = "SELECT * FROM test_results WHERE Status='Test Passed'";
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\query.txt";
+
+            TextWriter txt = new StreamWriter(path);
+            txt.Write(query);
+            txt.Close();
+        }
 
         static public string createDB(Dictionary<int, Protocols> MainDictionary)
         {
+            createQueryDoc();
+
             string date = DateTime.Now.ToString();
 
             // This is the query which will create a new table in our database file with three columns. An auto increment column called "ID", and two NVARCHAR type columns with the names "Key" and "Value"
