@@ -16,15 +16,15 @@ run using the SQLITE software.
 
 
 ## Installations:
-visual studio for developing and adding protocols. Can be downloaded from [here]().
-aardvark for drivers download from [here](https://www.totalphase.com/products/usb-drivers-windows/) and install it.
-SQLITE to manage the data. download fron [here](https://sqlitebrowser.org/dl/)
+- visual studio for developing and adding protocols. Can be downloaded from [here]().
+- aardvark for drivers download from [here](https://www.totalphase.com/products/usb-drivers-windows/) and install it.
+- SQLITE to manage the data. download fron [here](https://sqlitebrowser.org/dl/)
 
 ## adding new protocol
 to add protocol to program: 
-	1: create folder with the protocol name inside Protocol_classes folder
-	2: create base abstract protocol class that inherit from Protocol.cs
-	3: create all inherited classes, each class should implement all Protocol.cs functions.
-	4: also create <protocol name>_manage.cs class the inherit from Protocol_manage interface
-	5: add to Form1.cs the namespace of new created protocol folder
-	6: in Form1.cs add to function SFFoptions_SelectedIndexChanged(), the new protocol
+Markup:	1. create folder with the protocol name inside Protocol_classes folder
+	2. create base abstract protocol class that inherit from Protocol.cs
+	3. create all inherited classes, each class should implement all Protocol.cs functions.
+	4. also create <protocol name>_manage.cs class the inherit from Protocol_manage interface
+	5. add to Form1.cs the namespace of new created protocol folder
+	6. in Form1.cs add to function SFFoptions_SelectedIndexChanged(), the new protocol
